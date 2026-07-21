@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
@@ -36,6 +37,7 @@ import com.islamic.asmaulhusna.ui.theme.*
 fun HomeScreen(
     onNameClick: (Int) -> Unit,
     onFavoritesClick: () -> Unit,
+    onVirtuesClick: () -> Unit,
     onSettingsClick: () -> Unit
 ) {
     var query by remember { mutableStateOf("") }
@@ -69,6 +71,9 @@ fun HomeScreen(
                     titleContentColor = Cream
                 ),
                 actions = {
+                    IconButton(onClick = onVirtuesClick) {
+                        Icon(Icons.AutoMirrored.Filled.MenuBook, stringResource(R.string.cd_virtues), tint = Gold)
+                    }
                     IconButton(onClick = onFavoritesClick) {
                         Icon(Icons.Filled.Favorite, stringResource(R.string.cd_favorites), tint = Gold)
                     }

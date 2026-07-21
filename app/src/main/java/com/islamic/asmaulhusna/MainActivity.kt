@@ -31,6 +31,7 @@ import com.islamic.asmaulhusna.ui.LanguageScreen
 import com.islamic.asmaulhusna.ui.LocaleStore
 import com.islamic.asmaulhusna.ui.SettingsScreen
 import com.islamic.asmaulhusna.ui.TextScaleStore
+import com.islamic.asmaulhusna.ui.VirtuesScreen
 import com.islamic.asmaulhusna.ui.theme.AsmaulHusnaTheme
 
 class MainActivity : ComponentActivity() {
@@ -86,8 +87,12 @@ class MainActivity : ComponentActivity() {
                         HomeScreen(
                             onNameClick = { id -> nav.navigate("detail/$id") },
                             onFavoritesClick = { nav.navigate("favorites") },
+                            onVirtuesClick = { nav.navigate("virtues") },
                             onSettingsClick = { nav.navigate("settings") }
                         )
+                    }
+                    composable("virtues") {
+                        VirtuesScreen(onBack = { nav.popBackStack() })
                     }
                     composable(
                         "detail/{id}",
