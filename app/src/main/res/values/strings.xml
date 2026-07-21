@@ -1,3 +1,51 @@
 <resources>
-    <string name="app_name">আসমাউল হুসনা</string>
+    <string name="app_name">Asma al-Husna</string>
+
+    <!-- Home -->
+    <string name="app_subtitle">Asma al-Husna · 99 Names</string>
+    <string name="today_label">Today</string>
+    <string name="search_hint">Search name or meaning…</string>
+
+    <!-- Detail -->
+    <string name="section_meaning">Meaning</string>
+    <string name="section_virtue">Virtue</string>
+    <string name="section_practice">Practice</string>
+    <string name="action_listen">Listen</string>
+
+    <!-- Favorites -->
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_empty">No names added yet.</string>
+
+    <!-- Reminders -->
+    <string name="reminders_title">Reminders</string>
+    <string name="reminders_intro">Turn on reminders to be notified on time. Set Suhoor and Iftar to your own local times.</string>
+    <string name="reminder_daily_name">Name of the Day</string>
+    <string name="reminder_daily_name_hint">A daily name to remember</string>
+    <string name="reminder_suhoor">Suhoor</string>
+    <string name="reminder_suhoor_hint">Reminds you before Suhoor ends</string>
+    <string name="reminder_iftar">Iftar</string>
+    <string name="reminder_iftar_hint">Tells you when it is time for Iftar</string>
+
+    <!-- Language -->
+    <string name="language_title">Language</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_back">Back</string>
+    <string name="cd_favorite">Favorite</string>
+    <string name="cd_favorites">Favorites</string>
+    <string name="cd_reminders">Reminders</string>
+    <string name="cd_language">Language</string>
+
+    <!-- Notification channels -->
+    <string name="channel_reminders">Daily reminders</string>
+    <string name="channel_reminders_desc">Name of the day, Suhoor and Iftar reminders</string>
+    <string name="channel_announcements">Announcements</string>
+    <string name="channel_announcements_desc">Ramadan and special announcements</string>
+
+    <!-- Notifications -->
+    <string name="notif_daily_title">Name of the Day · %1$s</string>
+    <string name="notif_suhoor_title">Suhoor time is near</string>
+    <string name="notif_suhoor_body">Finish your meal before Suhoor ends and make your intention to fast.</string>
+    <string name="notif_iftar_title">Iftar time</string>
+    <string name="notif_iftar_body">It is time to break your fast — a blessed moment for accepted prayers.</string>
 </resources>

@@ -18,18 +18,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
 import com.islamic.asmaulhusna.data.FavoritesStore
+import com.islamic.asmaulhusna.data.localized
 import com.islamic.asmaulhusna.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
     val name = remember(nameId) { AsmaulHusnaRepository.names.first { it.id == nameId } }
+    val loc = name.localized(rememberNameContent())
     val context = LocalContext.current
     val isFav = favorites.favorites.value.contains(nameId)
 
@@ -39,14 +43,14 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
                 title = { Text("${name.id}. ${name.transliteration}", fontWeight = FontWeight.SemiBold) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "ফিরে যান")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.cd_back))
                     }
                 },
                 actions = {
                     IconButton(onClick = { favorites.toggle(nameId) }) {
                         Icon(
                             if (isFav) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                            "ফেভারিট",
+                            stringResource(R.string.cd_favorite),
                             tint = Gold
                         )
                     }
@@ -68,7 +72,10 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            NameHero(name.arabic, name.transliteration, name.banglaName)
+            NameHero(
+                name.arabic, name.transliteration,
+                if (loc.name.equals(name.transliteration, true)) "" else loc.name
+            )
 
             Spacer(Modifier.height(20.dp))
             Button(
@@ -82,13 +89,13 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
             ) {
                 Icon(Icons.Filled.VolumeUp, null)
                 Spacer(Modifier.width(8.dp))
-                Text("শুনুন", fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.action_listen), fontWeight = FontWeight.Bold)
             }
             Spacer(Modifier.height(20.dp))
 
-            SectionCard("অর্থ · MEANING", name.meaning)
-            SectionCard("ফজিলত · VIRTUE", name.fazilat)
-            SectionCard("আমল · PRACTICE", name.amal)
+            SectionCard(stringResource(R.string.section_meaning), loc.meaning)
+            SectionCard(stringResource(R.string.section_virtue), loc.fazilat)
+            SectionCard(stringResource(R.string.section_practice), loc.amal)
             Spacer(Modifier.height(24.dp))
         }
     }
@@ -117,7 +124,7 @@ private fun NameHero(arabic: String, transliteration: String, bangla: String) {
             Spacer(Modifier.height(14.dp))
             Text(transliteration, fontSize = 20.sp, color = GoldSoft,
                 fontWeight = FontWeight.SemiBold)
-            Text(bangla, fontSize = 15.sp, color = CreamDim)
+            if (bangla.isNotBlank()) Text(bangla, fontSize = 15.sp, color = CreamDim)
         }
     }
 }

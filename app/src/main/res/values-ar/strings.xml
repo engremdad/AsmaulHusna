@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">أسماء الله الحسنى</string>
+
+    <string name="app_subtitle">أسماء الله الحسنى · ٩٩ اسمًا</string>
+    <string name="today_label">اسم اليوم</string>
+    <string name="search_hint">ابحث عن اسم أو معنى…</string>
+
+    <string name="section_meaning">المعنى</string>
+    <string name="section_virtue">الفضل</string>
+    <string name="section_practice">العمل</string>
+    <string name="action_listen">استمع</string>
+
+    <string name="favorites_title">المفضلة</string>
+    <string name="favorites_empty">لم تتم إضافة أي اسم بعد.</string>
+
+    <string name="reminders_title">التذكيرات</string>
+    <string name="reminders_intro">فعِّل التذكيرات لتصلك في وقتها. اضبط وقتي السحور والإفطار حسب توقيتك المحلي.</string>
+    <string name="reminder_daily_name">اسم اليوم</string>
+    <string name="reminder_daily_name_hint">اسم يومي لتتذكره</string>
+    <string name="reminder_suhoor">السحور</string>
+    <string name="reminder_suhoor_hint">يذكّرك قبل انتهاء وقت السحور</string>
+    <string name="reminder_iftar">الإفطار</string>
+    <string name="reminder_iftar_hint">يخبرك عند حلول وقت الإفطار</string>
+
+    <string name="language_title">اللغة</string>
+
+    <string name="cd_back">رجوع</string>
+    <string name="cd_favorite">المفضلة</string>
+    <string name="cd_favorites">المفضلة</string>
+    <string name="cd_reminders">التذكيرات</string>
+    <string name="cd_language">اللغة</string>
+
+    <string name="channel_reminders">التذكيرات اليومية</string>
+    <string name="channel_reminders_desc">تذكيرات اسم اليوم والسحور والإفطار</string>
+    <string name="channel_announcements">الإعلانات</string>
+    <string name="channel_announcements_desc">إعلانات رمضان والمناسبات الخاصة</string>
+
+    <string name="notif_daily_title">اسم اليوم · %1$s</string>
+    <string name="notif_suhoor_title">اقترب وقت السحور</string>
+    <string name="notif_suhoor_body">أكمل طعامك قبل انتهاء وقت السحور وانوِ الصيام.</string>
+    <string name="notif_iftar_title">وقت الإفطار</string>
+    <string name="notif_iftar_body">حان وقت الإفطار — إنها لحظة مباركة يُستجاب فيها الدعاء.</string>
+</resources>

@@ -1,0 +1,695 @@
+[
+ {
+  "id": 1,
+  "name": "Ar-Rahman",
+  "meaning": "The Most Compassionate",
+  "fazilat": "Whoever recites 'Ya Rahman' 100 times after every farz prayer, Allah will remove heedlessness (negligence) and forgetfulness from his heart.",
+  "amal": "Recite 100 times every day after Fajr. The heart will find peace."
+ },
+ {
+  "id": 2,
+  "name": "Ar-Raheem",
+  "meaning": "The Most Merciful",
+  "fazilat": "Whoever recites 'Ya Raheem' 100 times after the Fajr prayer, Allah will make everyone kind toward him.",
+  "amal": "Recite 100 times after Fajr — you will gain the love of people."
+ },
+ {
+  "id": 3,
+  "name": "Al-Malik",
+  "meaning": "The Sovereign, the Absolute Ruler, King of kings",
+  "fazilat": "Whoever regularly recites 'Ya Malik' every day after Fajr, Allah will grant him wealth and honor.",
+  "amal": "Recite 121 times after sunrise."
+ },
+ {
+  "id": 4,
+  "name": "Al-Quddus",
+  "meaning": "The Pure, the Holy",
+  "fazilat": "Whoever recites 'Ya Quddus' 100 times every day, his heart will remain pure from all kinds of anxiety and illness.",
+  "amal": "100 times every day — freedom from the diseases of the heart."
+ },
+ {
+  "id": 5,
+  "name": "As-Salam",
+  "meaning": "The Giver of Peace",
+  "fazilat": "Reciting 'Ya Salam' 115 times before a sick person, Allah grants healing (shifa).",
+  "amal": "Recite over the sick person and blow on them."
+ },
+ {
+  "id": 6,
+  "name": "Al-Mu'min",
+  "meaning": "The Giver of Security",
+  "fazilat": "Whoever recites 'Ya Mu'min' 631 times, Allah will keep him safe from all calamities.",
+  "amal": "Recite in times of fear — you will gain security."
+ },
+ {
+  "id": 7,
+  "name": "Al-Muhaymin",
+  "meaning": "The Guardian, the Protector",
+  "fazilat": "Reciting 'Ya Muhaymin' 115 times after praying 2 rakats following a bath, the heart becomes illuminated.",
+  "amal": "Recite 115 times every day."
+ },
+ {
+  "id": 8,
+  "name": "Al-Aziz",
+  "meaning": "The Almighty, the Most Powerful",
+  "fazilat": "Reciting 'Ya Aziz' 40 times after Fajr every day for 40 days, Allah will make him dependent on no one.",
+  "amal": "40 times after every Fajr × 40 days."
+ },
+ {
+  "id": 9,
+  "name": "Al-Jabbar",
+  "meaning": "The Compeller, the Irresistible",
+  "fazilat": "Whoever recites 'Ya Jabbar' 226 times every day will be protected from the oppression of tyrants.",
+  "amal": "Recite to be saved from the hand of the oppressor."
+ },
+ {
+  "id": 10,
+  "name": "Al-Mutakabbir",
+  "meaning": "The Greatest, the Possessor of Majesty",
+  "fazilat": "Reciting 'Ya Mutakabbir' 10 times at the start of any task, Allah will be your helper.",
+  "amal": "Recite 10 times before beginning a task."
+ },
+ {
+  "id": 11,
+  "name": "Al-Khaliq",
+  "meaning": "The Creator",
+  "fazilat": "Reciting 'Ya Khaliq' 100 times before sleeping at night, Allah will send an angel who will worship on his behalf until the Day of Judgment and send him its reward.",
+  "amal": "100 times every night before sleeping."
+ },
+ {
+  "id": 12,
+  "name": "Al-Bari'",
+  "meaning": "The Originator, the Maker",
+  "fazilat": "A childless woman who fasts for 7 days and recites 'Ya Bari' 21 times at the time of Iftar may hope to be blessed with a child.",
+  "amal": "Regular recitation in the wish for a child."
+ },
+ {
+  "id": 13,
+  "name": "Al-Musawwir",
+  "meaning": "The Fashioner, the Shaper of forms",
+  "fazilat": "Fasting for 7 days and blowing over water 21 times at the time of Iftar and then drinking it is beneficial for those wishing for a child.",
+  "amal": "Recite over water at the time of Iftar and drink it."
+ },
+ {
+  "id": 14,
+  "name": "Al-Ghaffar",
+  "meaning": "The Ever-Forgiving",
+  "fazilat": "Reciting 'Ya Ghaffar' 100 times after the Jumu'ah prayer, sins are forgiven.",
+  "amal": "100 times after every Jumu'ah."
+ },
+ {
+  "id": 15,
+  "name": "Al-Qahhar",
+  "meaning": "The Subduer, the All-Prevailing",
+  "fazilat": "Reciting 'Ya Qahhar' subdues the desires of the self (the cravings of the nafs) and reduces greed for the world.",
+  "amal": "Recite to gain victory over the nafs."
+ },
+ {
+  "id": 16,
+  "name": "Al-Wahhab",
+  "meaning": "The Bestower, the Supreme Giver",
+  "fazilat": "Reciting 'Ya Wahhab' 100 times after Tahajjud for 3 or 7 days, Allah accepts one's supplications.",
+  "amal": "Recite along with dua after Tahajjud."
+ },
+ {
+  "id": 17,
+  "name": "Ar-Razzaq",
+  "meaning": "The Provider, the Giver of sustenance",
+  "fazilat": "Standing at the four corners of the house before Fajr and reciting 'Ya Razzaq' 10 times at each, brings blessing (barakah) in sustenance.",
+  "amal": "Recite at the four corners of the house in the morning."
+ },
+ {
+  "id": 18,
+  "name": "Al-Fattah",
+  "meaning": "The Opener, the Giver of great victory",
+  "fazilat": "Placing your hand on your chest in the morning and reciting 'Ya Fattah' 70 times, the heart becomes illuminated and success comes in one's work.",
+  "amal": "70 times in the morning with your hand on your chest."
+ },
+ {
+  "id": 19,
+  "name": "Al-'Alim",
+  "meaning": "The All-Knowing",
+  "fazilat": "Reciting 'Ya 'Alim' regularly, Allah grants knowledge and wisdom.",
+  "amal": "Recite before studying."
+ },
+ {
+  "id": 20,
+  "name": "Al-Qabid",
+  "meaning": "The Withholder, the Constrictor",
+  "fazilat": "Reciting 'Ya Qabid' for 40 days makes hunger and want bearable.",
+  "amal": "Recite for self-restraint."
+ },
+ {
+  "id": 21,
+  "name": "Al-Basit",
+  "meaning": "The Expander",
+  "fazilat": "Whoever, after the Chasht (Duha) prayer, raises his hands and recites 'Ya Basit' 10 times and then wipes his hands over his face, his poverty will be removed.",
+  "amal": "Recite it after the Chasht (Duha) prayer."
+ },
+ {
+  "id": 22,
+  "name": "Al-Khafid",
+  "meaning": "The Abaser",
+  "fazilat": "Whoever fasts for 3 days and on the 4th day recites 'Ya Khafid' 70 times, the plots of his enemies will be destroyed.",
+  "amal": "For protection from enemies."
+ },
+ {
+  "id": 23,
+  "name": "Ar-Rafi'",
+  "meaning": "The Exalter",
+  "fazilat": "Whoever recites 'Ya Rafi'' 100 times daily, his honor and dignity among people will increase.",
+  "amal": "100 times daily."
+ },
+ {
+  "id": 24,
+  "name": "Al-Mu'izz",
+  "meaning": "The Bestower of Honor",
+  "fazilat": "Whoever recites 'Ya Mu'izz' 140 times on Monday or Friday night will become honored in the eyes of people.",
+  "amal": "140 times on Monday/Friday night."
+ },
+ {
+  "id": 25,
+  "name": "Al-Mudhill",
+  "meaning": "The Humiliator",
+  "fazilat": "Whoever recites 'Ya Mudhill' 75 times in prostration (sujood) will be protected from the oppression of tyrannical enemies.",
+  "amal": "Recite it in prostration (sujood)."
+ },
+ {
+  "id": 26,
+  "name": "As-Sami'",
+  "meaning": "The All-Hearing",
+  "fazilat": "Whoever, on Thursday at the time of Chasht (Duha), recites 'Ya Sami'' 100 times without speaking to anyone, his dua will be accepted.",
+  "amal": "Recite it for the acceptance of dua."
+ },
+ {
+  "id": 27,
+  "name": "Al-Basir",
+  "meaning": "The All-Seeing",
+  "fazilat": "Whoever recites 'Ya Basir' 100 times after the Jumu'ah prayer, his eyesight will remain good and his inner vision (insight) will open.",
+  "amal": "100 times after every Jumu'ah."
+ },
+ {
+  "id": 28,
+  "name": "Al-Hakam",
+  "meaning": "The Judge",
+  "fazilat": "Whoever performs wudu at night and keeps reciting 'Ya Hakam', hidden knowledge will unfold in his heart.",
+  "amal": "Recite it at night while in a state of wudu."
+ },
+ {
+  "id": 29,
+  "name": "Al-'Adl",
+  "meaning": "The Just",
+  "fazilat": "Whoever writes 'Al-'Adl' on paper on Jumu'ah night, recites it 20 times, and keeps it with him, everyone will obey him.",
+  "amal": "For attaining justice."
+ },
+ {
+  "id": 30,
+  "name": "Al-Latif",
+  "meaning": "The Subtle One",
+  "fazilat": "Whoever recites 'Ya Latif' 133 times in difficulty or crisis, Allah will soon open an easy way out.",
+  "amal": "133 times in any crisis."
+ },
+ {
+  "id": 31,
+  "name": "Al-Khabir",
+  "meaning": "The All-Aware",
+  "fazilat": "Through regular recitation, insight into hidden matters is born.",
+  "amal": "Recite it for hidden knowledge."
+ },
+ {
+  "id": 32,
+  "name": "Al-Halim",
+  "meaning": "The Most Forbearing",
+  "fazilat": "If written on paper and placed in land or water, blessings come to the crops or the work.",
+  "amal": "Recite it to reduce anger."
+ },
+ {
+  "id": 33,
+  "name": "Al-'Azim",
+  "meaning": "The Magnificent",
+  "fazilat": "Whoever regularly recites 'Ya 'Azim', Allah will honor him in this world and the Hereafter.",
+  "amal": "Recite it daily."
+ },
+ {
+  "id": 34,
+  "name": "Al-Ghafur",
+  "meaning": "The All-Forgiving",
+  "fazilat": "Whoever recites 'Ya Ghafur' abundantly during headache, fever, and the like, will find healing and his sins will be forgiven.",
+  "amal": "For illness and the forgiveness of sins."
+ },
+ {
+  "id": 35,
+  "name": "Ash-Shakur",
+  "meaning": "The Most Appreciative",
+  "fazilat": "In physical weakness and restlessness, reciting it over water and drinking it after blowing on it is beneficial.",
+  "amal": "For gratitude and gaining strength."
+ },
+ {
+  "id": 36,
+  "name": "Al-'Ali",
+  "meaning": "The Most High",
+  "fazilat": "The dignity and knowledge of one who constantly recites 'Ya 'Ali' increases.",
+  "amal": "Recite it for advancement."
+ },
+ {
+  "id": 37,
+  "name": "Al-Kabir",
+  "meaning": "The Most Great",
+  "fazilat": "Reciting it 100 times for 7 days increases one's standing in society.",
+  "amal": "7 days x 100 times."
+ },
+ {
+  "id": 38,
+  "name": "Al-Hafiz",
+  "meaning": "The Preserver",
+  "fazilat": "Whoever recites 'Ya Hafiz' will be protected from all dangers, enemies, and accidents.",
+  "amal": "Recite it during travel and in danger."
+ },
+ {
+  "id": 39,
+  "name": "Al-Muqit",
+  "meaning": "The Sustainer",
+  "fazilat": "Reciting it when hungry or in times of scarcity of livelihood, Allah makes provision (rizq) easy.",
+  "amal": "Recite it regularly for provision (rizq)."
+ },
+ {
+  "id": 40,
+  "name": "Al-Hasib",
+  "meaning": "The Reckoner",
+  "fazilat": "Whoever recites 'Hasbiyallahul-Hasib' 70 times from Thursday evening until Friday evening will be protected from theft and robbery.",
+  "amal": "Recite it for protection."
+ },
+ {
+  "id": 41,
+  "name": "Al-Jalil",
+  "meaning": "The Majestic",
+  "fazilat": "If one writes it with saffron on paper and keeps it with oneself, one attains honor and dignity.",
+  "amal": "For increasing honor."
+ },
+ {
+  "id": 42,
+  "name": "Al-Karim",
+  "meaning": "The Most Generous",
+  "fazilat": "If one recites 'Ya Karim' at the time of sleeping, Allah grants honor in this world and the Hereafter.",
+  "amal": "Every night before sleeping."
+ },
+ {
+  "id": 43,
+  "name": "Ar-Raqib",
+  "meaning": "The Watchful",
+  "fazilat": "For the protection of family and wealth, recite it 7 times and blow.",
+  "amal": "For the protection of family and wealth."
+ },
+ {
+  "id": 44,
+  "name": "Al-Mujib",
+  "meaning": "The Responder to Prayer",
+  "fazilat": "If one recites 'Ya Mujib', duas are quickly accepted.",
+  "amal": "Recite along with dua."
+ },
+ {
+  "id": 45,
+  "name": "Al-Wasi'",
+  "meaning": "The All-Encompassing",
+  "fazilat": "If one recites it during scarcity in provision, blessing comes.",
+  "amal": "For expansion of provision."
+ },
+ {
+  "id": 46,
+  "name": "Al-Hakim",
+  "meaning": "The All-Wise",
+  "fazilat": "If one recites 'Ya Hakim' in difficult matters, one gains the right decision and wisdom.",
+  "amal": "Recite before making a decision."
+ },
+ {
+  "id": 47,
+  "name": "Al-Wadud",
+  "meaning": "The Loving",
+  "fazilat": "If a husband and wife recite it 1000 times over food, blow on it, and eat, their love increases.",
+  "amal": "For marital love."
+ },
+ {
+  "id": 48,
+  "name": "Al-Majid",
+  "meaning": "The Most Glorious",
+  "fazilat": "With regular recitation, the heart is illuminated and honor increases.",
+  "amal": "Recite daily."
+ },
+ {
+  "id": 49,
+  "name": "Al-Ba'ith",
+  "meaning": "The Resurrector",
+  "fazilat": "If one recites it 100 times with the hand on the chest before sleeping, the heart comes alive.",
+  "amal": "At night before sleeping."
+ },
+ {
+  "id": 50,
+  "name": "Ash-Shahid",
+  "meaning": "The Witness",
+  "fazilat": "If one recites it while placing the hand on the head of a disobedient child or a rebellious spouse, there is hope for their reform.",
+  "amal": "Recite for reform."
+ },
+ {
+  "id": 51,
+  "name": "Al-Haqq",
+  "meaning": "The Absolute Truth",
+  "fazilat": "To recover a lost item, if one recites it facing the four directions, help comes.",
+  "amal": "For a lost item."
+ },
+ {
+  "id": 52,
+  "name": "Al-Wakil",
+  "meaning": "The Trustee, Disposer of Affairs",
+  "fazilat": "If one recites it during storms and lightning or in times of fear, Allah protects.",
+  "amal": "In all affairs with tawakkul (trust in Allah)."
+ },
+ {
+  "id": 53,
+  "name": "Al-Qawi",
+  "meaning": "The Most Strong",
+  "fazilat": "If one recites 'Ya Qawi' when confronting an enemy, victory is attained.",
+  "amal": "For strength and victory."
+ },
+ {
+  "id": 54,
+  "name": "Al-Matin",
+  "meaning": "The Firm",
+  "fazilat": "With regular recitation, character and faith become firm.",
+  "amal": "For firmness of faith."
+ },
+ {
+  "id": 55,
+  "name": "Al-Wali",
+  "meaning": "The Protecting Guardian",
+  "fazilat": "Allah makes the one who recites 'Ya Wali' His wali (friend).",
+  "amal": "Recite daily."
+ },
+ {
+  "id": 56,
+  "name": "Al-Hamid",
+  "meaning": "The Praiseworthy",
+  "fazilat": "If one recites it 99 times, good character and praiseworthy qualities are attained.",
+  "amal": "99 times daily."
+ },
+ {
+  "id": 57,
+  "name": "Al-Muhsi",
+  "meaning": "The Reckoner",
+  "fazilat": "If one recites it 20 times before an exam, calculation and memory improve.",
+  "amal": "For increasing memory."
+ },
+ {
+  "id": 58,
+  "name": "Al-Mubdi'",
+  "meaning": "The Originator",
+  "fazilat": "If one places the hand on the belly of a pregnant mother and recites it 99 times, the unborn child remains protected.",
+  "amal": "Recite during pregnancy."
+ },
+ {
+  "id": 59,
+  "name": "Al-Mu'id",
+  "meaning": "The Restorer",
+  "fazilat": "To recover a lost person or item, recite it 70 times at the four corners of the house.",
+  "amal": "To recover what is lost."
+ },
+ {
+  "id": 60,
+  "name": "Al-Muhyi",
+  "meaning": "The Giver of Life",
+  "fazilat": "In a serious illness, if one places the hand on the chest and recites it 7 times, healing comes.",
+  "amal": "For the recovery of the sick."
+ },
+ {
+  "id": 61,
+  "name": "Al-Mumit",
+  "meaning": "The Giver of Death",
+  "fazilat": "Reciting it in bed to subdue the wrongful desires of the nafs reduces the pull toward sin.",
+  "amal": "Recite it against the nafs."
+ },
+ {
+  "id": 62,
+  "name": "Al-Hayy",
+  "meaning": "The Ever-Living",
+  "fazilat": "Reciting 'Ya Hayyu Ya Qayyum' before a sick person brings swift recovery.",
+  "amal": "Recite it for the sick."
+ },
+ {
+  "id": 63,
+  "name": "Al-Qayyum",
+  "meaning": "The Self-Subsisting",
+  "fazilat": "Reciting 'Hayyu Qayyum' together is regarded as Ism-e-A'zam — a special means for the acceptance of dua.",
+  "amal": "Recite it before dua."
+ },
+ {
+  "id": 64,
+  "name": "Al-Wajid",
+  "meaning": "The Self-Sufficient / The One who finds all",
+  "fazilat": "Reciting 'Ya Wajid' over food brings blessing.",
+  "amal": "For blessing in food."
+ },
+ {
+  "id": 65,
+  "name": "Al-Majid",
+  "meaning": "The Glorious",
+  "fazilat": "Recite it regularly for peace of heart.",
+  "amal": "Recite it for tranquility."
+ },
+ {
+  "id": 66,
+  "name": "Al-Wahid",
+  "meaning": "The One",
+  "fazilat": "Sitting in seclusion and reciting 'Ya Wahid' 1000 times removes the fear from the heart.",
+  "amal": "To gain focus and remove fear."
+ },
+ {
+  "id": 67,
+  "name": "Al-Ahad",
+  "meaning": "The Unique",
+  "fazilat": "Reciting it regularly at home lets one feel Allah's unseen help.",
+  "amal": "Recite it with full concentration."
+ },
+ {
+  "id": 68,
+  "name": "As-Samad",
+  "meaning": "The Eternal, Independent of all",
+  "fazilat": "Reciting 'Ya Samad' many times in sujood for any need fulfills that need.",
+  "amal": "To fulfill a need, in sujood."
+ },
+ {
+  "id": 69,
+  "name": "Al-Qadir",
+  "meaning": "The All-Powerful",
+  "fazilat": "Recite 'Ya Qadir' 41 times to destroy the plots of the enemy.",
+  "amal": "To be safe from the enemy's harm."
+ },
+ {
+  "id": 70,
+  "name": "Al-Muqtadir",
+  "meaning": "The Omnipotent",
+  "fazilat": "Reciting it 20 times upon waking from sleep makes the day blessed.",
+  "amal": "20 times in the morning."
+ },
+ {
+  "id": 71,
+  "name": "Al-Muqaddim",
+  "meaning": "The Expediter / The One who brings forward",
+  "fazilat": "Reciting it 184 times in war or a contest brings victory.",
+  "amal": "For victory in a contest."
+ },
+ {
+  "id": 72,
+  "name": "Al-Mu'akhkhir",
+  "meaning": "The Delayer",
+  "fazilat": "Reciting it 100 times daily increases the love of Allah in the heart.",
+  "amal": "100 times daily."
+ },
+ {
+  "id": 73,
+  "name": "Al-Awwal",
+  "meaning": "The First",
+  "fazilat": "Reciting it 40 times for 40 days lets the needy receive provision and the childless obtain a child.",
+  "amal": "40 times for 40 days."
+ },
+ {
+  "id": 74,
+  "name": "Al-Akhir",
+  "meaning": "The Last",
+  "fazilat": "Reciting it regularly reduces attachment to this world and increases longing for the Hereafter.",
+  "amal": "Recite it regularly."
+ },
+ {
+  "id": 75,
+  "name": "Az-Zahir",
+  "meaning": "The Manifest",
+  "fazilat": "Reciting it 500 times after Jumu'ah brings the manifestation of noor (light) in the heart.",
+  "amal": "After every Jumu'ah."
+ },
+ {
+  "id": 76,
+  "name": "Al-Batin",
+  "meaning": "The Knower of the Hidden",
+  "fazilat": "Reciting it 33 times, three times a day, brings inspiration about hidden matters.",
+  "amal": "3 x 33 times daily."
+ },
+ {
+  "id": 77,
+  "name": "Al-Wali",
+  "meaning": "The Sole Governor",
+  "fazilat": "Reciting it at home protects the home from calamity and the whisperings of Satan.",
+  "amal": "Recite it regularly at home."
+ },
+ {
+  "id": 78,
+  "name": "Al-Muta'ali",
+  "meaning": "The Most High",
+  "fazilat": "Reciting 'Ya Muta'ali' in an impossible task, Allah makes it easy.",
+  "amal": "Recite it in a difficult task."
+ },
+ {
+  "id": 79,
+  "name": "Al-Barr",
+  "meaning": "The Source of All Goodness",
+  "fazilat": "For the well-being of a child, recite it 7 times and blow.",
+  "amal": "For the well-being of a child."
+ },
+ {
+  "id": 80,
+  "name": "At-Tawwab",
+  "meaning": "The Acceptor of Repentance",
+  "fazilat": "Reciting 'Ya Tawwab' in sujood while seeking forgiveness of sins brings the acceptance of repentance.",
+  "amal": "Recite it with repentance."
+ },
+ {
+  "id": 81,
+  "name": "Al-Muntaqim",
+  "meaning": "The Avenger",
+  "fazilat": "If one recites this in prostration after the Jumu'ah prayer against an oppressor, Allah takes revenge on his behalf.",
+  "amal": "For redress against injustice."
+ },
+ {
+  "id": 82,
+  "name": "Al-'Afuww",
+  "meaning": "The Pardoner",
+  "fazilat": "Whoever recites 'Ya 'Afuww' abundantly will have his sins forgiven.",
+  "amal": "Many times every day."
+ },
+ {
+  "id": 83,
+  "name": "Ar-Ra'uf",
+  "meaning": "The Most Compassionate",
+  "fazilat": "If you recite it 10 times before an angry person, his anger will subside.",
+  "amal": "For establishing peace."
+ },
+ {
+  "id": 84,
+  "name": "Malikul-Mulk",
+  "meaning": "The Owner of All Sovereignty",
+  "fazilat": "Regular recitation brings honor and prosperity.",
+  "amal": "Recite regularly."
+ },
+ {
+  "id": 85,
+  "name": "Dhul-Jalali wal-Ikram",
+  "meaning": "The Lord of Majesty and Honor",
+  "fazilat": "Whoever recites it daily becomes wealthy in this world and the Hereafter.",
+  "amal": "Recite every day."
+ },
+ {
+  "id": 86,
+  "name": "Al-Muqsit",
+  "meaning": "The Just",
+  "fazilat": "If there is conflict among children, reciting it 70 times restores harmony.",
+  "amal": "For family peace."
+ },
+ {
+  "id": 87,
+  "name": "Al-Jami'",
+  "meaning": "The Gatherer",
+  "fazilat": "Recite it to bring back a lost person or to reunite a separated family.",
+  "amal": "For reunion."
+ },
+ {
+  "id": 88,
+  "name": "Al-Ghani",
+  "meaning": "The Self-Sufficient, The Rich",
+  "fazilat": "Reciting it 1000 times daily removes poverty and brings contentment and independence to the heart.",
+  "amal": "For removing poverty."
+ },
+ {
+  "id": 89,
+  "name": "Al-Mughni",
+  "meaning": "The Enricher",
+  "fazilat": "If you recite it 1000 times for 10 days, Allah grants wealth and riches.",
+  "amal": "10 days x 1000 times."
+ },
+ {
+  "id": 90,
+  "name": "Al-Mani'",
+  "meaning": "The Preventer",
+  "fazilat": "To remove household discord, recite it 20 times in bed.",
+  "amal": "For removing discord."
+ },
+ {
+  "id": 91,
+  "name": "Ad-Darr",
+  "meaning": "The Distresser",
+  "fazilat": "To be protected from the harm of enemies, recite it 100 times on Thursday night.",
+  "amal": "Recite on Thursday night."
+ },
+ {
+  "id": 92,
+  "name": "An-Nafi'",
+  "meaning": "The Benefactor",
+  "fazilat": "If you recite it 41 times before setting out on a journey or task, success will come.",
+  "amal": "Recite before travel."
+ },
+ {
+  "id": 93,
+  "name": "An-Nur",
+  "meaning": "The Light",
+  "fazilat": "Reciting 'Ya Nur' along with Surah An-Nur causes the light of Allah to manifest in the heart.",
+  "amal": "Recite at night."
+ },
+ {
+  "id": 94,
+  "name": "Al-Hadi",
+  "meaning": "The Guide",
+  "fazilat": "For seeking guidance, recite it abundantly in prostration.",
+  "amal": "For guidance."
+ },
+ {
+  "id": 95,
+  "name": "Al-Badi'",
+  "meaning": "The Incomparable Originator",
+  "fazilat": "For an impossible task, reciting 'Ya Badi'as-Samawati wal-Ard' 70 times brings a solution.",
+  "amal": "70 times for a difficult task."
+ },
+ {
+  "id": 96,
+  "name": "Al-Baqi",
+  "meaning": "The Everlasting",
+  "fazilat": "With regular recitation, one's deeds are prolonged and accepted.",
+  "amal": "Recite regularly."
+ },
+ {
+  "id": 97,
+  "name": "Al-Warith",
+  "meaning": "The Inheritor",
+  "fazilat": "Reciting it 100 times before sunrise brings worldly and spiritual inheritance.",
+  "amal": "100 times before Fajr."
+ },
+ {
+  "id": 98,
+  "name": "Ar-Rashid",
+  "meaning": "The Guide to the Right Path",
+  "fazilat": "Reciting it 1000 times between Maghrib and Isha before a difficult decision helps one find the right path.",
+  "amal": "Recite before a decision."
+ },
+ {
+  "id": 99,
+  "name": "As-Sabur",
+  "meaning": "The Most Patient",
+  "fazilat": "Reciting 'Ya Sabur' 3000 times in times of hardship brings patience and deliverance.",
+  "amal": "For patience in hardship."
+ }
+]

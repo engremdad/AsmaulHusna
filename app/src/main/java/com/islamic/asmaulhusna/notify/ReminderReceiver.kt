@@ -3,7 +3,11 @@ package com.islamic.asmaulhusna.notify
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
+import com.islamic.asmaulhusna.data.ContentStore
+import com.islamic.asmaulhusna.data.localized
+import com.islamic.asmaulhusna.ui.LocaleStore
 
 /** Fires when a reminder alarm goes off: posts the notification, then re-arms for tomorrow. */
 class ReminderReceiver : BroadcastReceiver() {
@@ -15,28 +19,30 @@ class ReminderReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         val type = ReminderType.fromKey(intent.getStringExtra(EXTRA_TYPE)) ?: return
+        val l = LocaleStore.wrap(context) // render notification text in the chosen language
 
         when (type) {
             ReminderType.DAILY_NAME -> {
                 val name = AsmaulHusnaRepository.today()
+                val c = name.localized(ContentStore.forLanguage(context, LocaleStore.language(context).tag))
                 NotificationHelper.show(
                     context,
                     NotificationHelper.CHANNEL_REMINDERS,
                     type.notifId,
-                    title = "আজকের নাম · ${name.transliteration}",
-                    body = "${name.arabic} — ${name.banglaName} (${name.meaning})",
+                    title = l.getString(R.string.notif_daily_title, name.transliteration),
+                    body = "${name.arabic} — ${c.name} (${c.meaning})",
                     openNameId = name.id
                 )
             }
             ReminderType.SUHOOR -> NotificationHelper.show(
                 context, NotificationHelper.CHANNEL_REMINDERS, type.notifId,
-                title = "সাহরির সময় ঘনিয়ে এসেছে",
-                body = "সাহরি শেষ হওয়ার আগে খাবার সম্পন্ন করুন এবং রোজার নিয়ত করুন।"
+                title = l.getString(R.string.notif_suhoor_title),
+                body = l.getString(R.string.notif_suhoor_body)
             )
             ReminderType.IFTAR -> NotificationHelper.show(
                 context, NotificationHelper.CHANNEL_REMINDERS, type.notifId,
-                title = "ইফতারের সময়",
-                body = "রোজা ভাঙার সময় হয়েছে — এটি দোয়া কবুলের বরকতময় মুহূর্ত।"
+                title = l.getString(R.string.notif_iftar_title),
+                body = l.getString(R.string.notif_iftar_body)
             )
         }
 

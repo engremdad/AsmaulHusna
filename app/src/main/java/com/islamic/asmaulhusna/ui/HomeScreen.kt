@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
@@ -19,12 +20,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.data.AsmaulHusna
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
+import com.islamic.asmaulhusna.data.NameContent
+import com.islamic.asmaulhusna.data.localized
 import com.islamic.asmaulhusna.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -32,16 +37,19 @@ import com.islamic.asmaulhusna.ui.theme.*
 fun HomeScreen(
     onNameClick: (Int) -> Unit,
     onFavoritesClick: () -> Unit,
-    onSettingsClick: () -> Unit
+    onSettingsClick: () -> Unit,
+    onLanguageClick: () -> Unit
 ) {
     var query by remember { mutableStateOf("") }
     val all = AsmaulHusnaRepository.names
-    val filtered = remember(query) {
+    val content = rememberNameContent()
+    val filtered = remember(query, content) {
         if (query.isBlank()) all
         else all.filter {
+            val c = it.localized(content)
             it.transliteration.contains(query, true) ||
-                    it.banglaName.contains(query, true) ||
-                    it.meaning.contains(query, true) ||
+                    c.name.contains(query, true) ||
+                    c.meaning.contains(query, true) ||
                     it.arabic.contains(query)
         }
     }
@@ -54,7 +62,7 @@ fun HomeScreen(
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text("أَسْمَاءُ ٱللَّٰه", fontSize = 24.sp, fontWeight = FontWeight.Bold,
                             color = Gold)
-                        Text("আসমাউল হুসনা · ৯৯ নাম", fontSize = 11.sp,
+                        Text(stringResource(R.string.app_subtitle), fontSize = 11.sp,
                             letterSpacing = 2.sp, color = CreamDim)
                     }
                 },
@@ -63,11 +71,14 @@ fun HomeScreen(
                     titleContentColor = Cream
                 ),
                 actions = {
+                    IconButton(onClick = onLanguageClick) {
+                        Icon(Icons.Filled.Language, stringResource(R.string.cd_language), tint = Gold)
+                    }
                     IconButton(onClick = onSettingsClick) {
-                        Icon(Icons.Filled.Notifications, "রিমাইন্ডার", tint = Gold)
+                        Icon(Icons.Filled.Notifications, stringResource(R.string.cd_reminders), tint = Gold)
                     }
                     IconButton(onClick = onFavoritesClick) {
-                        Icon(Icons.Filled.Favorite, "প্রিয় নাম", tint = Gold)
+                        Icon(Icons.Filled.Favorite, stringResource(R.string.cd_favorites), tint = Gold)
                     }
                 }
             )
@@ -82,20 +93,20 @@ fun HomeScreen(
             horizontalArrangement = Arrangement.spacedBy(9.dp)
         ) {
             item(span = { GridItemSpan(3) }) {
-                TodayCard(today, onClick = { onNameClick(today.id) })
+                TodayCard(today, today.localized(content), onClick = { onNameClick(today.id) })
             }
             item(span = { GridItemSpan(3) }) {
                 SearchField(query, onChange = { query = it })
             }
             itemsIndexed(filtered) { _, name ->
-                NameGridCard(name, onClick = { onNameClick(name.id) })
+                NameGridCard(name, name.localized(content), onClick = { onNameClick(name.id) })
             }
         }
     }
 }
 
 @Composable
-private fun TodayCard(name: AsmaulHusna, onClick: () -> Unit) {
+private fun TodayCard(name: AsmaulHusna, loc: NameContent, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -115,15 +126,17 @@ private fun TodayCard(name: AsmaulHusna, onClick: () -> Unit) {
             Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("আজকের নাম · TODAY", color = Gold, fontSize = 10.sp,
+            Text(stringResource(R.string.today_label).uppercase(), color = Gold, fontSize = 10.sp,
                 letterSpacing = 3.sp, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(10.dp))
             Text(name.arabic, fontSize = 42.sp, color = Cream,
                 fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
             Spacer(Modifier.height(8.dp))
-            Text("${name.transliteration} · ${name.banglaName}",
+            val todaySub = if (loc.name.equals(name.transliteration, true)) name.transliteration
+                else "${name.transliteration} · ${loc.name}"
+            Text(todaySub,
                 color = GoldSoft, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
-            Text(name.meaning, color = CreamDim, fontSize = 13.sp,
+            Text(loc.meaning, color = CreamDim, fontSize = 13.sp,
                 textAlign = TextAlign.Center)
         }
     }
@@ -136,7 +149,7 @@ private fun SearchField(query: String, onChange: (String) -> Unit) {
         value = query,
         onValueChange = onChange,
         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
-        placeholder = { Text("নাম বা অর্থ খুঁজুন…", color = CreamDim) },
+        placeholder = { Text(stringResource(R.string.search_hint), color = CreamDim) },
         leadingIcon = { Icon(Icons.Filled.Search, null, tint = GoldDim) },
         singleLine = true,
         shape = RoundedCornerShape(14.dp),
@@ -153,7 +166,7 @@ private fun SearchField(query: String, onChange: (String) -> Unit) {
 }
 
 @Composable
-private fun NameGridCard(name: AsmaulHusna, onClick: () -> Unit) {
+private fun NameGridCard(name: AsmaulHusna, loc: NameContent, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .height(118.dp)
@@ -173,7 +186,7 @@ private fun NameGridCard(name: AsmaulHusna, onClick: () -> Unit) {
             Text(name.arabic, fontSize = 22.sp, fontWeight = FontWeight.Bold,
                 color = GoldSoft, textAlign = TextAlign.Center, maxLines = 1)
             Spacer(Modifier.height(4.dp))
-            Text(name.banglaName, fontSize = 11.sp, textAlign = TextAlign.Center,
+            Text(loc.name, fontSize = 11.sp, textAlign = TextAlign.Center,
                 color = CreamDim, maxLines = 1)
         }
     }

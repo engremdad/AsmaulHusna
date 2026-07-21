@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">اسماءُ الحسنیٰ</string>
+
+    <string name="app_subtitle">اسماء الحسنیٰ · ۹۹ نام</string>
+    <string name="today_label">آج کا نام</string>
+    <string name="search_hint">نام یا معنی تلاش کریں…</string>
+
+    <string name="section_meaning">معنی</string>
+    <string name="section_virtue">فضیلت</string>
+    <string name="section_practice">عمل</string>
+    <string name="action_listen">سنیں</string>
+
+    <string name="favorites_title">پسندیدہ</string>
+    <string name="favorites_empty">ابھی تک کوئی نام شامل نہیں کیا گیا۔</string>
+
+    <string name="reminders_title">یاد دہانیاں</string>
+    <string name="reminders_intro">بروقت اطلاع کے لیے یاد دہانیاں آن کریں۔ سحری اور افطار کا وقت اپنے مقامی وقت کے مطابق خود مقرر کریں۔</string>
+    <string name="reminder_daily_name">آج کا نام</string>
+    <string name="reminder_daily_name_hint">یاد رکھنے کے لیے روزانہ ایک نام</string>
+    <string name="reminder_suhoor">سحری</string>
+    <string name="reminder_suhoor_hint">سحری ختم ہونے سے پہلے یاد دلائے گا</string>
+    <string name="reminder_iftar">افطار</string>
+    <string name="reminder_iftar_hint">افطار کا وقت ہونے پر بتائے گا</string>
+
+    <string name="language_title">زبان</string>
+
+    <string name="cd_back">واپس</string>
+    <string name="cd_favorite">پسندیدہ</string>
+    <string name="cd_favorites">پسندیدہ</string>
+    <string name="cd_reminders">یاد دہانیاں</string>
+    <string name="cd_language">زبان</string>
+
+    <string name="channel_reminders">روزانہ یاد دہانیاں</string>
+    <string name="channel_reminders_desc">آج کا نام، سحری اور افطار کی یاد دہانیاں</string>
+    <string name="channel_announcements">اعلانات</string>
+    <string name="channel_announcements_desc">رمضان اور خاص اعلانات</string>
+
+    <string name="notif_daily_title">آج کا نام · %1$s</string>
+    <string name="notif_suhoor_title">سحری کا وقت قریب ہے</string>
+    <string name="notif_suhoor_body">سحری ختم ہونے سے پہلے کھانا مکمل کریں اور روزے کی نیت کریں۔</string>
+    <string name="notif_iftar_title">افطار کا وقت</string>
+    <string name="notif_iftar_body">روزہ افطار کرنے کا وقت ہو گیا — یہ دعا کی قبولیت کا بابرکت لمحہ ہے۔</string>
+</resources>
