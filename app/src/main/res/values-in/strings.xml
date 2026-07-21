@@ -66,4 +66,5 @@
     <string name="text_size_sample">Contoh teks</string>
     <string name="cd_text_smaller">Teks lebih kecil</string>
     <string name="cd_text_larger">Teks lebih besar</string>
+    <string name="zikir_show_hint">Tampilkan penghitung ketuk pada setiap nama</string>
 </resources>

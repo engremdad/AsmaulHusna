@@ -66,4 +66,5 @@
     <string name="text_size_sample">Örnek metin</string>
     <string name="cd_text_smaller">Daha küçük yazı</string>
     <string name="cd_text_larger">Daha büyük yazı</string>
+    <string name="zikir_show_hint">Her isimde dokunma sayacını göster</string>
 </resources>

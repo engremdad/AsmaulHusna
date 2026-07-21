@@ -109,6 +109,12 @@ fun SettingsScreen(
 
             // ── Display ───────────────────────────────────────────────
             SectionHeader(stringResource(R.string.section_display))
+            ToggleRow(
+                title = stringResource(R.string.section_zikir),
+                hint = stringResource(R.string.zikir_show_hint),
+                checked = ZikirPrefs.isCounterShown(context),
+                onToggle = { ZikirPrefs.setCounterShown(context, it) }
+            )
             TextSizeRow(
                 scale = TextScaleStore.scale(context),
                 onDecrease = {
@@ -178,6 +184,36 @@ private fun TextSizeRow(scale: Float, onDecrease: () -> Unit, onIncrease: () -> 
         Text(
             stringResource(R.string.text_size_sample),
             color = CreamDim, fontSize = 15.sp
+        )
+    }
+}
+
+@Composable
+private fun ToggleRow(title: String, hint: String, checked: Boolean, onToggle: (Boolean) -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .background(SectGround)
+            .border(1.dp, EmeraldLine, RoundedCornerShape(16.dp))
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(Modifier.weight(1f)) {
+            Text(title, color = Cream, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+            Text(hint, color = CreamDim, fontSize = 12.sp)
+        }
+        Switch(
+            checked = checked,
+            onCheckedChange = onToggle,
+            colors = SwitchDefaults.colors(
+                checkedThumbColor = GoldInk,
+                checkedTrackColor = Gold,
+                checkedBorderColor = Gold,
+                uncheckedThumbColor = CreamDim,
+                uncheckedTrackColor = EmeraldRow,
+                uncheckedBorderColor = EmeraldLine
+            )
         )
     }
 }

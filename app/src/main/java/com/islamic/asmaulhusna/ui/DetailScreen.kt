@@ -160,14 +160,16 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
             }
             Spacer(Modifier.height(20.dp))
 
-            ZikirCounter(
-                count = zikir.countFor(nameId),
-                target = zikir.targetFor(nameId),
-                onTap = { zikir.increment(nameId) },
-                onReset = { zikir.reset(nameId) },
-                onSetTarget = { zikir.setTarget(nameId, it) }
-            )
-            Spacer(Modifier.height(8.dp))
+            if (ZikirPrefs.isCounterShown(context)) {
+                ZikirCounter(
+                    count = zikir.countFor(nameId),
+                    target = zikir.targetFor(nameId),
+                    onTap = { zikir.increment(nameId) },
+                    onReset = { zikir.reset(nameId) },
+                    onSetTarget = { zikir.setTarget(nameId, it) }
+                )
+                Spacer(Modifier.height(8.dp))
+            }
 
             SectionCard(stringResource(R.string.section_meaning), loc.meaning)
             SectionCard(stringResource(R.string.section_virtue), loc.fazilat)

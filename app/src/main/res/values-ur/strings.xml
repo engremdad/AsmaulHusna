@@ -66,4 +66,5 @@
     <string name="text_size_sample">نمونہ متن</string>
     <string name="cd_text_smaller">چھوٹا متن</string>
     <string name="cd_text_larger">بڑا متن</string>
+    <string name="zikir_show_hint">ہر نام پر ٹیپ کاؤنٹر دکھائیں</string>
 </resources>

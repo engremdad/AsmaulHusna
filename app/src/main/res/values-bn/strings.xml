@@ -66,4 +66,5 @@
     <string name="text_size_sample">নমুনা লেখা</string>
     <string name="cd_text_smaller">ছোট লেখা</string>
     <string name="cd_text_larger">বড় লেখা</string>
+    <string name="zikir_show_hint">প্রতিটি নামে ট্যাপ কাউন্টার দেখান</string>
 </resources>

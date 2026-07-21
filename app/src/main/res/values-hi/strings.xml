@@ -66,4 +66,5 @@
     <string name="text_size_sample">नमूना टेक्स्ट</string>
     <string name="cd_text_smaller">छोटा टेक्स्ट</string>
     <string name="cd_text_larger">बड़ा टेक्स्ट</string>
+    <string name="zikir_show_hint">हर नाम पर टैप काउंटर दिखाएँ</string>
 </resources>

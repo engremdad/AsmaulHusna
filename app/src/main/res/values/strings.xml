@@ -49,6 +49,7 @@
     <string name="section_language">Language</string>
     <string name="section_reminders">Reminders</string>
     <string name="section_display">Display</string>
+    <string name="zikir_show_hint">Show the tap counter on each name</string>
     <string name="text_size_title">Text size</string>
     <string name="text_size_sample">Sample text</string>
     <string name="cd_text_smaller">Smaller text</string>
