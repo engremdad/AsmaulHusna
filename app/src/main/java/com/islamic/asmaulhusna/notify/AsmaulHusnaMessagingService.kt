@@ -17,6 +17,7 @@ class AsmaulHusnaMessagingService : FirebaseMessagingService() {
     override fun onNewToken(token: String) {
         // Send this to your backend/marketing tool to target this device or a topic.
         Log.d(TAG, "FCM registration token: $token")
+        TokenUploader.upload(token)
     }
 
     override fun onMessageReceived(message: RemoteMessage) {

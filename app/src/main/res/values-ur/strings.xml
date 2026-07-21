@@ -22,7 +22,10 @@
     <string name="reminder_iftar">افطار</string>
     <string name="reminder_iftar_hint">افطار کا وقت ہونے پر بتائے گا</string>
 
+    <string name="settings_title">ترتیبات</string>
     <string name="language_title">زبان</string>
+    <string name="section_language">زبان</string>
+    <string name="section_reminders">یاد دہانیاں</string>
 
     <string name="cd_back">واپس</string>
     <string name="cd_favorite">پسندیدہ</string>
@@ -40,4 +43,27 @@
     <string name="notif_suhoor_body">سحری ختم ہونے سے پہلے کھانا مکمل کریں اور روزے کی نیت کریں۔</string>
     <string name="notif_iftar_title">افطار کا وقت</string>
     <string name="notif_iftar_body">روزہ افطار کرنے کا وقت ہو گیا — یہ دعا کی قبولیت کا بابرکت لمحہ ہے۔</string>
+
+    <string name="section_zikir">ذکر کاؤنٹر</string>
+    <string name="zikir_hint">اپنے اذکار گننے کے لیے ٹیپ کریں</string>
+    <string name="zikir_reset">ری سیٹ</string>
+    <string name="cd_zikir_count">ذکر کی تعداد</string>
+    <string name="zikir_set_target">ہدف مقرر کریں</string>
+    <string name="zikir_target_title">ذکر کا ہدف</string>
+    <string name="zikir_target_hint">منتخب کریں کہ کتنی بار پڑھنا ہے، یا اپنا عدد درج کریں۔</string>
+    <string name="zikir_target_custom">اپنا ہدف</string>
+    <string name="zikir_target_none">کوئی ہدف نہیں</string>
+    <string name="zikir_target_done">ہدف پورا ہو گیا</string>
+    <string name="action_save">محفوظ کریں</string>
+    <string name="action_cancel">منسوخ کریں</string>
+    <string name="action_share">شیئر کریں</string>
+    <string name="action_copy">کاپی کریں</string>
+    <string name="copied">کاپی ہو گیا</string>
+    <string name="cd_share">یہ نام شیئر کریں</string>
+    <string name="share_subject">اسماء الحسنیٰ</string>
+    <string name="section_display">ڈسپلے</string>
+    <string name="text_size_title">متن کا سائز</string>
+    <string name="text_size_sample">نمونہ متن</string>
+    <string name="cd_text_smaller">چھوٹا متن</string>
+    <string name="cd_text_larger">بڑا متن</string>
 </resources>

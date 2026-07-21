@@ -22,7 +22,10 @@
     <string name="reminder_iftar">İftar</string>
     <string name="reminder_iftar_hint">İftar vakti geldiğinde haber verir</string>
 
+    <string name="settings_title">Ayarlar</string>
     <string name="language_title">Dil</string>
+    <string name="section_language">Dil</string>
+    <string name="section_reminders">Hatırlatıcılar</string>
 
     <string name="cd_back">Geri</string>
     <string name="cd_favorite">Favori</string>
@@ -40,4 +43,27 @@
     <string name="notif_suhoor_body">Sahur bitmeden yemeğinizi tamamlayın ve oruca niyet edin.</string>
     <string name="notif_iftar_title">İftar vakti</string>
     <string name="notif_iftar_body">Orucunu açma vakti geldi — duaların kabul olduğu mübarek bir an.</string>
+
+    <string name="section_zikir">Zikir Sayacı</string>
+    <string name="zikir_hint">Zikirlerini saymak için dokun</string>
+    <string name="zikir_reset">Sıfırla</string>
+    <string name="cd_zikir_count">Zikir sayısı</string>
+    <string name="zikir_set_target">Hedef belirle</string>
+    <string name="zikir_target_title">Zikir hedefi</string>
+    <string name="zikir_target_hint">Kaç kez çekeceğini seç ya da kendi sayını gir.</string>
+    <string name="zikir_target_custom">Özel hedef</string>
+    <string name="zikir_target_none">Hedef yok</string>
+    <string name="zikir_target_done">Hedefe ulaşıldı</string>
+    <string name="action_save">Kaydet</string>
+    <string name="action_cancel">İptal</string>
+    <string name="action_share">Paylaş</string>
+    <string name="action_copy">Kopyala</string>
+    <string name="copied">Kopyalandı</string>
+    <string name="cd_share">Bu ismi paylaş</string>
+    <string name="share_subject">Esma-ül Hüsna</string>
+    <string name="section_display">Görünüm</string>
+    <string name="text_size_title">Yazı boyutu</string>
+    <string name="text_size_sample">Örnek metin</string>
+    <string name="cd_text_smaller">Daha küçük yazı</string>
+    <string name="cd_text_larger">Daha büyük yazı</string>
 </resources>

@@ -11,6 +11,23 @@
     <string name="section_virtue">Virtue</string>
     <string name="section_practice">Practice</string>
     <string name="action_listen">Listen</string>
+    <string name="section_zikir">Zikir Counter</string>
+    <string name="zikir_hint">Tap to count your recitations</string>
+    <string name="zikir_reset">Reset</string>
+    <string name="cd_zikir_count">Zikir count</string>
+    <string name="zikir_set_target">Set target</string>
+    <string name="zikir_target_title">Zikir target</string>
+    <string name="zikir_target_hint">Choose how many times to recite, or enter your own.</string>
+    <string name="zikir_target_custom">Custom target</string>
+    <string name="zikir_target_none">No target</string>
+    <string name="zikir_target_done">Target reached</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_share">Share</string>
+    <string name="action_copy">Copy</string>
+    <string name="copied">Copied</string>
+    <string name="cd_share">Share this name</string>
+    <string name="share_subject">Asma al-Husna</string>
 
     <!-- Favorites -->
     <string name="favorites_title">Favorites</string>
@@ -26,8 +43,16 @@
     <string name="reminder_iftar">Iftar</string>
     <string name="reminder_iftar_hint">Tells you when it is time for Iftar</string>
 
-    <!-- Language -->
+    <!-- Settings & Language -->
+    <string name="settings_title">Settings</string>
     <string name="language_title">Language</string>
+    <string name="section_language">Language</string>
+    <string name="section_reminders">Reminders</string>
+    <string name="section_display">Display</string>
+    <string name="text_size_title">Text size</string>
+    <string name="text_size_sample">Sample text</string>
+    <string name="cd_text_smaller">Smaller text</string>
+    <string name="cd_text_larger">Larger text</string>
 
     <!-- Content descriptions -->
     <string name="cd_back">Back</string>

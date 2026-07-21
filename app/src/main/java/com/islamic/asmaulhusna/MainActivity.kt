@@ -9,15 +9,19 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Density
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.NavType
 import com.islamic.asmaulhusna.data.FavoritesStore
+import com.islamic.asmaulhusna.data.ZikirStore
 import com.islamic.asmaulhusna.notify.NotificationHelper
 import com.islamic.asmaulhusna.notify.ReminderScheduler
 import com.islamic.asmaulhusna.ui.DetailScreen
@@ -25,7 +29,8 @@ import com.islamic.asmaulhusna.ui.FavoritesScreen
 import com.islamic.asmaulhusna.ui.HomeScreen
 import com.islamic.asmaulhusna.ui.LanguageScreen
 import com.islamic.asmaulhusna.ui.LocaleStore
-import com.islamic.asmaulhusna.ui.NotificationSettingsScreen
+import com.islamic.asmaulhusna.ui.SettingsScreen
+import com.islamic.asmaulhusna.ui.TextScaleStore
 import com.islamic.asmaulhusna.ui.theme.AsmaulHusnaTheme
 
 class MainActivity : ComponentActivity() {
@@ -50,6 +55,7 @@ class MainActivity : ComponentActivity() {
             AsmaulHusnaTheme {
                 val context = LocalContext.current
                 val favorites = remember { FavoritesStore(context) }
+                val zikir = remember { ZikirStore(context) }
                 val nav = rememberNavController()
 
                 val notifPermission = rememberLauncherForActivityResult(
@@ -66,13 +72,21 @@ class MainActivity : ComponentActivity() {
                     openNameId?.let { nav.navigate("detail/$it") }
                 }
 
+                // Apply the user's chosen text size on top of the system font scale.
+                val baseDensity = LocalDensity.current
+                val textScale = TextScaleStore.scale(context)
+                CompositionLocalProvider(
+                    LocalDensity provides Density(
+                        density = baseDensity.density,
+                        fontScale = baseDensity.fontScale * textScale
+                    )
+                ) {
                 NavHost(navController = nav, startDestination = "home") {
                     composable("home") {
                         HomeScreen(
                             onNameClick = { id -> nav.navigate("detail/$id") },
                             onFavoritesClick = { nav.navigate("favorites") },
-                            onSettingsClick = { nav.navigate("settings") },
-                            onLanguageClick = { nav.navigate("language") }
+                            onSettingsClick = { nav.navigate("settings") }
                         )
                     }
                     composable(
@@ -80,7 +94,7 @@ class MainActivity : ComponentActivity() {
                         arguments = listOf(navArgument("id") { type = NavType.IntType })
                     ) { backStack ->
                         val id = backStack.arguments?.getInt("id") ?: 1
-                        DetailScreen(id, favorites, onBack = { nav.popBackStack() })
+                        DetailScreen(id, favorites, zikir, onBack = { nav.popBackStack() })
                     }
                     composable("favorites") {
                         FavoritesScreen(
@@ -90,14 +104,16 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable("settings") {
-                        NotificationSettingsScreen(
+                        SettingsScreen(
                             onBack = { nav.popBackStack() },
+                            onLanguageClick = { nav.navigate("language") },
                             onRequestPermission = { requestNotifPermission() }
                         )
                     }
                     composable("language") {
                         LanguageScreen(onBack = { nav.popBackStack() })
                     }
+                }
                 }
             }
         }

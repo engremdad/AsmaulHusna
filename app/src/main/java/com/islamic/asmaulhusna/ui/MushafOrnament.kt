@@ -17,8 +17,8 @@ import com.islamic.asmaulhusna.ui.theme.Gold
  */
 fun Modifier.starLattice(step: Dp = 26.dp): Modifier = drawBehind {
     val gap = step.toPx()
-    val r = 1.1f
-    val colour = Gold.copy(alpha = 0.10f)
+    val r = 1.5.dp.toPx() // density-scaled, so the gilding is actually visible on-device
+    val colour = Gold.copy(alpha = 0.13f)
     var y = gap / 2f
     while (y < size.height) {
         var x = gap / 2f

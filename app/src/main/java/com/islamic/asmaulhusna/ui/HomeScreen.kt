@@ -11,9 +11,8 @@ import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Language
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -37,8 +36,7 @@ import com.islamic.asmaulhusna.ui.theme.*
 fun HomeScreen(
     onNameClick: (Int) -> Unit,
     onFavoritesClick: () -> Unit,
-    onSettingsClick: () -> Unit,
-    onLanguageClick: () -> Unit
+    onSettingsClick: () -> Unit
 ) {
     var query by remember { mutableStateOf("") }
     val all = AsmaulHusnaRepository.names
@@ -71,14 +69,11 @@ fun HomeScreen(
                     titleContentColor = Cream
                 ),
                 actions = {
-                    IconButton(onClick = onLanguageClick) {
-                        Icon(Icons.Filled.Language, stringResource(R.string.cd_language), tint = Gold)
-                    }
-                    IconButton(onClick = onSettingsClick) {
-                        Icon(Icons.Filled.Notifications, stringResource(R.string.cd_reminders), tint = Gold)
-                    }
                     IconButton(onClick = onFavoritesClick) {
                         Icon(Icons.Filled.Favorite, stringResource(R.string.cd_favorites), tint = Gold)
+                    }
+                    IconButton(onClick = onSettingsClick) {
+                        Icon(Icons.Filled.Settings, stringResource(R.string.settings_title), tint = Gold)
                     }
                 }
             )
@@ -117,7 +112,8 @@ private fun TodayCard(name: AsmaulHusna, loc: NameContent, onClick: () -> Unit) 
             .border(1.dp, GoldLine, RoundedCornerShape(20.dp))
             .padding(4.dp)
             .clip(RoundedCornerShape(16.dp))
-            .background(Brush.verticalGradient(listOf(EmeraldHi, EmeraldLo)))
+            .background(Brush.verticalGradient(listOf(EmeraldGlow, EmeraldHi, EmeraldLo)))
+            .background(Brush.verticalGradient(0f to GoldSoft.copy(alpha = 0.07f), 0.09f to GoldSoft.copy(alpha = 0f)))
             .border(1.dp, GoldLine, RoundedCornerShape(16.dp))
             .clickable(onClick = onClick)
             .padding(vertical = 20.dp, horizontal = 18.dp)

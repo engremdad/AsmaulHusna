@@ -22,7 +22,10 @@
     <string name="reminder_iftar">Buka Puasa</string>
     <string name="reminder_iftar_hint">Memberi tahu saat waktu berbuka tiba</string>
 
+    <string name="settings_title">Pengaturan</string>
     <string name="language_title">Bahasa</string>
+    <string name="section_language">Bahasa</string>
+    <string name="section_reminders">Pengingat</string>
 
     <string name="cd_back">Kembali</string>
     <string name="cd_favorite">Favorit</string>
@@ -40,4 +43,27 @@
     <string name="notif_suhoor_body">Selesaikan santap sahur sebelum waktunya habis dan niatkan puasa.</string>
     <string name="notif_iftar_title">Waktu berbuka</string>
     <string name="notif_iftar_body">Saatnya berbuka puasa — momen penuh berkah saat doa dikabulkan.</string>
+
+    <string name="section_zikir">Penghitung Zikir</string>
+    <string name="zikir_hint">Ketuk untuk menghitung zikir Anda</string>
+    <string name="zikir_reset">Atur ulang</string>
+    <string name="cd_zikir_count">Jumlah zikir</string>
+    <string name="zikir_set_target">Tetapkan target</string>
+    <string name="zikir_target_title">Target zikir</string>
+    <string name="zikir_target_hint">Pilih berapa kali membaca, atau masukkan angka Anda sendiri.</string>
+    <string name="zikir_target_custom">Target khusus</string>
+    <string name="zikir_target_none">Tanpa target</string>
+    <string name="zikir_target_done">Target tercapai</string>
+    <string name="action_save">Simpan</string>
+    <string name="action_cancel">Batal</string>
+    <string name="action_share">Bagikan</string>
+    <string name="action_copy">Salin</string>
+    <string name="copied">Disalin</string>
+    <string name="cd_share">Bagikan nama ini</string>
+    <string name="share_subject">Asmaul Husna</string>
+    <string name="section_display">Tampilan</string>
+    <string name="text_size_title">Ukuran teks</string>
+    <string name="text_size_sample">Contoh teks</string>
+    <string name="cd_text_smaller">Teks lebih kecil</string>
+    <string name="cd_text_larger">Teks lebih besar</string>
 </resources>

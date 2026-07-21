@@ -22,7 +22,10 @@
     <string name="reminder_iftar">ইফতার</string>
     <string name="reminder_iftar_hint">ইফতারের সময় জানিয়ে দেবে</string>
 
+    <string name="settings_title">সেটিংস</string>
     <string name="language_title">ভাষা</string>
+    <string name="section_language">ভাষা</string>
+    <string name="section_reminders">রিমাইন্ডার</string>
 
     <string name="cd_back">ফিরে যান</string>
     <string name="cd_favorite">ফেভারিট</string>
@@ -40,4 +43,27 @@
     <string name="notif_suhoor_body">সাহরি শেষ হওয়ার আগে খাবার সম্পন্ন করুন এবং রোজার নিয়ত করুন।</string>
     <string name="notif_iftar_title">ইফতারের সময়</string>
     <string name="notif_iftar_body">রোজা ভাঙার সময় হয়েছে — এটি দোয়া কবুলের বরকতময় মুহূর্ত।</string>
+
+    <string name="section_zikir">জিকির কাউন্টার</string>
+    <string name="zikir_hint">গণনা করতে ট্যাপ করুন</string>
+    <string name="zikir_reset">রিসেট</string>
+    <string name="cd_zikir_count">জিকির সংখ্যা</string>
+    <string name="zikir_set_target">লক্ষ্য নির্ধারণ করুন</string>
+    <string name="zikir_target_title">জিকিরের লক্ষ্য</string>
+    <string name="zikir_target_hint">কতবার পড়বেন তা বেছে নিন, অথবা নিজে লিখুন।</string>
+    <string name="zikir_target_custom">নিজস্ব লক্ষ্য</string>
+    <string name="zikir_target_none">কোনো লক্ষ্য নেই</string>
+    <string name="zikir_target_done">লক্ষ্য পূর্ণ হয়েছে</string>
+    <string name="action_save">সংরক্ষণ</string>
+    <string name="action_cancel">বাতিল</string>
+    <string name="action_share">শেয়ার</string>
+    <string name="action_copy">কপি</string>
+    <string name="copied">কপি হয়েছে</string>
+    <string name="cd_share">এই নামটি শেয়ার করুন</string>
+    <string name="share_subject">আসমাউল হুসনা</string>
+    <string name="section_display">প্রদর্শন</string>
+    <string name="text_size_title">লেখার আকার</string>
+    <string name="text_size_sample">নমুনা লেখা</string>
+    <string name="cd_text_smaller">ছোট লেখা</string>
+    <string name="cd_text_larger">বড় লেখা</string>
 </resources>

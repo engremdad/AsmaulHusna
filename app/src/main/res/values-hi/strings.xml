@@ -22,7 +22,10 @@
     <string name="reminder_iftar">इफ़्तार</string>
     <string name="reminder_iftar_hint">इफ़्तार का समय होने पर बताएगा</string>
 
+    <string name="settings_title">सेटिंग्स</string>
     <string name="language_title">भाषा</string>
+    <string name="section_language">भाषा</string>
+    <string name="section_reminders">रिमाइंडर</string>
 
     <string name="cd_back">वापस</string>
     <string name="cd_favorite">पसंदीदा</string>
@@ -40,4 +43,27 @@
     <string name="notif_suhoor_body">सहरी ख़त्म होने से पहले भोजन पूरा करें और रोज़े की नीयत करें।</string>
     <string name="notif_iftar_title">इफ़्तार का समय</string>
     <string name="notif_iftar_body">रोज़ा खोलने का समय हो गया — यह दुआ क़ुबूल होने का बरकत भरा पल है।</string>
+
+    <string name="section_zikir">ज़िक्र काउंटर</string>
+    <string name="zikir_hint">अपने ज़िक्र गिनने के लिए टैप करें</string>
+    <string name="zikir_reset">रीसेट</string>
+    <string name="cd_zikir_count">ज़िक्र की संख्या</string>
+    <string name="zikir_set_target">लक्ष्य तय करें</string>
+    <string name="zikir_target_title">ज़िक्र का लक्ष्य</string>
+    <string name="zikir_target_hint">चुनें कि कितनी बार पढ़ना है, या अपना नंबर दर्ज करें।</string>
+    <string name="zikir_target_custom">अपना लक्ष्य</string>
+    <string name="zikir_target_none">कोई लक्ष्य नहीं</string>
+    <string name="zikir_target_done">लक्ष्य पूरा हुआ</string>
+    <string name="action_save">सहेजें</string>
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_share">शेयर करें</string>
+    <string name="action_copy">कॉपी करें</string>
+    <string name="copied">कॉपी हो गया</string>
+    <string name="cd_share">यह नाम शेयर करें</string>
+    <string name="share_subject">अस्मा-उल-हुस्ना</string>
+    <string name="section_display">प्रदर्शन</string>
+    <string name="text_size_title">टेक्स्ट का आकार</string>
+    <string name="text_size_sample">नमूना टेक्स्ट</string>
+    <string name="cd_text_smaller">छोटा टेक्स्ट</string>
+    <string name="cd_text_larger">बड़ा टेक्स्ट</string>
 </resources>

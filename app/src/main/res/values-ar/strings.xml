@@ -22,7 +22,10 @@
     <string name="reminder_iftar">الإفطار</string>
     <string name="reminder_iftar_hint">يخبرك عند حلول وقت الإفطار</string>
 
+    <string name="settings_title">الإعدادات</string>
     <string name="language_title">اللغة</string>
+    <string name="section_language">اللغة</string>
+    <string name="section_reminders">التذكيرات</string>
 
     <string name="cd_back">رجوع</string>
     <string name="cd_favorite">المفضلة</string>
@@ -40,4 +43,27 @@
     <string name="notif_suhoor_body">أكمل طعامك قبل انتهاء وقت السحور وانوِ الصيام.</string>
     <string name="notif_iftar_title">وقت الإفطار</string>
     <string name="notif_iftar_body">حان وقت الإفطار — إنها لحظة مباركة يُستجاب فيها الدعاء.</string>
+
+    <string name="section_zikir">عدّاد الذِّكر</string>
+    <string name="zikir_hint">انقر لعدّ أذكارك</string>
+    <string name="zikir_reset">إعادة تعيين</string>
+    <string name="cd_zikir_count">عدد الذِّكر</string>
+    <string name="zikir_set_target">تحديد الهدف</string>
+    <string name="zikir_target_title">هدف الذِّكر</string>
+    <string name="zikir_target_hint">اختر عدد مرات الذِّكر، أو أدخل عددك الخاص.</string>
+    <string name="zikir_target_custom">هدف مخصّص</string>
+    <string name="zikir_target_none">بلا هدف</string>
+    <string name="zikir_target_done">تم بلوغ الهدف</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_share">مشاركة</string>
+    <string name="action_copy">نسخ</string>
+    <string name="copied">تم النسخ</string>
+    <string name="cd_share">شارك هذا الاسم</string>
+    <string name="share_subject">أسماء الله الحسنى</string>
+    <string name="section_display">العرض</string>
+    <string name="text_size_title">حجم النص</string>
+    <string name="text_size_sample">نص تجريبي</string>
+    <string name="cd_text_smaller">نص أصغر</string>
+    <string name="cd_text_larger">نص أكبر</string>
 </resources>
