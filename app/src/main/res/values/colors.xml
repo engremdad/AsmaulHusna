@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Mushaf launch window ground -->
+    <color name="mushaf_page">#FF0A2019</color>
+    <color name="mushaf_gold">#FFD4AF37</color>
 </resources>

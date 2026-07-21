@@ -1,32 +1,38 @@
 package com.islamic.asmaulhusna.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.islamic.asmaulhusna.data.AsmaulHusna
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
-import java.util.Calendar
+import com.islamic.asmaulhusna.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     onNameClick: (Int) -> Unit,
-    onFavoritesClick: () -> Unit
+    onFavoritesClick: () -> Unit,
+    onSettingsClick: () -> Unit
 ) {
     var query by remember { mutableStateOf("") }
     val all = AsmaulHusnaRepository.names
@@ -39,49 +45,47 @@ fun HomeScreen(
                     it.arabic.contains(query)
         }
     }
-    val today = remember {
-        val dayOfYear = Calendar.getInstance().get(Calendar.DAY_OF_YEAR)
-        all[dayOfYear % all.size]
-    }
+    val today = remember { AsmaulHusnaRepository.today() }
 
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("আসমাউল হুসনা", fontWeight = FontWeight.Bold) },
+                title = {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text("أَسْمَاءُ ٱللَّٰه", fontSize = 24.sp, fontWeight = FontWeight.Bold,
+                            color = Gold)
+                        Text("আসমাউল হুসনা · ৯৯ নাম", fontSize = 11.sp,
+                            letterSpacing = 2.sp, color = CreamDim)
+                    }
+                },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                    containerColor = Page,
+                    titleContentColor = Cream
                 ),
                 actions = {
+                    IconButton(onClick = onSettingsClick) {
+                        Icon(Icons.Filled.Notifications, "রিমাইন্ডার", tint = Gold)
+                    }
                     IconButton(onClick = onFavoritesClick) {
-                        Icon(Icons.Filled.Favorite, "প্রিয় নাম",
-                            tint = MaterialTheme.colorScheme.secondary)
+                        Icon(Icons.Filled.Favorite, "প্রিয় নাম", tint = Gold)
                     }
                 }
             )
         },
-        containerColor = MaterialTheme.colorScheme.background
+        containerColor = Page
     ) { padding ->
         LazyVerticalGrid(
             columns = GridCells.Fixed(3),
-            modifier = Modifier.padding(padding).padding(horizontal = 12.dp),
-            contentPadding = PaddingValues(vertical = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            modifier = Modifier.padding(padding).starLattice().padding(horizontal = 14.dp),
+            contentPadding = PaddingValues(vertical = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(9.dp),
+            horizontalArrangement = Arrangement.spacedBy(9.dp)
         ) {
             item(span = { GridItemSpan(3) }) {
                 TodayCard(today, onClick = { onNameClick(today.id) })
             }
             item(span = { GridItemSpan(3) }) {
-                OutlinedTextField(
-                    value = query,
-                    onValueChange = { query = it },
-                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
-                    placeholder = { Text("নাম বা অর্থ খুঁজুন…") },
-                    leadingIcon = { Icon(Icons.Filled.Search, null) },
-                    singleLine = true,
-                    shape = RoundedCornerShape(14.dp)
-                )
+                SearchField(query, onChange = { query = it })
             }
             itemsIndexed(filtered) { _, name ->
                 NameGridCard(name, onClick = { onNameClick(name.id) })
@@ -92,60 +96,85 @@ fun HomeScreen(
 
 @Composable
 private fun TodayCard(name: AsmaulHusna, onClick: () -> Unit) {
-    Card(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
-        onClick = onClick,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary),
-        shape = RoundedCornerShape(20.dp)
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp)
+            // outer emerald spacer + gold hairline = the double-rule frame
+            .clip(RoundedCornerShape(20.dp))
+            .background(Page)
+            .border(1.dp, GoldLine, RoundedCornerShape(20.dp))
+            .padding(4.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Brush.verticalGradient(listOf(EmeraldHi, EmeraldLo)))
+            .border(1.dp, GoldLine, RoundedCornerShape(16.dp))
+            .clickable(onClick = onClick)
+            .padding(vertical = 20.dp, horizontal = 18.dp)
     ) {
         Column(
-            modifier = Modifier.padding(20.dp).fillMaxWidth(),
+            Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text("আজকের নাম", color = MaterialTheme.colorScheme.secondary, fontSize = 14.sp)
-            Spacer(Modifier.height(6.dp))
-            Text(name.arabic, fontSize = 40.sp, color = MaterialTheme.colorScheme.onPrimary,
+            Text("আজকের নাম · TODAY", color = Gold, fontSize = 10.sp,
+                letterSpacing = 3.sp, fontWeight = FontWeight.SemiBold)
+            Spacer(Modifier.height(10.dp))
+            Text(name.arabic, fontSize = 42.sp, color = Cream,
                 fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-            Spacer(Modifier.height(6.dp))
-            Text("${name.transliteration} — ${name.banglaName}",
-                color = MaterialTheme.colorScheme.onPrimary, fontSize = 16.sp)
-            Text(name.meaning, color = MaterialTheme.colorScheme.secondary, fontSize = 14.sp,
+            Spacer(Modifier.height(8.dp))
+            Text("${name.transliteration} · ${name.banglaName}",
+                color = GoldSoft, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
+            Text(name.meaning, color = CreamDim, fontSize = 13.sp,
                 textAlign = TextAlign.Center)
         }
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SearchField(query: String, onChange: (String) -> Unit) {
+    OutlinedTextField(
+        value = query,
+        onValueChange = onChange,
+        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+        placeholder = { Text("নাম বা অর্থ খুঁজুন…", color = CreamDim) },
+        leadingIcon = { Icon(Icons.Filled.Search, null, tint = GoldDim) },
+        singleLine = true,
+        shape = RoundedCornerShape(14.dp),
+        colors = OutlinedTextFieldDefaults.colors(
+            focusedContainerColor = EmeraldRow,
+            unfocusedContainerColor = EmeraldRow,
+            focusedBorderColor = Gold,
+            unfocusedBorderColor = EmeraldLine,
+            focusedTextColor = Cream,
+            unfocusedTextColor = Cream,
+            cursorColor = Gold
+        )
+    )
+}
+
 @Composable
 private fun NameGridCard(name: AsmaulHusna, onClick: () -> Unit) {
-    Card(
-        onClick = onClick,
-        shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
-        modifier = Modifier.height(120.dp)
+    Box(
+        modifier = Modifier
+            .height(118.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .background(Brush.verticalGradient(listOf(EmeraldRow, EmeraldLo)))
+            .border(1.dp, EmeraldLine, RoundedCornerShape(14.dp))
+            .clickable(onClick = onClick)
+            .padding(6.dp)
     ) {
+        Text("${name.id}", color = GoldDim, fontSize = 9.sp, fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.TopCenter).padding(top = 2.dp))
         Column(
-            modifier = Modifier.fillMaxSize().padding(6.dp),
+            Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Box(
-                modifier = Modifier.size(28.dp).clip(RoundedCornerShape(50))
-                    .background(MaterialTheme.colorScheme.secondary),
-                contentAlignment = Alignment.Center
-            ) {
-                Text("${name.id}", color = MaterialTheme.colorScheme.onSecondary,
-                    fontSize = 12.sp, fontWeight = FontWeight.Bold)
-            }
+            Text(name.arabic, fontSize = 22.sp, fontWeight = FontWeight.Bold,
+                color = GoldSoft, textAlign = TextAlign.Center, maxLines = 1)
             Spacer(Modifier.height(4.dp))
-            Text(name.arabic, fontSize = 20.sp, fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary, textAlign = TextAlign.Center,
-                maxLines = 1)
-            Text(name.banglaName, fontSize = 12.sp, textAlign = TextAlign.Center,
-                color = MaterialTheme.colorScheme.onSurface, maxLines = 1)
+            Text(name.banglaName, fontSize = 11.sp, textAlign = TextAlign.Center,
+                color = CreamDim, maxLines = 1)
         }
     }
 }
-
-// re-export helper for span
-private fun GridItemSpan(n: Int) = androidx.compose.foundation.lazy.grid.GridItemSpan(n)

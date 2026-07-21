@@ -11,6 +11,13 @@ data class AsmaulHusna(
 )
 
 object AsmaulHusnaRepository {
+
+    /** The name featured for the current day — stable across the whole day. */
+    fun today(): AsmaulHusna {
+        val dayOfYear = java.util.Calendar.getInstance().get(java.util.Calendar.DAY_OF_YEAR)
+        return names[dayOfYear % names.size]
+    }
+
     val names: List<AsmaulHusna> = listOf(
         AsmaulHusna(1, "ٱلرَّحْمَٰنُ", "Ar-Rahman", "আর-রাহমান", "পরম করুণাময়",
             "যে ব্যক্তি প্রতি ফরজ নামাজের পর ১০০ বার ‘ইয়া রাহমান’ পাঠ করবে, আল্লাহ তার অন্তর থেকে গাফলত (উদাসীনতা) ও ভুলে যাওয়ার প্রবণতা দূর করে দেবেন।",

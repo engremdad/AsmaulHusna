@@ -1,5 +1,7 @@
 package com.islamic.asmaulhusna.ui
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,6 +15,8 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -20,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
 import com.islamic.asmaulhusna.data.FavoritesStore
+import com.islamic.asmaulhusna.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -42,77 +47,98 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
                         Icon(
                             if (isFav) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                             "ফেভারিট",
-                            tint = MaterialTheme.colorScheme.secondary
+                            tint = Gold
                         )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
+                    containerColor = Page,
+                    titleContentColor = Gold,
+                    navigationIconContentColor = Gold
                 )
             )
         },
-        containerColor = MaterialTheme.colorScheme.background
+        containerColor = Page
     ) { padding ->
         Column(
-            modifier = Modifier.padding(padding).verticalScroll(rememberScrollState())
+            modifier = Modifier
+                .padding(padding)
+                .starLattice()
+                .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Card(
-                shape = RoundedCornerShape(24.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Column(
-                    modifier = Modifier.padding(24.dp).fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(name.arabic, fontSize = 64.sp, fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onPrimary, textAlign = TextAlign.Center)
-                    Spacer(Modifier.height(12.dp))
-                    Text(name.transliteration, fontSize = 20.sp,
-                        color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.SemiBold)
-                    Text(name.banglaName, fontSize = 18.sp,
-                        color = MaterialTheme.colorScheme.onPrimary)
-                }
-            }
-            Spacer(Modifier.height(16.dp))
+            NameHero(name.arabic, name.transliteration, name.banglaName)
+
+            Spacer(Modifier.height(20.dp))
             Button(
                 onClick = { AudioPlayer.play(context, nameId) },
                 shape = RoundedCornerShape(50),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary,
-                    contentColor = MaterialTheme.colorScheme.onSecondary
-                )
+                    containerColor = Gold,
+                    contentColor = GoldInk
+                ),
+                contentPadding = PaddingValues(horizontal = 26.dp, vertical = 12.dp)
             ) {
                 Icon(Icons.Filled.VolumeUp, null)
                 Spacer(Modifier.width(8.dp))
-                Text("শুনুন")
+                Text("শুনুন", fontWeight = FontWeight.Bold)
             }
-            Spacer(Modifier.height(16.dp))
-            SectionCard("অর্থ", name.meaning)
-            SectionCard("ফজিলত", name.fazilat)
-            SectionCard("আমল", name.amal)
+            Spacer(Modifier.height(20.dp))
+
+            SectionCard("অর্থ · MEANING", name.meaning)
+            SectionCard("ফজিলত · VIRTUE", name.fazilat)
+            SectionCard("আমল · PRACTICE", name.amal)
             Spacer(Modifier.height(24.dp))
         }
     }
 }
 
 @Composable
-private fun SectionCard(title: String, body: String) {
-    Card(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
-        shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+private fun NameHero(arabic: String, transliteration: String, bangla: String) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(24.dp))
+            .background(Page)
+            .border(1.dp, GoldLine, RoundedCornerShape(24.dp))
+            .padding(4.dp)
+            .clip(RoundedCornerShape(20.dp))
+            .background(Brush.verticalGradient(listOf(EmeraldHi, EmeraldLo)))
+            .cornerBrackets()
+            .padding(vertical = 30.dp, horizontal = 20.dp)
     ) {
+        Column(
+            Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(arabic, fontSize = 60.sp, fontWeight = FontWeight.Bold,
+                color = Cream, textAlign = TextAlign.Center)
+            Spacer(Modifier.height(14.dp))
+            Text(transliteration, fontSize = 20.sp, color = GoldSoft,
+                fontWeight = FontWeight.SemiBold)
+            Text(bangla, fontSize = 15.sp, color = CreamDim)
+        }
+    }
+}
+
+@Composable
+private fun SectionCard(title: String, body: String) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 6.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(SectGround)
+            .border(1.dp, EmeraldLine, RoundedCornerShape(16.dp))
+    ) {
+        // gold rule down the leading edge
+        Box(Modifier.width(3.dp).heightIn(min = 64.dp).fillMaxHeight().background(Gold))
         Column(Modifier.padding(16.dp)) {
-            Text(title, fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary, fontSize = 16.sp)
-            Spacer(Modifier.height(6.dp))
-            Text(body, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 15.sp,
-                lineHeight = 22.sp)
+            Text(title, fontWeight = FontWeight.Bold, color = Gold, fontSize = 11.sp,
+                letterSpacing = 2.sp)
+            Spacer(Modifier.height(8.dp))
+            Text(body, color = Cream, fontSize = 14.sp, lineHeight = 24.sp)
         }
     }
 }
