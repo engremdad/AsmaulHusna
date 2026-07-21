@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AsmaulHusna" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.AsmaulHusna" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/mushaf_page</item>
+        <item name="android:statusBarColor">@color/mushaf_page</item>
+        <item name="android:navigationBarColor">@color/mushaf_page</item>
+        <item name="android:colorPrimary">@color/mushaf_page</item>
+        <item name="android:colorAccent">@color/mushaf_gold</item>
+    </style>
 </resources>
