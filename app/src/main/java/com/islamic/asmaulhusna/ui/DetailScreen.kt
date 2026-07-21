@@ -29,6 +29,7 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
@@ -71,6 +72,7 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
     val shareSubject = stringResource(R.string.share_subject)
     val copiedMsg = stringResource(R.string.copied)
 
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -123,18 +125,17 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Gold,
                     navigationIconContentColor = Gold
                 )
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         Column(
             modifier = Modifier
                 .padding(padding)
-                .starLattice()
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -176,6 +177,7 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
             SectionCard(stringResource(R.string.section_practice), loc.amal)
             Spacer(Modifier.height(24.dp))
         }
+    }
     }
 }
 

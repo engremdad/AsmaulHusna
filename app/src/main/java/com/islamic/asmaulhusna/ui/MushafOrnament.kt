@@ -1,5 +1,6 @@
 package com.islamic.asmaulhusna.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
@@ -9,12 +10,21 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.islamic.asmaulhusna.ui.theme.Gold
+import com.islamic.asmaulhusna.ui.theme.Page
 
 /**
  * A faint gold star-dot lattice — the ambient texture behind every screen,
  * echoing the pin-prick gilding of an illuminated page. Cheap: it draws a grid
  * of small dots directly in the background layer.
  */
+/**
+ * The full-screen Mushaf ground: the solid emerald page plus the ambient gold
+ * lattice, drawn edge-to-edge. Wrap a Scaffold in a Box carrying this modifier
+ * (with a transparent Scaffold + top bar) so the gilding shows behind the top
+ * bar and status-bar area too, not only under the content padding.
+ */
+fun Modifier.mushafGround(): Modifier = this.fillMaxSize().background(Page).starLattice()
+
 fun Modifier.starLattice(step: Dp = 26.dp): Modifier = drawBehind {
     val gap = step.toPx()
     val r = 1.5.dp.toPx() // density-scaled, so the gilding is actually visible on-device

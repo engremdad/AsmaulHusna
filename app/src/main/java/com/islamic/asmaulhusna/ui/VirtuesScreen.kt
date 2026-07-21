@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -40,6 +41,7 @@ fun VirtuesScreen(onBack: () -> Unit) {
         R.string.virtues_s8_title to R.string.virtues_s8_body,
     )
 
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -50,18 +52,17 @@ fun VirtuesScreen(onBack: () -> Unit) {
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Gold,
                     navigationIconContentColor = Gold
                 )
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         Column(
             modifier = Modifier
                 .padding(padding)
-                .starLattice()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -82,6 +83,7 @@ fun VirtuesScreen(onBack: () -> Unit) {
             }
             Spacer(Modifier.height(24.dp))
         }
+    }
     }
 }
 

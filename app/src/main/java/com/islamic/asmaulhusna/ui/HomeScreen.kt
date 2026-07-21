@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -55,6 +56,7 @@ fun HomeScreen(
     }
     val today = remember { AsmaulHusnaRepository.today() }
 
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -67,7 +69,7 @@ fun HomeScreen(
                     }
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Cream
                 ),
                 actions = {
@@ -83,11 +85,11 @@ fun HomeScreen(
                 }
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         LazyVerticalGrid(
             columns = GridCells.Fixed(3),
-            modifier = Modifier.padding(padding).starLattice().padding(horizontal = 14.dp),
+            modifier = Modifier.padding(padding).padding(horizontal = 14.dp),
             contentPadding = PaddingValues(vertical = 10.dp),
             verticalArrangement = Arrangement.spacedBy(9.dp),
             horizontalArrangement = Arrangement.spacedBy(9.dp)
@@ -102,6 +104,7 @@ fun HomeScreen(
                 NameGridCard(name, name.localized(content), onClick = { onNameClick(name.id) })
             }
         }
+    }
     }
 }
 

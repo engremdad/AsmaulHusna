@@ -20,6 +20,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -61,6 +62,7 @@ fun SettingsScreen(
         }
     }
 
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -71,16 +73,16 @@ fun SettingsScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Gold,
                     navigationIconContentColor = Gold
                 )
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         Column(
-            Modifier.padding(padding).starLattice().verticalScroll(rememberScrollState())
+            Modifier.padding(padding).verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
@@ -143,6 +145,7 @@ fun SettingsScreen(
             }
             Spacer(Modifier.height(8.dp))
         }
+    }
     }
 }
 
