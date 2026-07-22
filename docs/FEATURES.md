@@ -3,7 +3,7 @@
 > The 99 Names of Allah — an illuminated "Mushaf" reading app.
 > Package `com.islamic.asmaulhusna` · version 1.0 (versionCode 1) · minSdk 24 · targetSdk 36
 
-_Last updated: 2026-07-22 (notification-permission guidance)_
+_Last updated: 2026-07-22 (audio feature disabled pending licensing)_
 
 This document is the running catalogue of what the app does. **It is updated whenever a
 task adds, changes, or removes a feature** — see [Maintenance](#maintenance) at the bottom.
@@ -19,7 +19,8 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 ## Name detail
 - **Name hero** — large Arabic calligraphy with transliteration and localized name.
 - **Meaning / Virtue / Practice** sections for every name.
-- **Listen** — audio playback of the name's recitation.
+- **Listen** — audio playback of the name's recitation. _(Currently disabled pending
+  properly-licensed audio — toggle `AudioPlayer.ENABLED`. The button is hidden while off.)_
 - **Favorite** — toggle a name as favorite from the detail top bar.
 - **Share** — send the full name text (Arabic, transliteration, name, Meaning, Virtue,
   Practice) with an "— Asma al-Husna" footer via the system share sheet.

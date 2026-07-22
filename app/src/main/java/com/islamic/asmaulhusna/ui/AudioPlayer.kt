@@ -6,6 +6,11 @@ import android.util.Log
 import android.widget.Toast
 
 object AudioPlayer {
+    // Disabled until we ship properly-licensed audio: the current source has no license
+    // (copyright/DMCA risk for Play Store). Flip to true once bundled/licensed audio exists.
+    // The playback code below is left intact so re-enabling is a one-line change.
+    const val ENABLED = false
+
     // Source: https://github.com/MohammedAbidNafi/99-Names-of-Allah (public repo, res/raw folder)
     private const val BASE_URL =
         "https://raw.githubusercontent.com/MohammedAbidNafi/99-Names-of-Allah/master/app/src/main/res/raw/"

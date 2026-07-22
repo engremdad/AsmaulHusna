@@ -21,7 +21,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 
 | # | Category | Gap | Fix |
 |---|---|---|---|
-| 1 | **Legal** | **Third-party audio without license** — `AudioPlayer` hotlinks MP3s from `MohammedAbidNafi/99-Names-of-Allah` (no LICENSE). | Bundle your own/commissioned or verified CC0/CC-BY audio in `assets/`; don't hotlink. Self-hosting the *same* files does **not** cure copyright. Interim: disable the audio feature. |
+| 1 | **Legal** | **Third-party audio without license** — `AudioPlayer` hotlinks MP3s from `MohammedAbidNafi/99-Names-of-Allah` (no LICENSE). **Interim mitigation applied: audio feature disabled (`AudioPlayer.ENABLED = false`), so nothing streams.** | Still to do before re-enabling: bundle your own/commissioned or verified CC0/CC-BY audio in `assets/` (don't hotlink; self-hosting the *same* files does **not** cure copyright), then flip the flag. |
 | 2 | **Legal/Privacy** | **FCM token upload to a placeholder server** — `TokenUploader` POSTs the device push token to `https://api.example.com/v1/devices`. | Either remove `TokenUploader`/FCM until there's a real backend, or point it at a secured HTTPS endpoint you own and declare it in Data Safety. Shipping token collection to `example.com` is broken and a policy risk. |
 | 3 | **Build** | **No signed release AAB** — `buildTypes.release` has no `signingConfig`; no keystore. | Create a keystore, add `signingConfigs.release` (creds via `keystore.properties`, never committed), build `bundleRelease`. |
 | 4 | **Legal** | **No Privacy Policy URL** — required: app declares `INTERNET`, streams audio, and integrates FCM (push token is a device identifier). | Publish a privacy policy (GitHub Pages is fine) and add the URL in Play Console. |

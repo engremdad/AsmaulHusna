@@ -118,19 +118,22 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
                     if (loc.name.equals(name.transliteration, true)) "" else loc.name
                 )
 
-                Spacer(Modifier.height(20.dp))
-                Button(
-                    onClick = { AudioPlayer.play(context, nameId) },
-                    shape = RoundedCornerShape(50),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Gold,
-                        contentColor = GoldInk
-                    ),
-                    contentPadding = PaddingValues(horizontal = 26.dp, vertical = 12.dp)
-                ) {
-                    Icon(Icons.Filled.VolumeUp, null)
-                    Spacer(Modifier.width(8.dp))
-                    Text(stringResource(R.string.action_listen), fontWeight = FontWeight.Bold)
+                // Audio feature disabled until licensed audio ships — see AudioPlayer.ENABLED.
+                if (AudioPlayer.ENABLED) {
+                    Spacer(Modifier.height(20.dp))
+                    Button(
+                        onClick = { AudioPlayer.play(context, nameId) },
+                        shape = RoundedCornerShape(50),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Gold,
+                            contentColor = GoldInk
+                        ),
+                        contentPadding = PaddingValues(horizontal = 26.dp, vertical = 12.dp)
+                    ) {
+                        Icon(Icons.Filled.VolumeUp, null)
+                        Spacer(Modifier.width(8.dp))
+                        Text(stringResource(R.string.action_listen), fontWeight = FontWeight.Bold)
+                    }
                 }
                 Spacer(Modifier.height(20.dp))
 
