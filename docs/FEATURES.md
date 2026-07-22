@@ -65,6 +65,8 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 - **Reminders** — enable/disable and set times for the notification reminders below.
 - **About › Audio credits** — dialog with the pronunciation-audio attribution and CC BY-SA
   4.0 licence link (required while the bundled audio ships).
+- **About › Privacy Policy** — opens the hosted privacy policy
+  (https://sites.google.com/view/asma-al-husna/home) in the browser.
 
 ## Notifications
 - **Name of the Day** — daily reminder that deep-links to a name's detail screen.

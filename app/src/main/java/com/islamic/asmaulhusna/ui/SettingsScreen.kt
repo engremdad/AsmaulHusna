@@ -1,7 +1,9 @@
 package com.islamic.asmaulhusna.ui
 
 import android.app.TimePickerDialog
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.net.Uri
 import android.provider.Settings
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -15,6 +17,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.outlined.PrivacyTip
 import androidx.compose.material.icons.filled.NotificationsOff
 import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material.icons.filled.Add
@@ -227,6 +230,34 @@ fun SettingsScreen(
                         }
                     }
                 )
+            }
+
+            val privacyUrl = stringResource(R.string.privacy_policy_url)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(SectGround)
+                    .border(1.dp, EmeraldLine, RoundedCornerShape(16.dp))
+                    .clickable {
+                        // Opens the hosted privacy policy in the user's browser.
+                        try {
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(privacyUrl)))
+                        } catch (_: ActivityNotFoundException) {
+                            // No browser available — nothing to open.
+                        }
+                    }
+                    .padding(horizontal = 16.dp, vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(Icons.Outlined.PrivacyTip, null, tint = Gold, modifier = Modifier.size(20.dp))
+                Spacer(Modifier.width(14.dp))
+                Column(Modifier.weight(1f)) {
+                    Text(stringResource(R.string.privacy_policy_title), color = Cream, fontSize = 16.sp,
+                        fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.privacy_policy_hint), color = CreamDim, fontSize = 12.sp)
+                }
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = GoldDim)
             }
 
             Spacer(Modifier.height(8.dp))
