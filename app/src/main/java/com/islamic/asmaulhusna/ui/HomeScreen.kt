@@ -59,16 +59,16 @@ fun HomeScreen(
     Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(
+            TopAppBar(
                 title = {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Column(horizontalAlignment = Alignment.Start) {
                         Text("أَسْمَاءُ ٱللَّٰه", fontSize = 24.sp, fontWeight = FontWeight.Bold,
                             color = Gold)
                         Text(stringResource(R.string.app_subtitle), fontSize = 11.sp,
                             letterSpacing = 2.sp, color = CreamDim)
                     }
                 },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = Color.Transparent,
                     titleContentColor = Cream
                 ),
