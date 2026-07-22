@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Esma-ül Hüsna</string>
 
-    <string name="app_subtitle">Esma-ül Hüsna · 99 İsim</string>
+    <string name="app_subtitle">Esma-ül Hüsna · Allah\'ın 99 İsmi</string>
     <string name="today_label">Günün İsmi</string>
     <string name="search_hint">İsim veya anlam ara…</string>
 

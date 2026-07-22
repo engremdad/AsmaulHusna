@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">أسماء الله الحسنى</string>
 
-    <string name="app_subtitle">أسماء الله الحسنى · ٩٩ اسمًا</string>
+    <string name="app_subtitle">أسماء الله الحسنى · ٩٩ اسمًا من أسماء الله</string>
     <string name="today_label">اسم اليوم</string>
     <string name="search_hint">ابحث عن اسم أو معنى…</string>
 
