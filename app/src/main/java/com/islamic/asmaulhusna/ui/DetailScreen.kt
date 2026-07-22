@@ -69,7 +69,8 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
                             stringResource(R.string.section_meaning) to loc.meaning,
                             stringResource(R.string.section_virtue) to loc.fazilat,
                             stringResource(R.string.section_practice) to loc.amal
-                        )
+                        ),
+                        appName = stringResource(R.string.app_name)
                     )
                     val copiedMsg = stringResource(R.string.toast_copied)
                     IconButton(onClick = { copyToClipboard(context, name.transliteration, shareBody, copiedMsg) }) {
@@ -136,14 +137,16 @@ private fun buildShareText(
     arabic: String,
     transliteration: String,
     name: String,
-    sections: List<Pair<String, String>>
+    sections: List<Pair<String, String>>,
+    appName: String
 ): String {
     val title = if (name.isNotBlank() && !name.equals(transliteration, true))
         "$arabic — $transliteration ($name)" else "$arabic — $transliteration"
     val body = sections
         .filter { it.second.isNotBlank() }
         .joinToString("\n\n") { (label, text) -> "$label\n$text" }
-    return if (body.isBlank()) title else "$title\n\n$body"
+    val main = if (body.isBlank()) title else "$title\n\n$body"
+    return "$main\n\n— $appName"
 }
 
 private fun copyToClipboard(context: Context, label: String, text: String, toast: String) {
