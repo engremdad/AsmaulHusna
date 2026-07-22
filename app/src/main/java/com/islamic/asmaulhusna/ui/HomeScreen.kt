@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
@@ -73,9 +74,6 @@ fun HomeScreen(
                     titleContentColor = Cream
                 ),
                 actions = {
-                    IconButton(onClick = onVirtuesClick) {
-                        Icon(Icons.AutoMirrored.Filled.MenuBook, stringResource(R.string.cd_virtues), tint = Gold)
-                    }
                     IconButton(onClick = onFavoritesClick) {
                         Icon(Icons.Filled.Favorite, stringResource(R.string.cd_favorites), tint = Gold)
                     }
@@ -95,6 +93,9 @@ fun HomeScreen(
             horizontalArrangement = Arrangement.spacedBy(9.dp)
         ) {
             item(span = { GridItemSpan(3) }) {
+                VirtuesBanner(onClick = onVirtuesClick)
+            }
+            item(span = { GridItemSpan(3) }) {
                 TodayCard(today, today.localized(content), onClick = { onNameClick(today.id) })
             }
             item(span = { GridItemSpan(3) }) {
@@ -105,6 +106,38 @@ fun HomeScreen(
             }
         }
     }
+    }
+}
+
+@Composable
+private fun VirtuesBanner(onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 8.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .background(Brush.verticalGradient(listOf(EmeraldHi, EmeraldLo)))
+            .border(1.dp, Gold, RoundedCornerShape(14.dp))
+            .clickable(onClick = onClick)
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            modifier = Modifier
+                .size(38.dp)
+                .clip(RoundedCornerShape(10.dp))
+                .background(GoldLine),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(Icons.AutoMirrored.Filled.MenuBook, null, tint = Gold)
+        }
+        Spacer(Modifier.width(12.dp))
+        Column(Modifier.weight(1f)) {
+            Text(stringResource(R.string.virtues_title), color = Cream, fontSize = 14.sp,
+                fontWeight = FontWeight.Bold)
+            Text(stringResource(R.string.virtues_subtitle), color = CreamDim, fontSize = 11.sp)
+        }
+        Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = GoldDim)
     }
 }
 
