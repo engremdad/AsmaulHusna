@@ -9,6 +9,9 @@
     <string name="section_virtue">Keutamaan</string>
     <string name="section_practice">Amalan</string>
     <string name="action_listen">Dengarkan</string>
+    <string name="audio_loading">Memuat…</string>
+    <string name="audio_load_failed">Tidak dapat memuat audio</string>
+    <string name="audio_failed">Tidak dapat memutar audio</string>
 
     <string name="favorites_title">Favorit</string>
     <string name="favorites_empty">Belum ada nama yang ditambahkan.</string>

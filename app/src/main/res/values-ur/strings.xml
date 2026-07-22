@@ -9,6 +9,9 @@
     <string name="section_virtue">فضیلت</string>
     <string name="section_practice">عمل</string>
     <string name="action_listen">سنیں</string>
+    <string name="audio_loading">لوڈ ہو رہا ہے…</string>
+    <string name="audio_load_failed">آڈیو لوڈ نہیں ہو سکا</string>
+    <string name="audio_failed">آڈیو شروع نہیں ہو سکا</string>
 
     <string name="favorites_title">پسندیدہ</string>
     <string name="favorites_empty">ابھی تک کوئی نام شامل نہیں کیا گیا۔</string>

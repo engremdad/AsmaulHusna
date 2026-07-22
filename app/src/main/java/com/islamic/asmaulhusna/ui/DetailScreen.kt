@@ -21,8 +21,8 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -130,7 +130,7 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
                         ),
                         contentPadding = PaddingValues(horizontal = 26.dp, vertical = 12.dp)
                     ) {
-                        Icon(Icons.Filled.VolumeUp, null)
+                        Icon(Icons.AutoMirrored.Filled.VolumeUp, null)
                         Spacer(Modifier.width(8.dp))
                         Text(stringResource(R.string.action_listen), fontWeight = FontWeight.Bold)
                     }

@@ -21,6 +21,11 @@ import retrofit2.http.POST
  */
 object TokenUploader {
 
+    // No real backend yet: uploading the device token would send an identifier to a
+    // placeholder server (privacy/Play-policy risk). Uploads are disabled until BASE_URL
+    // points at a secured endpoint you own — then set BACKEND_CONFIGURED = true.
+    private const val BACKEND_CONFIGURED = false
+
     // Trailing slash is required by Retrofit. Replace with your backend.
     private const val BASE_URL = "https://api.example.com/"
     private const val TAG = "FCM"
@@ -48,8 +53,12 @@ object TokenUploader {
             .create(PushApi::class.java)
     }
 
-    /** Send a known token to the backend. Safe to call from any thread. */
+    /** Send a known token to the backend. Safe to call from any thread. No-op until a backend is configured. */
     fun upload(token: String) {
+        if (!BACKEND_CONFIGURED) {
+            Log.d(TAG, "Token upload skipped — no backend configured")
+            return
+        }
         scope.launch {
             try {
                 api.registerToken(TokenRegistration(token = token))
@@ -68,6 +77,7 @@ object TokenUploader {
      * onNewToken only fires when the token actually changes.
      */
     fun refreshAndUpload() {
+        if (!BACKEND_CONFIGURED) return
         FirebaseMessaging.getInstance().token
             .addOnCompleteListener { task ->
                 if (!task.isSuccessful) {

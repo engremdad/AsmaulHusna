@@ -9,6 +9,9 @@
     <string name="section_virtue">الفضل</string>
     <string name="section_practice">العمل</string>
     <string name="action_listen">استمع</string>
+    <string name="audio_loading">جارٍ التحميل…</string>
+    <string name="audio_load_failed">تعذّر تحميل الصوت</string>
+    <string name="audio_failed">تعذّر تشغيل الصوت</string>
 
     <string name="favorites_title">المفضلة</string>
     <string name="favorites_empty">لم تتم إضافة أي اسم بعد.</string>

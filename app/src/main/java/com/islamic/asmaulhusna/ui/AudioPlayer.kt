@@ -4,6 +4,7 @@ import android.content.Context
 import android.media.MediaPlayer
 import android.util.Log
 import android.widget.Toast
+import com.islamic.asmaulhusna.R
 
 object AudioPlayer {
     // Disabled until we ship properly-licensed audio: the current source has no license
@@ -31,7 +32,7 @@ object AudioPlayer {
         "haqq.mp3", "wakil.mp3", "qawi.mp3", "matin.mp3", "waliy.mp3",
         "hamid.mp3", "muhsi.mp3", "mubdi.mp3", "muid.mp3", "muhyi.mp3",
         "mumit.mp3", "hayy.mp3", "qayyum.mp3", "wajid.mp3", "majid.mp3",
-        "wahid.mp3", "ahad.mp4", "samad.mp3", "qadir.mp3", "muqtadir.mp3",
+        "wahid.mp3", "ahad.mp3", "samad.mp3", "qadir.mp3", "muqtadir.mp3",
         "muqaddim.mp3", "muakhkhir.mp3", "awwal.mp3", "akhir.mp3", "zahir.mp3",
         "batin.mp3", "wali.mp3", "muta_ali.mp3", "barr.mp3", "tawwab.mp3",
         "muntaqim.mp3", "afuw.mp3", "rauf.mp3", "malik_ul_mulk.mp3", "dhu_l_jalali_wal_ikram.mp3",
@@ -53,16 +54,16 @@ object AudioPlayer {
                 setOnCompletionListener { stop() }
                 setOnErrorListener { _, what, extra ->
                     Log.e("AudioPlayer", "Error $what/$extra for $url")
-                    Toast.makeText(context, "অডিও লোড করা যায়নি", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, R.string.audio_load_failed, Toast.LENGTH_SHORT).show()
                     stop()
                     true
                 }
                 prepareAsync()
             }
-            Toast.makeText(context, "লোড হচ্ছে…", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, R.string.audio_loading, Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
             Log.e("AudioPlayer", "Failed: ${e.message}")
-            Toast.makeText(context, "অডিও চালু করা যায়নি", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, R.string.audio_failed, Toast.LENGTH_SHORT).show()
         }
     }
 

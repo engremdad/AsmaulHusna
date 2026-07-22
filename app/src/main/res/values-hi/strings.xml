@@ -9,6 +9,9 @@
     <string name="section_virtue">फ़ज़ीलत</string>
     <string name="section_practice">अमल</string>
     <string name="action_listen">सुनें</string>
+    <string name="audio_loading">लोड हो रहा है…</string>
+    <string name="audio_load_failed">ऑडियो लोड नहीं हो सका</string>
+    <string name="audio_failed">ऑडियो शुरू नहीं हो सका</string>
 
     <string name="favorites_title">पसंदीदा</string>
     <string name="favorites_empty">अभी तक कोई नाम नहीं जोड़ा गया।</string>

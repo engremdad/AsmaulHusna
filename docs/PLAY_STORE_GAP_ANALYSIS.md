@@ -14,6 +14,12 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **Notification-permission guidance** — Settings shows a banner when notifications are blocked, deep-linking to system settings (added while fixing "reminders not firing").
 - **Top-bar deprecation** — Home switched off `centerAlignedTopAppBarColors` to `topAppBarColors`.
 - **Empty states** — Favorites has a proper empty state.
+- **Audio blocker mitigated** — unlicensed streaming disabled behind `AudioPlayer.ENABLED = false` (button hidden).
+- **FCM token upload neutralized** (#2) — guarded behind `TokenUploader.BACKEND_CONFIGURED = false`; no identifier leaves the device until a real endpoint is set.
+- **Exact-alarm permission** (#7) — switched to `USE_EXACT_ALARM` (auto-granted for alarm/reminder apps) on 33+, `SCHEDULE_EXACT_ALARM` capped at `maxSdkVersion=32`; exact Suhoor/Iftar timing preserved. _(Play Console still asks to confirm the alarm use case.)_
+- **`VolumeUp` deprecation** (#15) — switched to `Icons.AutoMirrored.Filled.VolumeUp`.
+- **Hard-coded Bangla toasts** (#19) — `AudioPlayer` toasts extracted to localized string resources.
+- **`ahad.mp4` typo** (#22) — corrected to `.mp3`.
 
 ---
 
