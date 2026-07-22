@@ -13,6 +13,9 @@
     <string name="favorites_title">المفضلة</string>
     <string name="favorites_empty">لم تتم إضافة أي اسم بعد.</string>
 
+    <string name="notif_off_title">الإشعارات متوقفة</string>
+    <string name="notif_off_body">لن تظهر التذكيرات حتى تسمح بالإشعارات لهذا التطبيق.</string>
+    <string name="action_enable">تفعيل</string>
     <string name="reminders_title">التذكيرات</string>
     <string name="reminders_intro">فعِّل التذكيرات لتصلك في وقتها. اضبط وقتي السحور والإفطار حسب توقيتك المحلي.</string>
     <string name="reminder_daily_name">اسم اليوم</string>

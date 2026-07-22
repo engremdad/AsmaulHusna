@@ -3,7 +3,7 @@
 > The 99 Names of Allah — an illuminated "Mushaf" reading app.
 > Package `com.islamic.asmaulhusna` · version 1.0 (versionCode 1) · minSdk 24 · targetSdk 36
 
-_Last updated: 2026-07-22_
+_Last updated: 2026-07-22 (notification-permission guidance)_
 
 This document is the running catalogue of what the app does. **It is updated whenever a
 task adds, changes, or removes a feature** — see [Maintenance](#maintenance) at the bottom.
@@ -64,6 +64,9 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 - **Suhoor** and **Iftar** reminders at user-set local times.
 - Reminders reschedule after device reboot.
 - **Announcements** — remote push (Firebase Cloud Messaging) for Ramadan/special messages.
+- **Permission guidance** — if notifications are blocked, Settings shows a warning banner
+  with an "Enable" button that opens the system notification settings; it clears
+  automatically on return.
 
 ## Design
 - **Mushaf theme** — a single committed dark palette (deep emerald grounds, gold-leaf

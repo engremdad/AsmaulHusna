@@ -13,6 +13,9 @@
     <string name="favorites_title">पसंदीदा</string>
     <string name="favorites_empty">अभी तक कोई नाम नहीं जोड़ा गया।</string>
 
+    <string name="notif_off_title">सूचनाएँ बंद हैं</string>
+    <string name="notif_off_body">जब तक आप इस ऐप के लिए सूचनाओं की अनुमति नहीं देते, रिमाइंडर नहीं दिखेंगे।</string>
+    <string name="action_enable">चालू करें</string>
     <string name="reminders_title">रिमाइंडर</string>
     <string name="reminders_intro">समय पर सूचना पाने के लिए रिमाइंडर चालू करें। सहरी और इफ़्तार का समय अपने स्थानीय समय के अनुसार स्वयं तय करें।</string>
     <string name="reminder_daily_name">आज का नाम</string>

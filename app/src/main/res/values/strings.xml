@@ -64,6 +64,9 @@
     <string name="favorites_empty">No names added yet.</string>
 
     <!-- Reminders -->
+    <string name="notif_off_title">Notifications are off</string>
+    <string name="notif_off_body">Reminders can’t appear until you allow notifications for this app.</string>
+    <string name="action_enable">Enable</string>
     <string name="reminders_title">Reminders</string>
     <string name="reminders_intro">Turn on reminders to be notified on time. Set Suhoor and Iftar to your own local times.</string>
     <string name="reminder_daily_name">Name of the Day</string>

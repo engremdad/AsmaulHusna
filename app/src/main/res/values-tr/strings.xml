@@ -13,6 +13,9 @@
     <string name="favorites_title">Favoriler</string>
     <string name="favorites_empty">Henüz isim eklenmedi.</string>
 
+    <string name="notif_off_title">Bildirimler kapalı</string>
+    <string name="notif_off_body">Bu uygulama için bildirimlere izin vermeden hatırlatıcılar görünmez.</string>
+    <string name="action_enable">Etkinleştir</string>
     <string name="reminders_title">Hatırlatıcılar</string>
     <string name="reminders_intro">Zamanında bildirim almak için hatırlatıcıları açın. Sahur ve iftar saatlerini kendi yerel saatinize göre ayarlayın.</string>
     <string name="reminder_daily_name">Günün İsmi</string>

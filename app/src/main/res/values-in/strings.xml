@@ -13,6 +13,9 @@
     <string name="favorites_title">Favorit</string>
     <string name="favorites_empty">Belum ada nama yang ditambahkan.</string>
 
+    <string name="notif_off_title">Notifikasi nonaktif</string>
+    <string name="notif_off_body">Pengingat tidak akan muncul sampai Anda mengizinkan notifikasi untuk aplikasi ini.</string>
+    <string name="action_enable">Aktifkan</string>
     <string name="reminders_title">Pengingat</string>
     <string name="reminders_intro">Aktifkan pengingat agar diberi tahu tepat waktu. Atur waktu Sahur dan Buka Puasa sesuai waktu setempat Anda.</string>
     <string name="reminder_daily_name">Nama Hari Ini</string>

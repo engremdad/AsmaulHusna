@@ -13,6 +13,9 @@
     <string name="favorites_title">پسندیدہ</string>
     <string name="favorites_empty">ابھی تک کوئی نام شامل نہیں کیا گیا۔</string>
 
+    <string name="notif_off_title">اطلاعات بند ہیں</string>
+    <string name="notif_off_body">جب تک آپ اس ایپ کے لیے اطلاعات کی اجازت نہیں دیتے، یاد دہانیاں ظاہر نہیں ہوں گی۔</string>
+    <string name="action_enable">فعال کریں</string>
     <string name="reminders_title">یاد دہانیاں</string>
     <string name="reminders_intro">بروقت اطلاع کے لیے یاد دہانیاں آن کریں۔ سحری اور افطار کا وقت اپنے مقامی وقت کے مطابق خود مقرر کریں۔</string>
     <string name="reminder_daily_name">آج کا نام</string>

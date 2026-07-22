@@ -1,6 +1,8 @@
 package com.islamic.asmaulhusna.ui
 
 import android.app.TimePickerDialog
+import android.content.Intent
+import android.provider.Settings
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -12,6 +14,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.filled.NotificationsOff
 import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Schedule
@@ -22,11 +25,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.app.NotificationManagerCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.notify.ReminderPrefs
 import com.islamic.asmaulhusna.notify.ReminderScheduler
@@ -43,6 +50,22 @@ fun SettingsScreen(
     val context = LocalContext.current
     val prefs = remember { ReminderPrefs(context) }
     val currentLang = remember { LocaleStore.language(context) }
+
+    // Reminders only appear when notifications are allowed. Re-check on resume so the
+    // warning clears the moment the user comes back from the system settings screen.
+    val lifecycleOwner = LocalLifecycleOwner.current
+    var notificationsEnabled by remember {
+        mutableStateOf(NotificationManagerCompat.from(context).areNotificationsEnabled())
+    }
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                notificationsEnabled = NotificationManagerCompat.from(context).areNotificationsEnabled()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
 
     val states = remember {
         mutableStateListOf(*ReminderType.entries.map {
@@ -140,6 +163,13 @@ fun SettingsScreen(
 
             // ── Reminders ─────────────────────────────────────────────
             SectionHeader(stringResource(R.string.section_reminders))
+            if (!notificationsEnabled) {
+                NotificationsOffCard(onEnable = {
+                    val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                        .putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+                    context.startActivity(intent)
+                })
+            }
             Text(stringResource(R.string.reminders_intro),
                 color = CreamDim, fontSize = 13.sp, lineHeight = 20.sp)
             states.forEachIndexed { i, s ->
@@ -242,6 +272,35 @@ private fun StepperButton(icon: androidx.compose.ui.graphics.vector.ImageVector,
         contentAlignment = Alignment.Center
     ) {
         Icon(icon, cd, tint = tint, modifier = Modifier.size(20.dp))
+    }
+}
+
+@Composable
+private fun NotificationsOffCard(onEnable: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .background(SectGround)
+            .border(1.dp, Gold, RoundedCornerShape(16.dp))
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(Icons.Filled.NotificationsOff, null, tint = Gold, modifier = Modifier.size(22.dp))
+        Spacer(Modifier.width(14.dp))
+        Column(Modifier.weight(1f)) {
+            Text(stringResource(R.string.notif_off_title), color = Cream, fontSize = 15.sp,
+                fontWeight = FontWeight.SemiBold)
+            Text(stringResource(R.string.notif_off_body), color = CreamDim, fontSize = 12.sp,
+                lineHeight = 17.sp)
+        }
+        Spacer(Modifier.width(10.dp))
+        TextButton(
+            onClick = onEnable,
+            colors = ButtonDefaults.textButtonColors(contentColor = Gold)
+        ) {
+            Text(stringResource(R.string.action_enable), fontWeight = FontWeight.Bold)
+        }
     }
 }
 

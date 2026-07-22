@@ -13,6 +13,9 @@
     <string name="favorites_title">প্রিয় নাম</string>
     <string name="favorites_empty">এখনো কোনো নাম যোগ করা হয়নি।</string>
 
+    <string name="notif_off_title">নোটিফিকেশন বন্ধ</string>
+    <string name="notif_off_body">এই অ্যাপের জন্য নোটিফিকেশন অনুমতি না দিলে রিমাইন্ডার দেখা যাবে না।</string>
+    <string name="action_enable">চালু করুন</string>
     <string name="reminders_title">রিমাইন্ডার</string>
     <string name="reminders_intro">সময়মতো স্মরণ করিয়ে দিতে রিমাইন্ডার চালু করুন। সাহরি ও ইফতারের সময় আপনার স্থানীয় সময় অনুযায়ী নিজে ঠিক করে নিন।</string>
     <string name="reminder_daily_name">আজকের নাম</string>
