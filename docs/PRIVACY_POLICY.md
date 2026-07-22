@@ -26,10 +26,9 @@ Google account (Google Drive), governed by Google's privacy policy — not by us
 ## Permissions the app requests
 - **Notifications (POST_NOTIFICATIONS)** — to show the daily name, Suhoor, and Iftar
   reminders you enable. You control these in Settings and in system settings.
-- **Exact alarms (USE_EXACT_ALARM / SCHEDULE_EXACT_ALARM)** — so time-critical reminders
-  (e.g. Suhoor) fire at the correct minute.
 - **Run at startup (RECEIVE_BOOT_COMPLETED)** — to re-arm your reminders after the device
-  restarts.
+  restarts. (Reminders use inexact, battery-friendly alarms and arrive around the time you
+  set, not to the exact second.)
 - **Internet (INTERNET)** — used only if optional online features are enabled (see below).
 
 ## Network and third-party services

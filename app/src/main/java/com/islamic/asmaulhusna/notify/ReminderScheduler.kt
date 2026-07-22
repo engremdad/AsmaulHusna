@@ -4,14 +4,14 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import java.util.Calendar
 
 /**
- * Schedules each reminder as a daily alarm. We prefer an exact alarm so Suhoor /
- * Iftar fire on time, but fall back to an inexact (doze-friendly) alarm when the
- * OS hasn't granted exact-alarm access — the reminder still arrives, just not to
- * the second. Each firing reschedules itself for the next day (see ReminderReceiver).
+ * Schedules each reminder as a daily alarm using an inexact, doze-friendly alarm
+ * (setAndAllowWhileIdle) — the reminder arrives around the chosen time, within the
+ * OS's tolerance window. We deliberately avoid exact alarms: Google Play restricts
+ * those to apps whose core function is alarms/reminders, which this reference app is
+ * not. Each firing reschedules itself for the next day (see ReminderReceiver).
  */
 object ReminderScheduler {
 
@@ -26,12 +26,8 @@ object ReminderScheduler {
         val am = context.getSystemService(AlarmManager::class.java) ?: return
         val triggerAt = nextTriggerMillis(hour, minute)
         val pending = alarmPendingIntent(context, type)
-        val canExact = Build.VERSION.SDK_INT < Build.VERSION_CODES.S || am.canScheduleExactAlarms()
-        if (canExact) {
-            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAt, pending)
-        } else {
-            am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAt, pending)
-        }
+        // Inexact but delivered even in doze; no exact-alarm permission required.
+        am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAt, pending)
     }
 
     fun cancel(context: Context, type: ReminderType) {

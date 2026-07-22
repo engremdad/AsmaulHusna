@@ -16,7 +16,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **Empty states** — Favorites has a proper empty state.
 - **Audio blocker resolved** (#1) — the unlicensed GitHub hotlink is gone. All 99 pronunciation clips (Mohammed Sadiq / Wikimedia Commons / **CC BY-SA 4.0**) are now bundled in `res/raw/` and play fully offline; `AudioPlayer.ENABLED = true`. CC BY-SA attribution + licence link surfaced in **Settings › About › Audio credits**, with the notice file at `assets/licenses/asma_ul_husna_audio_attribution.txt`.
 - **FCM token upload removed** (#2) — `TokenUploader` (which POSTed the device token to the `api.example.com` placeholder) is deleted, along with its retrofit/gson/coroutines deps. The FCM *receive* path is kept (`AsmaulHusnaMessagingService`); push is now targeted from the Firebase console / topics, so no device identifier is collected or sent anywhere.
-- **Exact-alarm permission** (#7) — switched to `USE_EXACT_ALARM` (auto-granted for alarm/reminder apps) on 33+, `SCHEDULE_EXACT_ALARM` capped at `maxSdkVersion=32`; exact Suhoor/Iftar timing preserved. _(Play Console still asks to confirm the alarm use case.)_
+- **Exact-alarm permission** (#7) — dropped entirely in favour of inexact, doze-friendly alarms (`setAndAllowWhileIdle`). Exact alarms are Play-restricted to core alarm/reminder apps; as a reference app we accept a few minutes' tolerance and avoid the restricted permission / Console declaration.
 - **`VolumeUp` deprecation** (#15) — switched to `Icons.AutoMirrored.Filled.VolumeUp`.
 - **Hard-coded Bangla toasts** (#19) — `AudioPlayer` toasts extracted to localized string resources.
 - **`ahad.mp4` typo** (#22) — corrected to `.mp3`.
@@ -43,7 +43,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 
 | # | Category | Gap | Fix |
 |---|---|---|---|
-| 7 | **Policy** | **`SCHEDULE_EXACT_ALARM` is a restricted permission** — apps targeting 33+ that request it must have alarm/reminder as a core feature and justify it; otherwise Play flags it. | Justify it in the Console declaration, switch to `USE_EXACT_ALARM` (allowed for alarm/reminder apps), or drop to inexact alarms (the scheduler already falls back). |
+| 7 | ✅ **Resolved** | **Exact-alarm permission was a restricted/policy risk** — exact alarms are reserved by Play for apps whose core function is alarms/reminders; this is a reference app. | **Done:** dropped both `USE_EXACT_ALARM` and `SCHEDULE_EXACT_ALARM`; `ReminderScheduler` now always uses inexact `setAndAllowWhileIdle` (doze-friendly, arrives within the OS window). No restricted permission, no Console alarm declaration needed. |
 | 8 | **Content** | **Fazilat/amal authenticity** — per-name virtue/practice text may include weak/unsourced narrations. (A Virtues screen with hadith references + an authenticity note now exists — good, but per-name text still needs review.) | Cite sources or mark as "traditional"; keep the disclaimer prominent. |
 | 9 | **Config** | **`google-services.json` is gitignored** but the app links Firebase. | Fine for local builds; ensure the release/CI build has the correct file for the production Firebase project (or remove Firebase if unused). |
 | 10 | ✅ **Resolved** | **No offline fallback for audio** — used to stream and only show a toast on failure. | **Done:** audio is bundled in `res/raw/` and plays offline; no network path to fail. |
@@ -72,7 +72,7 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 ## 📋 Suggested publish order
 1. ~~**Audio**: bundle licensed audio~~ ✅ done — 99 CC BY-SA 4.0 clips bundled offline in `res/raw/` with in-app attribution — #1, #10, #22
 2. ~~**FCM**: remove `TokenUploader`~~ ✅ done — `TokenUploader` deleted (no backend); FCM receive kept, no token uploaded — #2, #9, #12
-3. **Exact alarms**: decide `USE_EXACT_ALARM` vs inexact and update the manifest/declaration — #7
+3. ~~**Exact alarms**: decide `USE_EXACT_ALARM` vs inexact~~ ✅ done — dropped exact-alarm perms, using inexact `setAndAllowWhileIdle` — #7
 4. **Backup**: fill in backup rules or set `allowBackup=false` — #11
 5. **Privacy Policy**: write + host, get the URL — #4
 6. **Release build**: keystore + `signingConfigs.release`, enable R8 — #3, #17

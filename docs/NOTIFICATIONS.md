@@ -4,7 +4,7 @@ The app uses a **hybrid** notification strategy:
 
 | Job | Mechanism | Why |
 |---|---|---|
-| Suhoor / Iftar / daily-name reminders (fire at an exact local time, offline) | **On-device `AlarmManager`** | No delivery-time guarantee, network, or per-user server data needed. A missed Iftar ping is a bad experience. |
+| Suhoor / Iftar / daily-name reminders (fire around a local time, offline) | **On-device `AlarmManager`** (inexact) | No delivery-time guarantee, network, or per-user server data needed. A missed Iftar ping is a bad experience. |
 | Ramadan greetings, announcements, engagement nudges (same message to many, sent on demand) | **Firebase Cloud Messaging (FCM)** | Exactly what FCM is for — broadcast from the Firebase console or a backend. |
 
 Local reminders work out of the box. FCM stays **dormant until you add `google-services.json`** (see setup below).
@@ -19,7 +19,7 @@ All notification code lives in `app/src/main/java/com/islamic/asmaulhusna/notify
 |---|---|
 | `NotificationHelper.kt` | Creates the two channels (`reminders`, `announcements`) and posts notifications. Deep-links via the `open_name_id` extra. |
 | `Reminders.kt` | `ReminderType` enum (Daily Name / Suhoor / Iftar) with stable IDs + `ReminderPrefs` (SharedPreferences toggle + time per reminder). |
-| `ReminderScheduler.kt` | Schedules each reminder as a daily `AlarmManager` alarm. Prefers exact alarms; falls back to inexact (doze-friendly) when exact-alarm access isn't granted. |
+| `ReminderScheduler.kt` | Schedules each reminder as a daily inexact `AlarmManager` alarm (`setAndAllowWhileIdle`, doze-friendly). No exact-alarm permission — Play restricts exact alarms to core alarm/reminder apps. |
 | `ReminderReceiver.kt` | Fires on the alarm: posts the notification, then re-arms for the next day. |
 | `BootReceiver.kt` | Re-arms every enabled reminder after a device reboot (alarms are cleared on boot). |
 | `AsmaulHusnaMessagingService.kt` | `FirebaseMessagingService` — handles `onNewToken` and `onMessageReceived` (FCM). |
@@ -30,8 +30,8 @@ UI: `ui/NotificationSettingsScreen.kt` — reached from the bell icon in the Hom
 
 ### Permissions (already in `AndroidManifest.xml`)
 - `POST_NOTIFICATIONS` — runtime-requested on Android 13+ (requested when a reminder is enabled).
-- `SCHEDULE_EXACT_ALARM` — for on-time Suhoor/Iftar; degrades gracefully to inexact if the user/OS revokes it.
 - `RECEIVE_BOOT_COMPLETED` — to re-arm alarms after reboot.
+- _No exact-alarm permission_ — reminders use inexact alarms, so `USE_EXACT_ALARM` / `SCHEDULE_EXACT_ALARM` are intentionally not declared (avoids Play's restricted-permission review).
 
 ---
 
@@ -87,8 +87,13 @@ FCM messages post to the **`announcements`** channel (see `default_notification_
 
 To verify reboot re-arming: enable a reminder, reboot the device/emulator, confirm the alarm is re-scheduled (it fires at its next time without reopening the app).
 
-### Exact-alarm note
-On Android 12+ the OS may not grant exact alarms automatically. Without it, reminders still arrive but may be delayed by a few minutes under Doze. If precise timing matters, guide users to **Settings → Apps → Asmaul Husna → Alarms & reminders → Allow**.
+### Timing note
+Reminders use **inexact** alarms (`setAndAllowWhileIdle`), so they arrive around the chosen
+time and may be delayed by a few minutes under Doze — an accepted trade-off. Exact alarms are
+deliberately not used: Google Play restricts `USE_EXACT_ALARM` / `SCHEDULE_EXACT_ALARM` to apps
+whose core function is alarms/reminders, which this reference app is not. If exact timing ever
+becomes a core feature, revisit this decision and add the appropriate permission + Console
+declaration.
 
 ---
 

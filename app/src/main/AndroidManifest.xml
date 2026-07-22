@@ -4,12 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <!-- Exact alarms for time-critical Suhoor/Iftar reminders. USE_EXACT_ALARM is
-         auto-granted for alarm/reminder apps on 33+; SCHEDULE_EXACT_ALARM covers 31–32. -->
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
-    <uses-permission
-        android:name="android.permission.SCHEDULE_EXACT_ALARM"
-        android:maxSdkVersion="32" />
+    <!-- Reminders use inexact (doze-friendly) alarms — no exact-alarm permission. Exact
+         alarms are reserved by Google Play for apps whose core function is alarms/reminders;
+         this is a reference app, so a few minutes' tolerance is acceptable and avoids the
+         restricted-permission review. -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
