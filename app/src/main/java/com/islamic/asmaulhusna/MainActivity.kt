@@ -1,6 +1,7 @@
 package com.islamic.asmaulhusna
 
 import android.Manifest
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -22,10 +23,18 @@ import com.islamic.asmaulhusna.notify.ReminderScheduler
 import com.islamic.asmaulhusna.ui.DetailScreen
 import com.islamic.asmaulhusna.ui.FavoritesScreen
 import com.islamic.asmaulhusna.ui.HomeScreen
+import com.islamic.asmaulhusna.ui.LanguageScreen
+import com.islamic.asmaulhusna.ui.LocaleStore
 import com.islamic.asmaulhusna.ui.NotificationSettingsScreen
 import com.islamic.asmaulhusna.ui.theme.AsmaulHusnaTheme
 
 class MainActivity : ComponentActivity() {
+
+    // Apply the user's chosen UI language to the whole (single-activity) app.
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleStore.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -62,7 +71,8 @@ class MainActivity : ComponentActivity() {
                         HomeScreen(
                             onNameClick = { id -> nav.navigate("detail/$id") },
                             onFavoritesClick = { nav.navigate("favorites") },
-                            onSettingsClick = { nav.navigate("settings") }
+                            onSettingsClick = { nav.navigate("settings") },
+                            onLanguageClick = { nav.navigate("language") }
                         )
                     }
                     composable(
@@ -84,6 +94,9 @@ class MainActivity : ComponentActivity() {
                             onBack = { nav.popBackStack() },
                             onRequestPermission = { requestNotifPermission() }
                         )
+                    }
+                    composable("language") {
+                        LanguageScreen(onBack = { nav.popBackStack() })
                     }
                 }
             }

@@ -9,6 +9,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.islamic.asmaulhusna.MainActivity
 import com.islamic.asmaulhusna.R
+import com.islamic.asmaulhusna.ui.LocaleStore
 
 /** Creates channels and posts notifications for both local reminders and FCM messages. */
 object NotificationHelper {
@@ -26,15 +27,18 @@ object NotificationHelper {
 
     fun ensureChannels(context: Context) {
         val nm = context.getSystemService(NotificationManager::class.java) ?: return
+        val l = LocaleStore.wrap(context)
         nm.createNotificationChannel(
             NotificationChannel(
-                CHANNEL_REMINDERS, "দৈনিক রিমাইন্ডার", NotificationManager.IMPORTANCE_HIGH
-            ).apply { description = "আজকের নাম, সাহরি ও ইফতারের রিমাইন্ডার" }
+                CHANNEL_REMINDERS, l.getString(R.string.channel_reminders),
+                NotificationManager.IMPORTANCE_HIGH
+            ).apply { description = l.getString(R.string.channel_reminders_desc) }
         )
         nm.createNotificationChannel(
             NotificationChannel(
-                CHANNEL_ANNOUNCEMENTS, "ঘোষণা", NotificationManager.IMPORTANCE_DEFAULT
-            ).apply { description = "রমজান ও বিশেষ ঘোষণা" }
+                CHANNEL_ANNOUNCEMENTS, l.getString(R.string.channel_announcements),
+                NotificationManager.IMPORTANCE_DEFAULT
+            ).apply { description = l.getString(R.string.channel_announcements_desc) }
         )
     }
 

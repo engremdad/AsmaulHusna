@@ -1,10 +1,13 @@
 package com.islamic.asmaulhusna.notify
 
 import android.content.Context
+import androidx.annotation.StringRes
+import com.islamic.asmaulhusna.R
 
 /**
  * The three local, offline reminders. Each has stable IDs so its alarm and
  * notification can be scheduled, cancelled, and replaced deterministically.
+ * Labels/hints are string resources so they follow the app's chosen language.
  */
 enum class ReminderType(
     val key: String,
@@ -12,15 +15,15 @@ enum class ReminderType(
     val requestCode: Int,
     val defaultHour: Int,
     val defaultMinute: Int,
-    val label: String,
-    val hint: String
+    @StringRes val labelRes: Int,
+    @StringRes val hintRes: Int
 ) {
     DAILY_NAME("daily_name", 1001, 2001, 8, 0,
-        "আজকের নাম", "প্রতিদিন একটি নাম স্মরণ করিয়ে দেবে"),
+        R.string.reminder_daily_name, R.string.reminder_daily_name_hint),
     SUHOOR("suhoor", 1002, 2002, 4, 30,
-        "সাহরি", "সাহরি শেষ হওয়ার আগে মনে করিয়ে দেবে"),
+        R.string.reminder_suhoor, R.string.reminder_suhoor_hint),
     IFTAR("iftar", 1003, 2003, 18, 30,
-        "ইফতার", "ইফতারের সময় জানিয়ে দেবে");
+        R.string.reminder_iftar, R.string.reminder_iftar_hint);
 
     companion object {
         fun fromKey(key: String?): ReminderType? = entries.firstOrNull { it.key == key }

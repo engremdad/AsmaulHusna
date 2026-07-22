@@ -1,0 +1,695 @@
+[
+ {
+  "id": 1,
+  "name": "Ar-Rahman",
+  "meaning": "Maha Pengasih",
+  "fazilat": "Barangsiapa membaca 'Ya Rahman' 100 kali setelah setiap salat fardu, Allah akan menghilangkan kelalaian (sikap acuh) dan kecenderungan lupa dari hatinya.",
+  "amal": "Bacalah 100 kali setiap hari setelah Fajar. Hati akan menjadi tenang."
+ },
+ {
+  "id": 2,
+  "name": "Ar-Rahim",
+  "meaning": "Maha Penyayang",
+  "fazilat": "Barangsiapa membaca 'Ya Rahim' 100 kali setelah salat Fajar, Allah akan menjadikan semua orang berbelas kasih kepadanya.",
+  "amal": "Bacalah 100 kali setelah Fajar — akan memperoleh kasih sayang dari orang-orang."
+ },
+ {
+  "id": 3,
+  "name": "Al-Malik",
+  "meaning": "Penguasa, Raja diraja yang memiliki segala kekuasaan",
+  "fazilat": "Barangsiapa membaca 'Ya Malik' secara rutin setiap hari setelah Fajar, Allah akan menganugerahkan harta dan kehormatan kepadanya.",
+  "amal": "Bacalah 121 kali setelah matahari terbit."
+ },
+ {
+  "id": 4,
+  "name": "Al-Quddus",
+  "meaning": "Maha Suci",
+  "fazilat": "Barangsiapa membaca 'Ya Quddus' 100 kali setiap hari, hatinya akan tetap suci dari segala kecemasan dan penyakit.",
+  "amal": "100 kali setiap hari — terbebas dari penyakit hati."
+ },
+ {
+  "id": 5,
+  "name": "As-Salam",
+  "meaning": "Pemberi Keselamatan dan Kedamaian",
+  "fazilat": "Jika membaca 'Ya Salam' 115 kali di hadapan orang yang sakit, Allah akan menganugerahkan kesembuhan.",
+  "amal": "Bacalah lalu tiupkan kepada orang yang sakit."
+ },
+ {
+  "id": 6,
+  "name": "Al-Mu'min",
+  "meaning": "Pemberi Keamanan",
+  "fazilat": "Barangsiapa membaca 'Ya Mu'min' 631 kali, Allah akan menjaganya tetap aman dari segala bahaya.",
+  "amal": "Bacalah saat ketakutan — akan memperoleh keamanan."
+ },
+ {
+  "id": 7,
+  "name": "Al-Muhaymin",
+  "meaning": "Maha Memelihara",
+  "fazilat": "Jika setelah mandi mengerjakan salat 2 rakaat lalu membaca 'Ya Muhaimin' 115 kali, hati akan menjadi bercahaya.",
+  "amal": "Bacalah 115 kali setiap hari."
+ },
+ {
+  "id": 8,
+  "name": "Al-Aziz",
+  "meaning": "Maha Perkasa",
+  "fazilat": "Jika membaca 'Ya Aziz' 40 kali setiap hari setelah Fajar selama 40 hari, Allah tidak akan menjadikannya bergantung kepada siapa pun.",
+  "amal": "40 kali setelah setiap Fajar × 40 hari."
+ },
+ {
+  "id": 9,
+  "name": "Al-Jabbar",
+  "meaning": "Maha Kuasa, Tak Terkalahkan",
+  "fazilat": "Barangsiapa membaca 'Ya Jabbar' 226 kali setiap hari, ia akan terlindungi dari kezaliman orang yang zalim.",
+  "amal": "Bacalah untuk terlindung dari tangan orang yang zalim."
+ },
+ {
+  "id": 10,
+  "name": "Al-Mutakabbir",
+  "meaning": "Maha Agung, pemilik segala kebesaran",
+  "fazilat": "Jika membaca 'Ya Mutakabbir' 10 kali di awal pekerjaan apa pun, Allah akan menolongnya.",
+  "amal": "Bacalah 10 kali sebelum memulai pekerjaan."
+ },
+ {
+  "id": 11,
+  "name": "Al-Khaliq",
+  "meaning": "Maha Pencipta",
+  "fazilat": "Jika membaca 'Ya Khaliq' 100 kali sebelum tidur di malam hari, Allah akan mengutus seorang malaikat yang beribadah hingga hari Kiamat dan mengirimkan pahalanya.",
+  "amal": "100 kali setiap malam sebelum tidur."
+ },
+ {
+  "id": 12,
+  "name": "Al-Bari'",
+  "meaning": "Maha Mengadakan",
+  "fazilat": "Wanita yang belum memiliki anak, jika berpuasa selama 7 hari dan membaca 'Ya Bari' 21 kali saat Iftar, dapat berharap memperoleh anak.",
+  "amal": "Bacalah secara rutin untuk mendambakan anak."
+ },
+ {
+  "id": 13,
+  "name": "Al-Musawwir",
+  "meaning": "Maha Pembentuk Rupa",
+  "fazilat": "Jika berpuasa selama 7 hari dan meniupkan 21 kali ke dalam air saat Iftar lalu meminumnya, akan bermanfaat untuk mendambakan anak.",
+  "amal": "Bacalah ke dalam air saat Iftar lalu minumlah."
+ },
+ {
+  "id": 14,
+  "name": "Al-Ghaffar",
+  "meaning": "Maha Pengampun",
+  "fazilat": "Jika membaca 'Ya Ghaffar' 100 kali setelah salat Jumu'ah, dosa-dosa akan diampuni.",
+  "amal": "100 kali setelah setiap Jumu'ah."
+ },
+ {
+  "id": 15,
+  "name": "Al-Qahhar",
+  "meaning": "Maha Menundukkan",
+  "fazilat": "Jika membaca 'Ya Qahhar', hawa nafsu (keinginan nafsu) akan tertundukkan dan ketamakan terhadap dunia akan berkurang.",
+  "amal": "Bacalah untuk menang melawan hawa nafsu."
+ },
+ {
+  "id": 16,
+  "name": "Al-Wahhab",
+  "meaning": "Maha Pemberi Karunia",
+  "fazilat": "Jika membaca 'Ya Wahhab' 100 kali setelah Tahajud selama 3 atau 7 hari, Allah akan mengabulkan permohonan.",
+  "amal": "Bacalah bersama doa setelah Tahajud."
+ },
+ {
+  "id": 17,
+  "name": "Ar-Razzaq",
+  "meaning": "Maha Pemberi Rezeki",
+  "fazilat": "Jika sebelum Fajar berdiri di keempat sudut rumah dan membaca 'Ya Razzaq' masing-masing 10 kali, rezeki akan diberkahi.",
+  "amal": "Bacalah di keempat sudut rumah pada pagi hari."
+ },
+ {
+  "id": 18,
+  "name": "Al-Fattah",
+  "meaning": "Maha Pembuka, Pemberi Kemenangan",
+  "fazilat": "Jika pada pagi hari meletakkan tangan di dada dan membaca 'Ya Fattah' 70 kali, hati akan menjadi bercahaya dan datang keberhasilan dalam pekerjaan.",
+  "amal": "70 kali pada pagi hari dengan meletakkan tangan di dada."
+ },
+ {
+  "id": 19,
+  "name": "Al-'Alim",
+  "meaning": "Maha Mengetahui",
+  "fazilat": "Jika membaca 'Ya Alim' secara rutin, Allah akan menganugerahkan ilmu dan hikmah.",
+  "amal": "Bacalah sebelum belajar."
+ },
+ {
+  "id": 20,
+  "name": "Al-Qabid",
+  "meaning": "Maha Menyempitkan (Menggenggam)",
+  "fazilat": "Jika membaca 'Ya Qabid' selama 40 hari, rasa lapar dan kekurangan akan menjadi lebih mudah ditanggung.",
+  "amal": "Bacalah untuk melatih pengendalian diri."
+ },
+ {
+  "id": 21,
+  "name": "Al-Basith",
+  "meaning": "Yang Maha Melapangkan",
+  "fazilat": "Jika setelah shalat Dhuha seseorang mengangkat tangan dan membaca 'Ya Basith' 10 kali lalu mengusapkan tangannya ke wajah, maka kekurangan akan hilang.",
+  "amal": "Bacalah setelah shalat Dhuha."
+ },
+ {
+  "id": 22,
+  "name": "Al-Khafidh",
+  "meaning": "Yang Maha Merendahkan",
+  "fazilat": "Jika seseorang berpuasa selama 3 hari dan pada hari ke-4 membaca 'Ya Khafidh' 70 kali, maka tipu daya musuh akan hancur.",
+  "amal": "Untuk perlindungan dari musuh."
+ },
+ {
+  "id": 23,
+  "name": "Ar-Rafi'",
+  "meaning": "Yang Maha Meninggikan",
+  "fazilat": "Jika seseorang membaca 'Ya Rafi'' 100 kali setiap hari, maka kehormatan dan kedudukannya di antara manusia akan meningkat.",
+  "amal": "100 kali setiap hari."
+ },
+ {
+  "id": 24,
+  "name": "Al-Mu'izz",
+  "meaning": "Yang Maha Pemberi Kemuliaan",
+  "fazilat": "Jika seseorang membaca 'Ya Mu'izz' 140 kali pada malam Senin atau Jumat, maka ia akan dihormati di hadapan manusia.",
+  "amal": "140 kali pada malam Senin/Jumat."
+ },
+ {
+  "id": 25,
+  "name": "Al-Mudzill",
+  "meaning": "Yang Maha Menghinakan",
+  "fazilat": "Jika seseorang membaca 'Ya Mudzill' 75 kali dalam sujud, maka ia akan terlindungi dari kezaliman musuh yang zalim.",
+  "amal": "Bacalah dalam sujud."
+ },
+ {
+  "id": 26,
+  "name": "As-Sami'",
+  "meaning": "Yang Maha Mendengar",
+  "fazilat": "Jika seseorang membaca 'Ya Sami'' 100 kali tanpa berbicara dengan siapa pun pada waktu Dhuha hari Kamis, maka doanya akan dikabulkan.",
+  "amal": "Bacalah agar doa dikabulkan."
+ },
+ {
+  "id": 27,
+  "name": "Al-Bashir",
+  "meaning": "Yang Maha Melihat",
+  "fazilat": "Jika seseorang membaca 'Ya Bashir' 100 kali setelah shalat Jumat, maka penglihatannya akan tetap baik dan mata batinnya akan terbuka.",
+  "amal": "100 kali setiap setelah shalat Jumat."
+ },
+ {
+  "id": 28,
+  "name": "Al-Hakam",
+  "meaning": "Yang Maha Memutuskan Perkara",
+  "fazilat": "Jika seseorang berwudhu di malam hari lalu terus-menerus membaca 'Ya Hakam', maka pengetahuan yang tersembunyi akan terbuka di dalam hatinya.",
+  "amal": "Bacalah dalam keadaan berwudhu di malam hari."
+ },
+ {
+  "id": 29,
+  "name": "Al-'Adl",
+  "meaning": "Yang Maha Adil",
+  "fazilat": "Jika pada malam Jumat seseorang menuliskan 'Al-'Adl' di atas kertas, membacanya 20 kali, lalu menyimpannya bersamanya, maka semua orang akan patuh kepadanya.",
+  "amal": "Untuk memperoleh keadilan."
+ },
+ {
+  "id": 30,
+  "name": "Al-Lathif",
+  "meaning": "Yang Maha Lembut",
+  "fazilat": "Jika seseorang membaca 'Ya Lathif' 133 kali dalam kesulitan atau krisis, maka Allah akan segera membukakan jalan kemudahan baginya.",
+  "amal": "133 kali dalam setiap krisis."
+ },
+ {
+  "id": 31,
+  "name": "Al-Khabir",
+  "meaning": "Yang Maha Mengetahui",
+  "fazilat": "Dengan membacanya secara rutin, akan timbul mata batin mengenai perkara-perkara yang tersembunyi.",
+  "amal": "Bacalah untuk pengetahuan yang tersembunyi."
+ },
+ {
+  "id": 32,
+  "name": "Al-Halim",
+  "meaning": "Yang Maha Penyantun",
+  "fazilat": "Jika ditulis di atas kertas lalu diletakkan di tanah atau di air, maka keberkahan akan datang pada hasil panen atau pekerjaan.",
+  "amal": "Bacalah untuk meredakan amarah."
+ },
+ {
+  "id": 33,
+  "name": "Al-'Azhim",
+  "meaning": "Yang Maha Agung",
+  "fazilat": "Barangsiapa membaca 'Ya 'Azhim' secara rutin, maka Allah akan memuliakannya di dunia dan akhirat.",
+  "amal": "Bacalah setiap hari."
+ },
+ {
+  "id": 34,
+  "name": "Al-Ghafur",
+  "meaning": "Yang Maha Pengampun",
+  "fazilat": "Jika seseorang memperbanyak membaca 'Ya Ghafur' ketika sakit kepala, demam, dan sebagainya, maka ia akan memperoleh kesembuhan dan dosa-dosanya akan diampuni.",
+  "amal": "Untuk penyakit dan pengampunan dosa."
+ },
+ {
+  "id": 35,
+  "name": "Asy-Syakur",
+  "meaning": "Yang Maha Menghargai",
+  "fazilat": "Jika saat mengalami kelemahan fisik dan kegelisahan seseorang membacakannya pada air lalu meniupkannya dan meminumnya, maka ia akan memperoleh manfaat.",
+  "amal": "Untuk rasa syukur dan memperoleh kekuatan."
+ },
+ {
+  "id": 36,
+  "name": "Al-'Ali",
+  "meaning": "Yang Maha Tinggi",
+  "fazilat": "Kedudukan dan ilmu orang yang senantiasa membaca 'Ya 'Ali' akan bertambah.",
+  "amal": "Bacalah untuk kemajuan."
+ },
+ {
+  "id": 37,
+  "name": "Al-Kabir",
+  "meaning": "Yang Maha Besar",
+  "fazilat": "Jika seseorang membacanya 100 kali selama 7 hari, maka kedudukannya di masyarakat akan meningkat.",
+  "amal": "7 hari × 100 kali."
+ },
+ {
+  "id": 38,
+  "name": "Al-Hafizh",
+  "meaning": "Yang Maha Memelihara",
+  "fazilat": "Jika seseorang membaca 'Ya Hafizh', maka ia akan memperoleh perlindungan dari segala bahaya, musuh, dan kecelakaan.",
+  "amal": "Bacalah saat bepergian dan dalam bahaya."
+ },
+ {
+  "id": 39,
+  "name": "Al-Muqit",
+  "meaning": "Yang Maha Pemberi Makan",
+  "fazilat": "Jika seseorang membacanya ketika lapar atau ketika kekurangan rezeki, maka Allah akan memudahkan rezekinya.",
+  "amal": "Bacalah secara rutin untuk rezeki."
+ },
+ {
+  "id": 40,
+  "name": "Al-Hasib",
+  "meaning": "Yang Maha Membuat Perhitungan",
+  "fazilat": "Jika seseorang membaca 'Hasbiyallahul Hasib' 70 kali dari petang hari Kamis hingga petang hari Jumat, maka ia akan memperoleh perlindungan dari pencurian dan perampokan.",
+  "amal": "Bacalah untuk perlindungan."
+ },
+ {
+  "id": 41,
+  "name": "Al-Jalil",
+  "meaning": "Yang Mahaagung",
+  "fazilat": "Barangsiapa menuliskannya di atas kertas dengan za'faran lalu menyimpannya bersama dirinya, maka ia akan memperoleh kehormatan dan kemuliaan.",
+  "amal": "Untuk menambah kehormatan."
+ },
+ {
+  "id": 42,
+  "name": "Al-Karim",
+  "meaning": "Yang Maha Pemurah",
+  "fazilat": "Barangsiapa membaca 'Ya Karim' saat hendak tidur, maka Allah akan memuliakannya di dunia dan akhirat.",
+  "amal": "Setiap malam sebelum tidur."
+ },
+ {
+  "id": 43,
+  "name": "Ar-Raqib",
+  "meaning": "Yang Maha Mengawasi",
+  "fazilat": "Untuk menjaga keluarga dan harta, bacalah 7 kali lalu tiupkan.",
+  "amal": "Untuk menjaga keluarga dan harta."
+ },
+ {
+  "id": 44,
+  "name": "Al-Mujib",
+  "meaning": "Yang Maha Mengabulkan permohonan",
+  "fazilat": "Barangsiapa membaca 'Ya Mujib', maka doanya akan cepat dikabulkan.",
+  "amal": "Bacalah bersama doa."
+ },
+ {
+  "id": 45,
+  "name": "Al-Wasi'",
+  "meaning": "Yang Maha Luas",
+  "fazilat": "Jika kekurangan rezeki, membacanya akan mendatangkan keberkahan.",
+  "amal": "Untuk keluasan rezeki."
+ },
+ {
+  "id": 46,
+  "name": "Al-Hakim",
+  "meaning": "Yang Maha Bijaksana",
+  "fazilat": "Barangsiapa membaca 'Ya Hakim' dalam urusan yang sulit, maka ia akan memperoleh keputusan yang tepat dan hikmah.",
+  "amal": "Bacalah sebelum mengambil keputusan."
+ },
+ {
+  "id": 47,
+  "name": "Al-Wadud",
+  "meaning": "Yang Maha Mencintai",
+  "fazilat": "Bila dibaca 1000 kali lalu ditiupkan pada makanan, dan makanan itu dimakan oleh suami-istri, maka cinta di antara keduanya akan bertambah.",
+  "amal": "Untuk cinta dalam rumah tangga."
+ },
+ {
+  "id": 48,
+  "name": "Al-Majid",
+  "meaning": "Yang Mahamulia",
+  "fazilat": "Dengan membacanya secara rutin, hati menjadi bercahaya dan kedudukan meningkat.",
+  "amal": "Bacalah setiap hari."
+ },
+ {
+  "id": 49,
+  "name": "Al-Ba'its",
+  "meaning": "Yang Maha Membangkitkan",
+  "fazilat": "Barangsiapa membaca 100 kali dengan meletakkan tangan di dada sebelum tidur, maka hatinya menjadi hidup.",
+  "amal": "Pada malam hari sebelum tidur."
+ },
+ {
+  "id": 50,
+  "name": "Asy-Syahid",
+  "meaning": "Yang Maha Menyaksikan",
+  "fazilat": "Bila dibaca dengan meletakkan tangan di atas kepala anak yang durhaka atau suami/istri yang membangkang, diharapkan mereka dapat berubah menjadi baik.",
+  "amal": "Bacalah untuk perbaikan."
+ },
+ {
+  "id": 51,
+  "name": "Al-Haqq",
+  "meaning": "Yang Maha Benar",
+  "fazilat": "Untuk mendapatkan kembali barang yang hilang, bacalah dengan menghadap ke empat arah, maka akan memperoleh pertolongan.",
+  "amal": "Untuk barang yang hilang."
+ },
+ {
+  "id": 52,
+  "name": "Al-Wakil",
+  "meaning": "Yang Maha Memelihara urusan",
+  "fazilat": "Barangsiapa membacanya saat badai, petir, atau ketika ketakutan, maka Allah akan melindunginya.",
+  "amal": "Dalam segala urusan dengan tawakal."
+ },
+ {
+  "id": 53,
+  "name": "Al-Qawiyy",
+  "meaning": "Yang Maha Kuat",
+  "fazilat": "Barangsiapa membaca 'Ya Qawiyy' dalam menghadapi musuh, maka ia akan memperoleh kemenangan.",
+  "amal": "Untuk kekuatan dan kemenangan."
+ },
+ {
+  "id": 54,
+  "name": "Al-Matin",
+  "meaning": "Yang Maha Kukuh",
+  "fazilat": "Dengan membacanya secara rutin, akhlak dan iman menjadi kukuh.",
+  "amal": "Untuk memperkukuh iman."
+ },
+ {
+  "id": 55,
+  "name": "Al-Wali",
+  "meaning": "Yang Maha Melindungi",
+  "fazilat": "Orang yang membaca 'Ya Wali', Allah akan menjadikannya wali (kekasih)-Nya.",
+  "amal": "Bacalah setiap hari."
+ },
+ {
+  "id": 56,
+  "name": "Al-Hamid",
+  "meaning": "Yang Maha Terpuji",
+  "fazilat": "Barangsiapa membaca 99 kali, maka ia akan memperoleh akhlak yang baik dan sifat-sifat yang terpuji.",
+  "amal": "Setiap hari 99 kali."
+ },
+ {
+  "id": 57,
+  "name": "Al-Muhshi",
+  "meaning": "Yang Maha Menghitung",
+  "fazilat": "Barangsiapa membaca 20 kali sebelum ujian, maka kemampuan berhitung dan daya ingatnya menjadi baik.",
+  "amal": "Untuk meningkatkan daya ingat."
+ },
+ {
+  "id": 58,
+  "name": "Al-Mubdi'",
+  "meaning": "Yang Maha Memulai",
+  "fazilat": "Bila dibaca 99 kali dengan meletakkan tangan di atas perut ibu yang sedang hamil, maka bayi dalam kandungan akan terlindungi.",
+  "amal": "Bacalah saat masa kehamilan."
+ },
+ {
+  "id": 59,
+  "name": "Al-Mu'id",
+  "meaning": "Yang Maha Mengembalikan",
+  "fazilat": "Untuk mendapatkan kembali orang atau barang yang hilang, bacalah 70 kali di empat sudut rumah.",
+  "amal": "Untuk mendapatkan kembali yang hilang."
+ },
+ {
+  "id": 60,
+  "name": "Al-Muhyi",
+  "meaning": "Yang Maha Menghidupkan",
+  "fazilat": "Barangsiapa membaca 7 kali dengan meletakkan tangan di dada saat menderita penyakit berat, maka ia akan memperoleh kesembuhan.",
+  "amal": "Untuk kesembuhan orang sakit."
+ },
+ {
+  "id": 61,
+  "name": "Al-Mumit",
+  "meaning": "Yang Maha Mematikan",
+  "fazilat": "Untuk menundukkan hawa nafsu yang jahat, membacanya di tempat tidur akan mengurangi daya tarik dosa.",
+  "amal": "Bacalah untuk melawan hawa nafsu."
+ },
+ {
+  "id": 62,
+  "name": "Al-Hayy",
+  "meaning": "Yang Maha Hidup",
+  "fazilat": "Membaca 'Ya Hayy Ya Qayyum' di hadapan orang sakit mendatangkan kesembuhan yang cepat.",
+  "amal": "Bacalah untuk orang yang sakit."
+ },
+ {
+  "id": 63,
+  "name": "Al-Qayyum",
+  "meaning": "Yang Maha Berdiri Sendiri",
+  "fazilat": "Membaca 'Hayy Qayyum' secara bersamaan dianggap sebagai Ismul A'zham — wasilah khusus untuk terkabulnya doa.",
+  "amal": "Bacalah sebelum berdoa."
+ },
+ {
+  "id": 64,
+  "name": "Al-Wajid",
+  "meaning": "Yang Tidak Membutuhkan/Yang Menemukan segala sesuatu",
+  "fazilat": "Membaca 'Ya Wajid' pada makanan mendatangkan keberkahan.",
+  "amal": "Untuk keberkahan pada makanan."
+ },
+ {
+  "id": 65,
+  "name": "Al-Majid",
+  "meaning": "Yang Maha Mulia",
+  "fazilat": "Bacalah secara rutin untuk ketenangan hati.",
+  "amal": "Bacalah untuk ketenangan."
+ },
+ {
+  "id": 66,
+  "name": "Al-Wahid",
+  "meaning": "Yang Maha Esa",
+  "fazilat": "Membaca 'Ya Wahid' 1.000 kali dalam kesendirian akan menghilangkan rasa takut dalam hati.",
+  "amal": "Untuk kekhusyukan dan menghilangkan rasa takut."
+ },
+ {
+  "id": 67,
+  "name": "Al-Ahad",
+  "meaning": "Yang Maha Tunggal",
+  "fazilat": "Dengan membacanya secara rutin di rumah, pertolongan gaib dari Allah akan terasa.",
+  "amal": "Bacalah dengan khusyuk."
+ },
+ {
+  "id": 68,
+  "name": "As-Samad",
+  "meaning": "Yang Maha Tempat Bergantung",
+  "fazilat": "Ketika ada suatu keperluan, membaca 'Ya Samad' berkali-kali dalam sujud akan memenuhi kebutuhan tersebut.",
+  "amal": "Dalam sujud untuk memenuhi kebutuhan."
+ },
+ {
+  "id": 69,
+  "name": "Al-Qadir",
+  "meaning": "Yang Maha Kuasa",
+  "fazilat": "Bacalah 'Ya Qadir' 41 kali untuk menggagalkan tipu daya musuh.",
+  "amal": "Untuk terhindar dari bahaya musuh."
+ },
+ {
+  "id": 70,
+  "name": "Al-Muqtadir",
+  "meaning": "Yang Maha Berkuasa",
+  "fazilat": "Membacanya 20 kali setelah bangun tidur akan menjadikan hari itu penuh berkah.",
+  "amal": "20 kali di pagi hari."
+ },
+ {
+  "id": 71,
+  "name": "Al-Muqaddim",
+  "meaning": "Yang Maha Mendahulukan",
+  "fazilat": "Membacanya 184 kali dalam peperangan atau perlombaan akan mendatangkan kemenangan.",
+  "amal": "Untuk kemenangan dalam perlombaan."
+ },
+ {
+  "id": 72,
+  "name": "Al-Mu'akhkhir",
+  "meaning": "Yang Maha Mengakhirkan",
+  "fazilat": "Membacanya 100 kali setiap hari akan menambah kecintaan kepada Allah dalam hati.",
+  "amal": "100 kali setiap hari."
+ },
+ {
+  "id": 73,
+  "name": "Al-Awwal",
+  "meaning": "Yang Maha Awal",
+  "fazilat": "Dengan membacanya 40 kali selama 40 hari, orang yang kekurangan akan memperoleh rezeki dan yang tidak memiliki anak akan dikaruniai anak.",
+  "amal": "40 kali × 40 hari."
+ },
+ {
+  "id": 74,
+  "name": "Al-Akhir",
+  "meaning": "Yang Maha Akhir",
+  "fazilat": "Dengan membacanya secara rutin, kecintaan terhadap dunia berkurang dan kecenderungan terhadap akhirat bertambah.",
+  "amal": "Bacalah secara rutin."
+ },
+ {
+  "id": 75,
+  "name": "Az-Zahir",
+  "meaning": "Yang Maha Nyata",
+  "fazilat": "Membacanya 500 kali setelah shalat Jumu'ah akan memunculkan cahaya (nur) dalam hati.",
+  "amal": "Setiap setelah Jumu'ah."
+ },
+ {
+  "id": 76,
+  "name": "Al-Batin",
+  "meaning": "Yang Maha Mengetahui yang tersembunyi",
+  "fazilat": "Membacanya 33 kali sebanyak 3 kali dalam sehari akan mendatangkan ilham tentang hal-hal yang tersembunyi.",
+  "amal": "Setiap hari 3 × 33 kali."
+ },
+ {
+  "id": 77,
+  "name": "Al-Wali",
+  "meaning": "Yang Maha Menguasai",
+  "fazilat": "Membacanya di rumah akan melindungi rumah dari bahaya dan bisikan jahat setan.",
+  "amal": "Bacalah secara rutin di rumah."
+ },
+ {
+  "id": 78,
+  "name": "Al-Muta'ali",
+  "meaning": "Yang Maha Tinggi",
+  "fazilat": "Dengan membaca 'Ya Muta'ali' dalam urusan yang mustahil, Allah akan memudahkannya.",
+  "amal": "Bacalah dalam urusan yang sulit."
+ },
+ {
+  "id": 79,
+  "name": "Al-Barr",
+  "meaning": "Yang Maha Melimpahkan Kebaikan",
+  "fazilat": "Untuk mengharapkan kebaikan bagi anak, bacalah 7 kali lalu tiupkan.",
+  "amal": "Untuk kebaikan anak."
+ },
+ {
+  "id": 80,
+  "name": "At-Tawwab",
+  "meaning": "Yang Maha Penerima Taubat",
+  "fazilat": "Dengan membaca 'Ya Tawwab' dalam sujud untuk memohon ampunan atas dosa, taubat akan diterima.",
+  "amal": "Bacalah disertai taubat."
+ },
+ {
+  "id": 81,
+  "name": "Al-Muntaqim",
+  "meaning": "Yang Maha Membalas",
+  "fazilat": "Barangsiapa membacanya dalam sujud setelah salat Jumu'ah untuk menghadapi orang zalim, Allah akan mengambil pembalasan atasnya.",
+  "amal": "Untuk membalas kezaliman."
+ },
+ {
+  "id": 82,
+  "name": "Al-'Afuww",
+  "meaning": "Yang Maha Pemaaf",
+  "fazilat": "Dosa orang yang memperbanyak membaca 'Ya 'Afuww' akan diampuni.",
+  "amal": "Berkali-kali setiap hari."
+ },
+ {
+  "id": 83,
+  "name": "Ar-Ra'uf",
+  "meaning": "Yang Maha Belas Kasih",
+  "fazilat": "Jika dibaca 10 kali di hadapan orang yang marah, kemarahannya akan mereda.",
+  "amal": "Untuk menciptakan kedamaian."
+ },
+ {
+  "id": 84,
+  "name": "Malikul-Mulk",
+  "meaning": "Pemilik segala kerajaan",
+  "fazilat": "Dengan membacanya secara rutin, seseorang memperoleh kehormatan dan kemakmuran.",
+  "amal": "Baca secara rutin."
+ },
+ {
+  "id": 85,
+  "name": "Dzul-Jalali wal-Ikram",
+  "meaning": "Pemilik keagungan dan kemuliaan",
+  "fazilat": "Barangsiapa membacanya setiap hari, ia akan menjadi kaya di dunia dan akhirat.",
+  "amal": "Bacalah setiap hari."
+ },
+ {
+  "id": 86,
+  "name": "Al-Muqsit",
+  "meaning": "Yang Maha Adil",
+  "fazilat": "Jika terjadi pertengkaran di antara anak-anak, membacanya 70 kali akan mengembalikan keharmonisan.",
+  "amal": "Untuk kedamaian keluarga."
+ },
+ {
+  "id": 87,
+  "name": "Al-Jami'",
+  "meaning": "Yang Maha Mengumpulkan",
+  "fazilat": "Bacalah untuk menyatukan kembali orang yang hilang atau keluarga yang terpisah.",
+  "amal": "Untuk penyatuan kembali."
+ },
+ {
+  "id": 88,
+  "name": "Al-Ghani",
+  "meaning": "Yang Maha Kaya",
+  "fazilat": "Membaca 1000 kali setiap hari akan menghilangkan kemiskinan dan menumbuhkan rasa cukup (tidak membutuhkan selain Allah) di dalam hati.",
+  "amal": "Untuk menghilangkan kemiskinan."
+ },
+ {
+  "id": 89,
+  "name": "Al-Mughni",
+  "meaning": "Yang Membebaskan dari kemiskinan",
+  "fazilat": "Jika dibaca 1000 kali selama 10 hari, Allah akan menganugerahkan harta dan kekayaan.",
+  "amal": "10 hari × 1000 kali."
+ },
+ {
+  "id": 90,
+  "name": "Al-Mani'",
+  "meaning": "Yang Maha Mencegah",
+  "fazilat": "Untuk menghilangkan pertengkaran rumah tangga, bacalah 20 kali di tempat tidur.",
+  "amal": "Untuk menghilangkan pertengkaran."
+ },
+ {
+  "id": 91,
+  "name": "Ad-Darr",
+  "meaning": "Yang mendatangkan mudarat",
+  "fazilat": "Untuk terlindung dari bahaya musuh, bacalah 100 kali pada malam Kamis.",
+  "amal": "Baca pada malam Kamis."
+ },
+ {
+  "id": 92,
+  "name": "An-Nafi'",
+  "meaning": "Yang Maha Pemberi Manfaat",
+  "fazilat": "Membaca 41 kali sebelum bepergian atau keluar untuk bekerja akan mendatangkan keberhasilan.",
+  "amal": "Baca sebelum bepergian."
+ },
+ {
+  "id": 93,
+  "name": "An-Nur",
+  "meaning": "Cahaya",
+  "fazilat": "Membaca 'Ya Nur' bersama surah An-Nur akan menampakkan cahaya Allah di dalam hati.",
+  "amal": "Bacalah pada malam hari."
+ },
+ {
+  "id": 94,
+  "name": "Al-Hadi",
+  "meaning": "Yang Maha Pemberi Petunjuk",
+  "fazilat": "Untuk memohon hidayah, perbanyaklah membacanya dalam sujud.",
+  "amal": "Untuk hidayah."
+ },
+ {
+  "id": 95,
+  "name": "Al-Badi'",
+  "meaning": "Pencipta yang tiada bandingannya",
+  "fazilat": "Untuk urusan yang mustahil, membaca 'Ya Badi'as-samawati wal-ard' 70 kali akan mendatangkan penyelesaian.",
+  "amal": "70 kali untuk urusan yang sulit."
+ },
+ {
+  "id": 96,
+  "name": "Al-Baqi",
+  "meaning": "Yang Maha Kekal",
+  "fazilat": "Dengan membacanya secara rutin, amal menjadi langgeng dan diterima.",
+  "amal": "Baca secara rutin."
+ },
+ {
+  "id": 97,
+  "name": "Al-Warits",
+  "meaning": "Yang Maha Mewarisi",
+  "fazilat": "Membaca 100 kali sebelum matahari terbit akan mendatangkan warisan duniawi dan spiritual.",
+  "amal": "100 kali sebelum Fajar."
+ },
+ {
+  "id": 98,
+  "name": "Ar-Rasyid",
+  "meaning": "Pembimbing ke jalan yang benar",
+  "fazilat": "Sebelum mengambil keputusan yang sulit, membaca 1000 kali antara Maghrib dan Isya akan menunjukkan jalan yang benar.",
+  "amal": "Baca sebelum mengambil keputusan."
+ },
+ {
+  "id": 99,
+  "name": "As-Sabur",
+  "meaning": "Yang Maha Penyabar",
+  "fazilat": "Membaca 'Ya Sabur' 3000 kali saat tertimpa kesulitan akan mendatangkan kesabaran dan kelapangan.",
+  "amal": "Untuk kesabaran dalam kesulitan."
+ }
+]

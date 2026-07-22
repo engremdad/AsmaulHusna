@@ -17,9 +17,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.notify.ReminderPrefs
 import com.islamic.asmaulhusna.notify.ReminderScheduler
 import com.islamic.asmaulhusna.notify.ReminderType
@@ -56,10 +58,10 @@ fun NotificationSettingsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("রিমাইন্ডার", fontWeight = FontWeight.Bold) },
+                title = { Text(stringResource(R.string.reminders_title), fontWeight = FontWeight.Bold) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "ফিরে যান")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.cd_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -76,8 +78,7 @@ fun NotificationSettingsScreen(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Text(
-                "সময়মতো স্মরণ করিয়ে দিতে রিমাইন্ডার চালু করুন। সাহরি ও ইফতারের সময় " +
-                    "আপনার স্থানীয় সময় অনুযায়ী নিজে ঠিক করে নিন।",
+                stringResource(R.string.reminders_intro),
                 color = CreamDim, fontSize = 13.sp, lineHeight = 20.sp
             )
             states.forEachIndexed { i, s ->
@@ -120,8 +121,8 @@ private fun ReminderRow(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(Modifier.weight(1f)) {
-            Text(ui.type.label, color = Cream, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
-            Text(ui.type.hint, color = CreamDim, fontSize = 12.sp)
+            Text(stringResource(ui.type.labelRes), color = Cream, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+            Text(stringResource(ui.type.hintRes), color = CreamDim, fontSize = 12.sp)
             Spacer(Modifier.height(8.dp))
             Row(
                 modifier = Modifier

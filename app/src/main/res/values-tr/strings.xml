@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Esma-ül Hüsna</string>
+
+    <string name="app_subtitle">Esma-ül Hüsna · 99 İsim</string>
+    <string name="today_label">Günün İsmi</string>
+    <string name="search_hint">İsim veya anlam ara…</string>
+
+    <string name="section_meaning">Anlamı</string>
+    <string name="section_virtue">Fazileti</string>
+    <string name="section_practice">Ameli</string>
+    <string name="action_listen">Dinle</string>
+
+    <string name="favorites_title">Favoriler</string>
+    <string name="favorites_empty">Henüz isim eklenmedi.</string>
+
+    <string name="reminders_title">Hatırlatıcılar</string>
+    <string name="reminders_intro">Zamanında bildirim almak için hatırlatıcıları açın. Sahur ve iftar saatlerini kendi yerel saatinize göre ayarlayın.</string>
+    <string name="reminder_daily_name">Günün İsmi</string>
+    <string name="reminder_daily_name_hint">Hatırlamak için her gün bir isim</string>
+    <string name="reminder_suhoor">Sahur</string>
+    <string name="reminder_suhoor_hint">Sahur bitmeden önce hatırlatır</string>
+    <string name="reminder_iftar">İftar</string>
+    <string name="reminder_iftar_hint">İftar vakti geldiğinde haber verir</string>
+
+    <string name="settings_title">Ayarlar</string>
+    <string name="language_title">Dil</string>
+    <string name="section_language">Dil</string>
+    <string name="section_reminders">Hatırlatıcılar</string>
+    <string name="choose_language">Dil seçin</string>
+
+    <string name="cd_back">Geri</string>
+    <string name="cd_favorite">Favori</string>
+    <string name="cd_favorites">Favoriler</string>
+    <string name="cd_reminders">Hatırlatıcılar</string>
+    <string name="cd_language">Dil</string>
+    <string name="cd_share">Paylaş</string>
+    <string name="cd_copy">Kopyala</string>
+    <string name="toast_copied">Panoya kopyalandı</string>
+
+    <string name="channel_reminders">Günlük hatırlatıcılar</string>
+    <string name="channel_reminders_desc">Günün ismi, sahur ve iftar hatırlatıcıları</string>
+    <string name="channel_announcements">Duyurular</string>
+    <string name="channel_announcements_desc">Ramazan ve özel duyurular</string>
+
+    <string name="notif_daily_title">Günün İsmi · %1$s</string>
+    <string name="notif_suhoor_title">Sahur vakti yaklaştı</string>
+    <string name="notif_suhoor_body">Sahur bitmeden yemeğinizi tamamlayın ve oruca niyet edin.</string>
+    <string name="notif_iftar_title">İftar vakti</string>
+    <string name="notif_iftar_body">Orucunu açma vakti geldi — duaların kabul olduğu mübarek bir an.</string>
+</resources>

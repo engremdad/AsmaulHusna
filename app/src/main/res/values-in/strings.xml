@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Asmaul Husna</string>
+
+    <string name="app_subtitle">Asmaul Husna · 99 Nama</string>
+    <string name="today_label">Nama Hari Ini</string>
+    <string name="search_hint">Cari nama atau arti…</string>
+
+    <string name="section_meaning">Arti</string>
+    <string name="section_virtue">Keutamaan</string>
+    <string name="section_practice">Amalan</string>
+    <string name="action_listen">Dengarkan</string>
+
+    <string name="favorites_title">Favorit</string>
+    <string name="favorites_empty">Belum ada nama yang ditambahkan.</string>
+
+    <string name="reminders_title">Pengingat</string>
+    <string name="reminders_intro">Aktifkan pengingat agar diberi tahu tepat waktu. Atur waktu Sahur dan Buka Puasa sesuai waktu setempat Anda.</string>
+    <string name="reminder_daily_name">Nama Hari Ini</string>
+    <string name="reminder_daily_name_hint">Satu nama setiap hari untuk diingat</string>
+    <string name="reminder_suhoor">Sahur</string>
+    <string name="reminder_suhoor_hint">Mengingatkan sebelum waktu sahur berakhir</string>
+    <string name="reminder_iftar">Buka Puasa</string>
+    <string name="reminder_iftar_hint">Memberi tahu saat waktu berbuka tiba</string>
+
+    <string name="settings_title">Pengaturan</string>
+    <string name="language_title">Bahasa</string>
+    <string name="section_language">Bahasa</string>
+    <string name="section_reminders">Pengingat</string>
+    <string name="choose_language">Pilih bahasa</string>
+
+    <string name="cd_back">Kembali</string>
+    <string name="cd_favorite">Favorit</string>
+    <string name="cd_favorites">Favorit</string>
+    <string name="cd_reminders">Pengingat</string>
+    <string name="cd_language">Bahasa</string>
+    <string name="cd_share">Bagikan</string>
+    <string name="cd_copy">Salin</string>
+    <string name="toast_copied">Disalin ke papan klip</string>
+
+    <string name="channel_reminders">Pengingat harian</string>
+    <string name="channel_reminders_desc">Pengingat nama hari ini, sahur, dan buka puasa</string>
+    <string name="channel_announcements">Pengumuman</string>
+    <string name="channel_announcements_desc">Pengumuman Ramadan dan acara khusus</string>
+
+    <string name="notif_daily_title">Nama Hari Ini · %1$s</string>
+    <string name="notif_suhoor_title">Waktu sahur hampir berakhir</string>
+    <string name="notif_suhoor_body">Selesaikan santap sahur sebelum waktunya habis dan niatkan puasa.</string>
+    <string name="notif_iftar_title">Waktu berbuka</string>
+    <string name="notif_iftar_body">Saatnya berbuka puasa — momen penuh berkah saat doa dikabulkan.</string>
+</resources>

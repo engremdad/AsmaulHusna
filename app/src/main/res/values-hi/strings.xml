@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">अस्मा-उल-हुस्ना</string>
+
+    <string name="app_subtitle">अस्मा-उल-हुस्ना · 99 नाम</string>
+    <string name="today_label">आज का नाम</string>
+    <string name="search_hint">नाम या अर्थ खोजें…</string>
+
+    <string name="section_meaning">अर्थ</string>
+    <string name="section_virtue">फ़ज़ीलत</string>
+    <string name="section_practice">अमल</string>
+    <string name="action_listen">सुनें</string>
+
+    <string name="favorites_title">पसंदीदा</string>
+    <string name="favorites_empty">अभी तक कोई नाम नहीं जोड़ा गया।</string>
+
+    <string name="reminders_title">रिमाइंडर</string>
+    <string name="reminders_intro">समय पर सूचना पाने के लिए रिमाइंडर चालू करें। सहरी और इफ़्तार का समय अपने स्थानीय समय के अनुसार स्वयं तय करें।</string>
+    <string name="reminder_daily_name">आज का नाम</string>
+    <string name="reminder_daily_name_hint">याद रखने के लिए हर दिन एक नाम</string>
+    <string name="reminder_suhoor">सहरी</string>
+    <string name="reminder_suhoor_hint">सहरी ख़त्म होने से पहले याद दिलाएगा</string>
+    <string name="reminder_iftar">इफ़्तार</string>
+    <string name="reminder_iftar_hint">इफ़्तार का समय होने पर बताएगा</string>
+
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="language_title">भाषा</string>
+    <string name="section_language">भाषा</string>
+    <string name="section_reminders">रिमाइंडर</string>
+    <string name="choose_language">भाषा चुनें</string>
+
+    <string name="cd_back">वापस</string>
+    <string name="cd_favorite">पसंदीदा</string>
+    <string name="cd_favorites">पसंदीदा</string>
+    <string name="cd_reminders">रिमाइंडर</string>
+    <string name="cd_language">भाषा</string>
+    <string name="cd_share">साझा करें</string>
+    <string name="cd_copy">कॉपी</string>
+    <string name="toast_copied">क्लिपबोर्ड पर कॉपी किया गया</string>
+
+    <string name="channel_reminders">दैनिक रिमाइंडर</string>
+    <string name="channel_reminders_desc">आज का नाम, सहरी और इफ़्तार के रिमाइंडर</string>
+    <string name="channel_announcements">घोषणाएँ</string>
+    <string name="channel_announcements_desc">रमज़ान और विशेष घोषणाएँ</string>
+
+    <string name="notif_daily_title">आज का नाम · %1$s</string>
+    <string name="notif_suhoor_title">सहरी का समय निकट है</string>
+    <string name="notif_suhoor_body">सहरी ख़त्म होने से पहले भोजन पूरा करें और रोज़े की नीयत करें।</string>
+    <string name="notif_iftar_title">इफ़्तार का समय</string>
+    <string name="notif_iftar_body">रोज़ा खोलने का समय हो गया — यह दुआ क़ुबूल होने का बरकत भरा पल है।</string>
+</resources>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">আসমাউল হুসনা</string>
+
+    <string name="app_subtitle">আসমাউল হুসনা · ৯৯ নাম</string>
+    <string name="today_label">আজকের নাম</string>
+    <string name="search_hint">নাম বা অর্থ খুঁজুন…</string>
+
+    <string name="section_meaning">অর্থ</string>
+    <string name="section_virtue">ফজিলত</string>
+    <string name="section_practice">আমল</string>
+    <string name="action_listen">শুনুন</string>
+
+    <string name="favorites_title">প্রিয় নাম</string>
+    <string name="favorites_empty">এখনো কোনো নাম যোগ করা হয়নি।</string>
+
+    <string name="reminders_title">রিমাইন্ডার</string>
+    <string name="reminders_intro">সময়মতো স্মরণ করিয়ে দিতে রিমাইন্ডার চালু করুন। সাহরি ও ইফতারের সময় আপনার স্থানীয় সময় অনুযায়ী নিজে ঠিক করে নিন।</string>
+    <string name="reminder_daily_name">আজকের নাম</string>
+    <string name="reminder_daily_name_hint">প্রতিদিন একটি নাম স্মরণ করিয়ে দেবে</string>
+    <string name="reminder_suhoor">সাহরি</string>
+    <string name="reminder_suhoor_hint">সাহরি শেষ হওয়ার আগে মনে করিয়ে দেবে</string>
+    <string name="reminder_iftar">ইফতার</string>
+    <string name="reminder_iftar_hint">ইফতারের সময় জানিয়ে দেবে</string>
+
+    <string name="settings_title">সেটিংস</string>
+    <string name="language_title">ভাষা</string>
+    <string name="section_language">ভাষা</string>
+    <string name="section_reminders">রিমাইন্ডার</string>
+    <string name="choose_language">ভাষা নির্বাচন করুন</string>
+
+    <string name="cd_back">ফিরে যান</string>
+    <string name="cd_favorite">ফেভারিট</string>
+    <string name="cd_favorites">প্রিয় নাম</string>
+    <string name="cd_reminders">রিমাইন্ডার</string>
+    <string name="cd_language">ভাষা</string>
+    <string name="cd_share">শেয়ার</string>
+    <string name="cd_copy">কপি</string>
+    <string name="toast_copied">ক্লিপবোর্ডে কপি হয়েছে</string>
+
+    <string name="channel_reminders">দৈনিক রিমাইন্ডার</string>
+    <string name="channel_reminders_desc">আজকের নাম, সাহরি ও ইফতারের রিমাইন্ডার</string>
+    <string name="channel_announcements">ঘোষণা</string>
+    <string name="channel_announcements_desc">রমজান ও বিশেষ ঘোষণা</string>
+
+    <string name="notif_daily_title">আজকের নাম · %1$s</string>
+    <string name="notif_suhoor_title">সাহরির সময় ঘনিয়ে এসেছে</string>
+    <string name="notif_suhoor_body">সাহরি শেষ হওয়ার আগে খাবার সম্পন্ন করুন এবং রোজার নিয়ত করুন।</string>
+    <string name="notif_iftar_title">ইফতারের সময়</string>
+    <string name="notif_iftar_body">রোজা ভাঙার সময় হয়েছে — এটি দোয়া কবুলের বরকতময় মুহূর্ত।</string>
+</resources>

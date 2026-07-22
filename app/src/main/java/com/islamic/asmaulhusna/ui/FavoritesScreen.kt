@@ -15,11 +15,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
 import com.islamic.asmaulhusna.data.FavoritesStore
+import com.islamic.asmaulhusna.data.localized
 import com.islamic.asmaulhusna.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -27,13 +30,14 @@ import com.islamic.asmaulhusna.ui.theme.*
 fun FavoritesScreen(favorites: FavoritesStore, onNameClick: (Int) -> Unit, onBack: () -> Unit) {
     val favIds = favorites.favorites.value
     val list = AsmaulHusnaRepository.names.filter { it.id in favIds }
+    val content = rememberNameContent()
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("প্রিয় নাম", fontWeight = FontWeight.Bold) },
+                title = { Text(stringResource(R.string.favorites_title), fontWeight = FontWeight.Bold) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, "ফিরে যান")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.cd_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -47,7 +51,7 @@ fun FavoritesScreen(favorites: FavoritesStore, onNameClick: (Int) -> Unit, onBac
     ) { padding ->
         if (list.isEmpty()) {
             Box(Modifier.padding(padding).starLattice().fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text("এখনো কোনো নাম যোগ করা হয়নি।", color = CreamDim)
+                Text(stringResource(R.string.favorites_empty), color = CreamDim)
             }
         } else {
             LazyColumn(
@@ -72,7 +76,7 @@ fun FavoritesScreen(favorites: FavoritesStore, onNameClick: (Int) -> Unit, onBac
                         Column(Modifier.weight(1f)) {
                             Text("${name.id}. ${name.transliteration}",
                                 fontWeight = FontWeight.SemiBold, color = Cream)
-                            Text(name.meaning, fontSize = 13.sp, color = CreamDim)
+                            Text(name.localized(content).meaning, fontSize = 13.sp, color = CreamDim)
                         }
                     }
                 }

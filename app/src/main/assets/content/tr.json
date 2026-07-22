@@ -1,0 +1,695 @@
+[
+ {
+  "id": 1,
+  "name": "Er-Rahman",
+  "meaning": "Sonsuz merhamet sahibi",
+  "fazilat": "Her farz namazdan sonra 100 kez 'Ya Rahman' okuyan kişinin kalbinden Allah gafleti (umursamazlığı) ve unutkanlık eğilimini giderir.",
+  "amal": "Her gün Fajr'dan sonra 100 kez okuyun. Kalp huzura kavuşur."
+ },
+ {
+  "id": 2,
+  "name": "Er-Rahim",
+  "meaning": "Sınırsız şefkat sahibi",
+  "fazilat": "Fajr namazından sonra 100 kez 'Ya Rahim' okuyan kişiye karşı Allah herkesi şefkatli kılar.",
+  "amal": "Fajr'dan sonra 100 kez okuyun — insanların sevgisini kazanırsınız."
+ },
+ {
+  "id": 3,
+  "name": "El-Melik",
+  "meaning": "Hükümdar, mutlak egemenliğe sahip padişahlar padişahı",
+  "fazilat": "Her gün Fajr'dan sonra düzenli olarak 'Ya Malik' okuyan kişiye Allah mal-mülk ve şeref bağışlar.",
+  "amal": "Gün doğduktan sonra 121 kez okuyun."
+ },
+ {
+  "id": 4,
+  "name": "El-Kuddus",
+  "meaning": "Tertemiz, mukaddes",
+  "fazilat": "Her gün 'Ya Kuddüs' 100 kez okuyan kişinin kalbi her türlü endişe ve hastalıktan arınmış kalır.",
+  "amal": "Her gün 100 kez — kalp hastalıklarından kurtuluş."
+ },
+ {
+  "id": 5,
+  "name": "Es-Selam",
+  "meaning": "Selamet ve barış veren",
+  "fazilat": "Hastanın önünde 115 kez 'Ya Selam' okunursa Allah şifa verir.",
+  "amal": "Hasta kişinin üzerine okuyup üfleyin."
+ },
+ {
+  "id": 6,
+  "name": "El-Mü'min",
+  "meaning": "Güven ve emniyet veren",
+  "fazilat": "'Ya Mü'min' 631 kez okuyan kişiyi Allah bütün tehlikelerden korur.",
+  "amal": "Korku anında okuyun — güvenlik elde edersiniz."
+ },
+ {
+  "id": 7,
+  "name": "El-Müheymin",
+  "meaning": "Gözetip koruyan",
+  "fazilat": "Gusülden sonra 2 rekat namaz kılıp 115 kez 'Ya Müheymin' okunursa kalp nurlanır.",
+  "amal": "Her gün 115 kez okuyun."
+ },
+ {
+  "id": 8,
+  "name": "El-Aziz",
+  "meaning": "Çok güçlü, izzet sahibi",
+  "fazilat": "40 gün boyunca her gün Fajr'dan sonra 40 kez 'Ya Aziz' okuyan kişiyi Allah kimseye muhtaç bırakmaz.",
+  "amal": "Her Fajr'dan sonra 40 kez × 40 gün."
+ },
+ {
+  "id": 9,
+  "name": "El-Cebbar",
+  "meaning": "Güçlü, karşı konulamaz",
+  "fazilat": "Her gün 'Ya Cebbar' 226 kez okuyan kişi zalimin zulmünden korunur.",
+  "amal": "Zalimin elinden kurtulmak için okuyun."
+ },
+ {
+  "id": 10,
+  "name": "El-Mütekebbir",
+  "meaning": "En yüce, azamet sahibi",
+  "fazilat": "Herhangi bir işe başlarken 10 kez 'Ya Mütekebbir' okunursa Allah yardımcı olur.",
+  "amal": "İşe başlamadan önce 10 kez okuyun."
+ },
+ {
+  "id": 11,
+  "name": "El-Halik",
+  "meaning": "Yaratıcı",
+  "fazilat": "Geceleyin uyumadan önce 100 kez 'Ya Halik' okuyan kişiye Allah bir melek gönderir; o melek kıyamete kadar ibadet ederek sevabını ona ulaştırır.",
+  "amal": "Her gece uyumadan önce 100 kez."
+ },
+ {
+  "id": 12,
+  "name": "El-Bari",
+  "meaning": "Yoktan var eden",
+  "fazilat": "Çocuğu olmayan kadın 7 gün oruç tutup İftar vaktinde 21 kez 'Ya Bari' okursa çocuk sahibi olmayı umabilir.",
+  "amal": "Çocuk arzusuyla düzenli okuma."
+ },
+ {
+  "id": 13,
+  "name": "El-Musavvir",
+  "meaning": "Şekil ve suret veren",
+  "fazilat": "7 gün oruç tutup İftar vaktinde suya 21 kez üfleyip içilirse çocuk arzusunda fayda olur.",
+  "amal": "İftar vaktinde suya okuyup için."
+ },
+ {
+  "id": 14,
+  "name": "El-Gaffar",
+  "meaning": "Çokça bağışlayan",
+  "fazilat": "Jumu'ah namazından sonra 100 kez 'Ya Gaffar' okunursa günahlar bağışlanır.",
+  "amal": "Her Jumu'ah'tan sonra 100 kez."
+ },
+ {
+  "id": 15,
+  "name": "El-Kahhar",
+  "meaning": "Kahredici, her şeye galip",
+  "fazilat": "'Ya Kahhar' okunursa nefsin arzuları (nefsani istekler) bastırılır ve dünya hırsı azalır.",
+  "amal": "Nefse karşı galip gelmek için okuyun."
+ },
+ {
+  "id": 16,
+  "name": "El-Vehhab",
+  "meaning": "Karşılıksız çokça veren",
+  "fazilat": "3 ya da 7 gün Tahajjud'dan sonra 100 kez 'Ya Vehhab' okunursa Allah duayı kabul eder.",
+  "amal": "Tahajjud'dan sonra dua ile okuyun."
+ },
+ {
+  "id": 17,
+  "name": "Er-Rezzak",
+  "meaning": "Rızık veren",
+  "fazilat": "Fajr'dan önce evin dört köşesinde durup her köşede 10 kez 'Ya Rezzak' okunursa rızıkta bereket olur.",
+  "amal": "Sabahleyin evin dört köşesinde okuyun."
+ },
+ {
+  "id": 18,
+  "name": "El-Fettah",
+  "meaning": "Büyük zafer bağışlayan, kapıları açan",
+  "fazilat": "Sabahleyin eli göğse koyup 70 kez 'Ya Fettah' okunursa kalp nurlanır ve işlerde başarı gelir.",
+  "amal": "Sabahleyin eli göğse koyup 70 kez."
+ },
+ {
+  "id": 19,
+  "name": "El-Alim",
+  "meaning": "Her şeyi bilen",
+  "fazilat": "Düzenli olarak 'Ya Alim' okuyan kişiye Allah ilim ve hikmet bağışlar.",
+  "amal": "Ders çalışmadan önce okuyun."
+ },
+ {
+  "id": 20,
+  "name": "El-Kabid",
+  "meaning": "Daraltan, kısan",
+  "fazilat": "40 gün 'Ya Kabid' okunursa açlık ve yokluk katlanılır hale gelir.",
+  "amal": "Sabır ve perhiz için okuyun."
+ },
+ {
+  "id": 21,
+  "name": "El-Basit",
+  "meaning": "Genişleten, bolluk veren",
+  "fazilat": "Duha namazından sonra ellerini kaldırarak 10 defa 'Ya Basit' okuyup ellerini yüzüne süren kişinin yoksulluğu gider.",
+  "amal": "Duha namazından sonra okuyun."
+ },
+ {
+  "id": 22,
+  "name": "El-Hafid",
+  "meaning": "Alçaltan",
+  "fazilat": "3 gün oruç tutup 4. gün 70 defa 'Ya Hafid' okuyan kişinin düşmanının tuzağı bozulur.",
+  "amal": "Düşmandan korunmak için."
+ },
+ {
+  "id": 23,
+  "name": "Er-Rafi",
+  "meaning": "Yükselten",
+  "fazilat": "Her gün 100 defa 'Ya Rafi' okuyan kişinin insanlar arasındaki saygınlığı ve değeri artar.",
+  "amal": "Her gün 100 defa."
+ },
+ {
+  "id": 24,
+  "name": "El-Muizz",
+  "meaning": "İzzet ve şeref veren",
+  "fazilat": "Pazartesi veya Cuma gecesi 140 defa 'Ya Muizz' okuyan kişi insanlar nezdinde saygın olur.",
+  "amal": "Pazartesi/Cuma gecesi 140 defa."
+ },
+ {
+  "id": 25,
+  "name": "El-Müzill",
+  "meaning": "Zelil kılan, alçaltan",
+  "fazilat": "Secdede 75 defa 'Ya Müzill' okuyan kişi zalim düşmanın zulmünden korunur.",
+  "amal": "Secdede okuyun."
+ },
+ {
+  "id": 26,
+  "name": "Es-Semi",
+  "meaning": "Her şeyi işiten",
+  "fazilat": "Perşembe günü duha vaktinde kimseyle konuşmadan 100 defa 'Ya Semi' okuyan kişinin duası kabul olur.",
+  "amal": "Duanın kabulü için okuyun."
+ },
+ {
+  "id": 27,
+  "name": "El-Basir",
+  "meaning": "Her şeyi gören",
+  "fazilat": "Cuma namazından sonra 100 defa 'Ya Basir' okuyan kişinin görme gücü iyi olur ve basireti açılır.",
+  "amal": "Her Cuma namazından sonra 100 defa."
+ },
+ {
+  "id": 28,
+  "name": "El-Hakem",
+  "meaning": "Hükmeden, karara bağlayan",
+  "fazilat": "Geceleyin abdest alıp 'Ya Hakem' okumaya devam eden kişinin kalbine gizli ilim açılır.",
+  "amal": "Geceleyin abdestli olarak okuyun."
+ },
+ {
+  "id": 29,
+  "name": "El-Adl",
+  "meaning": "Adil olan",
+  "fazilat": "Cuma gecesi bir kâğıda 'El-Adl' yazıp 20 defa okuyarak yanında taşıyan kişiye herkes itaat eder.",
+  "amal": "Adalet elde etmek için."
+ },
+ {
+  "id": 30,
+  "name": "El-Latif",
+  "meaning": "En ince şeyleri bilen, lütuf sahibi",
+  "fazilat": "Zorluk veya sıkıntı anında 133 defa 'Ya Latif' okuyan kişiye Allah çok geçmeden kolay bir yol açar.",
+  "amal": "Herhangi bir sıkıntıda 133 defa."
+ },
+ {
+  "id": 31,
+  "name": "El-Habir",
+  "meaning": "Her şeyden haberdar olan",
+  "fazilat": "Düzenli okumakla gizli konular hakkında basiret ve kavrayış oluşur.",
+  "amal": "Gizli ilim için okuyun."
+ },
+ {
+  "id": 32,
+  "name": "El-Halim",
+  "meaning": "Çok yumuşak huylu, çok sabırlı",
+  "fazilat": "Bir kâğıda yazıp toprağa veya suya koyarsa mahsulde ya da işte bereket gelir.",
+  "amal": "Öfkeyi yatıştırmak için okuyun."
+ },
+ {
+  "id": 33,
+  "name": "El-Azim",
+  "meaning": "Yüce, azametli",
+  "fazilat": "Düzenli olarak 'Ya Azim' okuyan kişiyi Allah dünyada ve ahirette şerefli kılar.",
+  "amal": "Her gün okuyun."
+ },
+ {
+  "id": 34,
+  "name": "El-Gafur",
+  "meaning": "Çok bağışlayan",
+  "fazilat": "Baş ağrısı, ateş vb. durumlarda çokça 'Ya Gafur' okuyan kişi şifa bulur ve günahları bağışlanır.",
+  "amal": "Hastalıkta ve günahların bağışlanması için."
+ },
+ {
+  "id": 35,
+  "name": "Eş-Şekur",
+  "meaning": "Şükredenleri bolca mükâfatlandıran",
+  "fazilat": "Bedensel zayıflık ve huzursuzlukta suya okuyup üfleyerek içen kişi fayda görür.",
+  "amal": "Şükür ve güç kazanmak için."
+ },
+ {
+  "id": 36,
+  "name": "El-Ali",
+  "meaning": "Çok yüce olan",
+  "fazilat": "Sürekli 'Ya Ali' okuyan kişinin değeri ve ilmi artar.",
+  "amal": "Yükselmek için okuyun."
+ },
+ {
+  "id": 37,
+  "name": "El-Kebir",
+  "meaning": "Her şeyden büyük olan",
+  "fazilat": "7 gün boyunca her gün 100 defa okuyan kişinin toplumdaki saygınlığı artar.",
+  "amal": "7 gün × 100 defa."
+ },
+ {
+  "id": 38,
+  "name": "El-Hafiz",
+  "meaning": "Koruyan, muhafaza eden",
+  "fazilat": "'Ya Hafiz' okuyan kişi tüm belalardan, düşmanlardan ve kazalardan korunur.",
+  "amal": "Yolculukta ve tehlike anında okuyun."
+ },
+ {
+  "id": 39,
+  "name": "El-Mukit",
+  "meaning": "Rızık ve gıda veren",
+  "fazilat": "Açlık halinde veya rızıkta darlık olduğunda okuyan kişiye Allah rızkı kolaylaştırır.",
+  "amal": "Rızık için düzenli okuyun."
+ },
+ {
+  "id": 40,
+  "name": "El-Hasib",
+  "meaning": "Hesaba çeken",
+  "fazilat": "Perşembe akşamından Cuma akşamına kadar 70 defa 'Hasbiyallahü'l-Hasib' okuyan kişi hırsızlık ve soygundan korunur.",
+  "amal": "Korunmak için okuyun."
+ },
+ {
+  "id": 41,
+  "name": "El-Celil",
+  "meaning": "Azamet ve celal sahibi",
+  "fazilat": "Zaferan ile kağıda yazıp yanında taşıyan kişi şeref ve itibar kazanır.",
+  "amal": "Şerefin artması için."
+ },
+ {
+  "id": 42,
+  "name": "El-Kerim",
+  "meaning": "Sonsuz cömertlik sahibi",
+  "fazilat": "Uyurken 'Ya Kerim' okuyan kişiyi Allah dünyada ve ahirette şerefli kılar.",
+  "amal": "Her gece uyumadan önce."
+ },
+ {
+  "id": 43,
+  "name": "Er-Rakib",
+  "meaning": "Her şeyi gözetleyen",
+  "fazilat": "Ailenin ve malın korunması için 7 kez okuyup üfleyin.",
+  "amal": "Ailenin ve malın korunması için."
+ },
+ {
+  "id": 44,
+  "name": "El-Mucib",
+  "meaning": "Dualara icabet eden",
+  "fazilat": "'Ya Mucib' okuyan kişinin duası çabucak kabul olunur.",
+  "amal": "Dua ile birlikte okuyun."
+ },
+ {
+  "id": 45,
+  "name": "El-Vasi",
+  "meaning": "İlmi ve rahmeti her şeyi kuşatan",
+  "fazilat": "Rızıkta darlık olduğunda okunursa bereket gelir.",
+  "amal": "Rızkın genişlemesi için."
+ },
+ {
+  "id": 46,
+  "name": "El-Hakim",
+  "meaning": "Hikmet sahibi",
+  "fazilat": "Zor işlerde 'Ya Hakim' okuyan kişi doğru karar ve hikmet elde eder.",
+  "amal": "Karar vermeden önce okuyun."
+ },
+ {
+  "id": 47,
+  "name": "El-Vedud",
+  "meaning": "Çok seven, sevgi kaynağı",
+  "fazilat": "Yemeğe 1000 kez okuyup üfledikten sonra karı koca yerse aralarındaki sevgi artar.",
+  "amal": "Eşler arasındaki sevgi için."
+ },
+ {
+  "id": 48,
+  "name": "El-Mecid",
+  "meaning": "Şanı yüce",
+  "fazilat": "Düzenli okumakla kalp nurlanır ve itibar artar.",
+  "amal": "Her gün okuyun."
+ },
+ {
+  "id": 49,
+  "name": "El-Bais",
+  "meaning": "Ölüleri dirilten",
+  "fazilat": "Uyumadan önce elini göğsüne koyup 100 kez okuyan kişinin kalbi dirilir.",
+  "amal": "Geceleyin uyumadan önce."
+ },
+ {
+  "id": 50,
+  "name": "Eş-Şehid",
+  "meaning": "Her şeye şahit olan",
+  "fazilat": "İtaatsiz evladın ya da asi eşin başına el koyup okunursa ıslah olması umulur.",
+  "amal": "Islah için okuyun."
+ },
+ {
+  "id": 51,
+  "name": "El-Hakk",
+  "meaning": "Mutlak gerçek, hak olan",
+  "fazilat": "Kaybolan eşyayı geri bulmak için dört yöne dönerek okunursa yardım gelir.",
+  "amal": "Kaybolan eşya için."
+ },
+ {
+  "id": 52,
+  "name": "El-Vekil",
+  "meaning": "İşleri düzenleyip yürüten vekil",
+  "fazilat": "Fırtına, yıldırım ya da korku anında okunursa Allah korur.",
+  "amal": "Her işte tevekkül ile."
+ },
+ {
+  "id": 53,
+  "name": "El-Kaviyy",
+  "meaning": "Çok güçlü",
+  "fazilat": "Düşmana karşı 'Ya Kaviyy' okuyan kişi zafere ulaşır.",
+  "amal": "Güç ve zafer için."
+ },
+ {
+  "id": 54,
+  "name": "El-Metin",
+  "meaning": "Çok sağlam ve dayanıklı",
+  "fazilat": "Düzenli okumakla ahlak ve iman sağlamlaşır.",
+  "amal": "İmanın sağlamlaşması için."
+ },
+ {
+  "id": 55,
+  "name": "El-Veli",
+  "meaning": "Dost ve koruyucu",
+  "fazilat": "'Ya Veli' okuyan kişiyi Allah kendi velisi (dostu) edinir.",
+  "amal": "Her gün okuyun."
+ },
+ {
+  "id": 56,
+  "name": "El-Hamid",
+  "meaning": "Övgüye layık olan",
+  "fazilat": "99 kez okuyan kişi güzel ahlak ve övgüye değer nitelikler kazanır.",
+  "amal": "Her gün 99 kez."
+ },
+ {
+  "id": 57,
+  "name": "El-Muhsi",
+  "meaning": "Her şeyi tek tek sayan",
+  "fazilat": "Sınavdan önce 20 kez okuyan kişinin hesap ve hafıza gücü artar.",
+  "amal": "Hafızanın güçlenmesi için."
+ },
+ {
+  "id": 58,
+  "name": "El-Mubdi",
+  "meaning": "Yoktan var eden, başlatan",
+  "fazilat": "Hamile annenin karnına el koyup 99 kez okunursa anne karnındaki bebek korunmuş olur.",
+  "amal": "Hamilelik döneminde okuyun."
+ },
+ {
+  "id": 59,
+  "name": "El-Muid",
+  "meaning": "Yeniden yaratıp geri döndüren",
+  "fazilat": "Kaybolan kişiyi ya da eşyayı geri bulmak için evin dört köşesinde 70 kez okuyun.",
+  "amal": "Kaybolanı geri bulmak için."
+ },
+ {
+  "id": 60,
+  "name": "El-Muhyi",
+  "meaning": "Hayat veren",
+  "fazilat": "Ağır hastalıkta elini göğsüne koyup 7 kez okuyan kişi şifa bulur.",
+  "amal": "Hastanın şifa bulması için."
+ },
+ {
+  "id": 61,
+  "name": "El-Mumit",
+  "meaning": "Ölümü veren",
+  "fazilat": "Nefsin haksız arzularını bastırmak için yatakta okunursa, günaha olan meyil azalır.",
+  "amal": "Nefse karşı okuyun."
+ },
+ {
+  "id": 62,
+  "name": "El-Hayy",
+  "meaning": "Daima diri olan",
+  "fazilat": "Hastanın yanında 'Ya Hayy Ya Kayyum' okunursa çabuk şifa gelir.",
+  "amal": "Hasta için okuyun."
+ },
+ {
+  "id": 63,
+  "name": "El-Kayyum",
+  "meaning": "Kendi kendine var olan (kaim)",
+  "fazilat": "'Hayy Kayyum'un birlikte okunması İsm-i Azam olarak kabul edilir; duanın kabulü için özel bir vesiledir.",
+  "amal": "Duadan önce okuyun."
+ },
+ {
+  "id": 64,
+  "name": "El-Vacid",
+  "meaning": "Hiçbir şeye ihtiyacı olmayan / dilediği her şeyi bulan",
+  "fazilat": "Yemeğe 'Ya Vacid' okunursa bereket olur.",
+  "amal": "Yemekte bereket için."
+ },
+ {
+  "id": 65,
+  "name": "El-Macid",
+  "meaning": "Şanı yüce olan",
+  "fazilat": "Kalbin huzuru için düzenli okuyun.",
+  "amal": "Huzur için okuyun."
+ },
+ {
+  "id": 66,
+  "name": "El-Vahid",
+  "meaning": "Tek olan",
+  "fazilat": "Yalnız bir yerde oturup 1000 defa 'Ya Vahid' okunursa kalpteki korku gider.",
+  "amal": "Konsantrasyon ve korkuyu gidermek için."
+ },
+ {
+  "id": 67,
+  "name": "El-Ehad",
+  "meaning": "Eşi ve benzeri olmayan",
+  "fazilat": "Evde düzenli okunursa, Allah'ın gaybi yardımı hissedilir.",
+  "amal": "Huşu ile okuyun."
+ },
+ {
+  "id": 68,
+  "name": "Es-Samed",
+  "meaning": "Hiçbir şeye muhtaç olmayan, her şeyin kendisine muhtaç olduğu",
+  "fazilat": "Bir ihtiyaç için secdede defalarca 'Ya Samed' okunursa, ihtiyaç giderilir.",
+  "amal": "İhtiyacın giderilmesi için secdede okuyun."
+ },
+ {
+  "id": 69,
+  "name": "El-Kadir",
+  "meaning": "Her şeye gücü yeten",
+  "fazilat": "Düşmanın tuzağını bozmak için 41 defa 'Ya Kadir' okuyun.",
+  "amal": "Düşmanın zararından korunmak için."
+ },
+ {
+  "id": 70,
+  "name": "El-Muktedir",
+  "meaning": "Kudreti çok güçlü olan",
+  "fazilat": "Uykudan kalkınca 20 defa okunursa, o gün bereketli olur.",
+  "amal": "Sabahleyin 20 defa."
+ },
+ {
+  "id": 71,
+  "name": "El-Mukaddim",
+  "meaning": "Öne alan, ileri geçiren",
+  "fazilat": "Savaşta veya yarışmada 184 defa okunursa zafer elde edilir.",
+  "amal": "Yarışmada zafer için."
+ },
+ {
+  "id": 72,
+  "name": "El-Muahhir",
+  "meaning": "Geriye bırakan, erteleyen",
+  "fazilat": "Her gün 100 defa okunursa, kalpte Allah sevgisi artar.",
+  "amal": "Her gün 100 defa."
+ },
+ {
+  "id": 73,
+  "name": "El-Evvel",
+  "meaning": "Başlangıcı olmayan, ilk olan",
+  "fazilat": "40 gün 40 defa okunursa, yoksul olan rızka kavuşur, çocuğu olmayan çocuk sahibi olur.",
+  "amal": "40 defa × 40 gün."
+ },
+ {
+  "id": 74,
+  "name": "El-Ahir",
+  "meaning": "Sonu olmayan, sonsuz olan",
+  "fazilat": "Düzenli okunursa dünyaya olan bağlılık azalır ve ahirete olan ilgi artar.",
+  "amal": "Düzenli okuyun."
+ },
+ {
+  "id": 75,
+  "name": "Ez-Zahir",
+  "meaning": "Varlığı aşikâr olan",
+  "fazilat": "Cuma namazından sonra 500 defa okunursa, kalpte nur zuhur eder.",
+  "amal": "Her Cuma namazından sonra."
+ },
+ {
+  "id": 76,
+  "name": "El-Batın",
+  "meaning": "Gizli olanı bilen",
+  "fazilat": "Günde 3 kez, 33'er defa okunursa, gizli konularda ilham gelir.",
+  "amal": "Her gün 3 × 33 defa."
+ },
+ {
+  "id": 77,
+  "name": "El-Vali",
+  "meaning": "Her şeyin sahibi ve yöneticisi",
+  "fazilat": "Evde okunursa, ev beladan ve şeytanın vesvesesinden korunur.",
+  "amal": "Evde düzenli okuyun."
+ },
+ {
+  "id": 78,
+  "name": "El-Müteali",
+  "meaning": "En yüce olan",
+  "fazilat": "İmkânsız görünen bir işte 'Ya Müteali' okunursa, Allah o işi kolaylaştırır.",
+  "amal": "Zor işlerde okuyun."
+ },
+ {
+  "id": 79,
+  "name": "El-Berr",
+  "meaning": "Kullarına karşı çok iyilik ve ihsan sahibi olan",
+  "fazilat": "Çocuğun hayrını dileyerek 7 defa okuyup üfleyin.",
+  "amal": "Çocuğun hayrı için."
+ },
+ {
+  "id": 80,
+  "name": "Et-Tevvab",
+  "meaning": "Tevbeleri kabul eden",
+  "fazilat": "Günahların bağışlanmasını dileyerek secdede 'Ya Tevvab' okunursa, tevbe kabul olur.",
+  "amal": "Tevbe ile birlikte okuyun."
+ },
+ {
+  "id": 81,
+  "name": "El-Müntekim",
+  "meaning": "İntikam alan, öç alan",
+  "fazilat": "Zalime karşı Cuma namazından sonra secdede okunursa, Allah intikamını alır.",
+  "amal": "Zulmün giderilmesi için okuyun."
+ },
+ {
+  "id": 82,
+  "name": "El-Afüvv",
+  "meaning": "Çokça affeden, bağışlayan",
+  "fazilat": "\"Ya Afüvv\" zikrini çokça okuyanın günahları bağışlanır.",
+  "amal": "Her gün çokça okuyun."
+ },
+ {
+  "id": 83,
+  "name": "Er-Raûf",
+  "meaning": "Çok şefkatli",
+  "fazilat": "Öfkeli bir kişinin önünde 10 defa okunursa, onun öfkesi yatışır.",
+  "amal": "Huzurun sağlanması için."
+ },
+ {
+  "id": 84,
+  "name": "Malikü'l-Mülk",
+  "meaning": "Mülkün ve saltanatın sahibi",
+  "fazilat": "Düzenli okumakla şeref ve bolluk elde edilir.",
+  "amal": "Düzenli olarak okuyun."
+ },
+ {
+  "id": 85,
+  "name": "Zü'l-Celâli ve'l-İkrâm",
+  "meaning": "Ululuk ve ikram sahibi",
+  "fazilat": "Her gün okuyan kimse dünyada ve ahirette zengin olur.",
+  "amal": "Her gün okuyun."
+ },
+ {
+  "id": 86,
+  "name": "El-Muksit",
+  "meaning": "Adaletli",
+  "fazilat": "Çocuklar arasında kavga olduğunda 70 defa okunursa, aralarındaki uyum geri gelir.",
+  "amal": "Aile huzuru için."
+ },
+ {
+  "id": 87,
+  "name": "El-Câmi'",
+  "meaning": "Bir araya getiren, toplayan",
+  "fazilat": "Kaybolan bir kişiyi ya da dağılmış bir aileyi bir araya getirmek için okuyun.",
+  "amal": "Yeniden kavuşmak için."
+ },
+ {
+  "id": 88,
+  "name": "El-Ganî",
+  "meaning": "Zengin, hiçbir şeye muhtaç olmayan",
+  "fazilat": "Her gün 1000 defa okunursa, yokluk giderilir ve gönülde tokgözlülük (kimseye muhtaç olmama hâli) meydana gelir.",
+  "amal": "Yokluğun giderilmesi için."
+ },
+ {
+  "id": 89,
+  "name": "El-Muğnî",
+  "meaning": "Muhtaçlıktan kurtaran, zengin kılan",
+  "fazilat": "10 gün boyunca 1000 defa okunursa, Allah mal ve servet ihsan eder.",
+  "amal": "10 gün × 1000 defa."
+ },
+ {
+  "id": 90,
+  "name": "El-Mâni'",
+  "meaning": "Engelleyen, men eden",
+  "fazilat": "Ailevi huzursuzluğu gidermek için yatakta 20 defa okuyun.",
+  "amal": "Huzursuzluğun giderilmesi için."
+ },
+ {
+  "id": 91,
+  "name": "Ed-Dârr",
+  "meaning": "Zarar veren, sıkıntı veren",
+  "fazilat": "Düşmanın zararından korunmak için Perşembe gecesi 100 defa okuyun.",
+  "amal": "Perşembe gecesi okuyun."
+ },
+ {
+  "id": 92,
+  "name": "En-Nâfi'",
+  "meaning": "Fayda veren",
+  "fazilat": "Yolculuğa ya da bir işe çıkmadan önce 41 defa okunursa, başarı gelir.",
+  "amal": "Yola çıkmadan önce okuyun."
+ },
+ {
+  "id": 93,
+  "name": "En-Nûr",
+  "meaning": "Nur, ışık",
+  "fazilat": "Nur suresiyle birlikte \"Ya Nur\" okunursa, gönülde Allah'ın nuru zâhir olur.",
+  "amal": "Geceleyin okuyun."
+ },
+ {
+  "id": 94,
+  "name": "El-Hâdî",
+  "meaning": "Doğru yolu gösteren, hidayet veren",
+  "fazilat": "Hidayet dileyerek secdede çokça okuyun.",
+  "amal": "Hidayet için."
+ },
+ {
+  "id": 95,
+  "name": "El-Bedî'",
+  "meaning": "Eşsiz yaratıcı, örneksiz yaratan",
+  "fazilat": "İmkânsız görünen bir işte 70 defa \"Ya Bedîa's-semavati ve'l-ard\" okunursa, çözüm gelir.",
+  "amal": "Zor işlerde 70 defa."
+ },
+ {
+  "id": 96,
+  "name": "El-Bâkî",
+  "meaning": "Ebedî, daima kalıcı olan",
+  "fazilat": "Düzenli okumakla ameller kalıcı olur ve kabul edilir.",
+  "amal": "Düzenli olarak okuyun."
+ },
+ {
+  "id": 97,
+  "name": "El-Vâris",
+  "meaning": "Vâris, her şeyin gerçek sahibi",
+  "fazilat": "Güneş doğmadan önce 100 defa okunursa, dünyevi ve manevi miras elde edilir.",
+  "amal": "Fecir'den (sabah namazından) önce 100 defa."
+ },
+ {
+  "id": 98,
+  "name": "Er-Reşîd",
+  "meaning": "Doğru yola ileten, irşad eden",
+  "fazilat": "Zor bir karardan önce Maghrib ile İşa namazları arasında 1000 defa okunursa, doğru yol bulunur.",
+  "amal": "Karar vermeden önce okuyun."
+ },
+ {
+  "id": 99,
+  "name": "Es-Sabûr",
+  "meaning": "Sonsuz sabırlı",
+  "fazilat": "Bela anında 3000 defa \"Ya Sabur\" okunursa, sabır ve kurtuluş elde edilir.",
+  "amal": "Bela ve musibet anında sabır için."
+ }
+]
