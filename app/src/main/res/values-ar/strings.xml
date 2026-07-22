@@ -70,6 +70,8 @@
     <string name="cd_text_smaller">نص أصغر</string>
     <string name="cd_text_larger">نص أكبر</string>
     <string name="zikir_show_hint">إظهار عدّاد النقر في كل اسم</string>
+    <string name="zikir_sound_title">صوت الذِّكر</string>
+    <string name="zikir_sound_hint">تشغيل صوت عند كل نقرة أثناء العدّ</string>
 
     <!-- Virtues (Fazilat) screen -->
     <string name="virtues_title">فضائل الأسماء الحسنى</string>

@@ -81,6 +81,8 @@
     <string name="choose_language">Choose language</string>
     <string name="section_display">Display</string>
     <string name="zikir_show_hint">Show the tap counter on each name</string>
+    <string name="zikir_sound_title">Zikir sound</string>
+    <string name="zikir_sound_hint">Play a tap sound while counting</string>
     <string name="text_size_title">Text size</string>
     <string name="text_size_sample">Sample text</string>
     <string name="cd_text_smaller">Smaller text</string>

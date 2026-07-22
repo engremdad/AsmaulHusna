@@ -70,6 +70,8 @@
     <string name="cd_text_smaller">Daha küçük yazı</string>
     <string name="cd_text_larger">Daha büyük yazı</string>
     <string name="zikir_show_hint">Her isimde dokunma sayacını göster</string>
+    <string name="zikir_sound_title">Zikir sesi</string>
+    <string name="zikir_sound_hint">Sayarken dokunuşta ses çal</string>
 
     <!-- Virtues (Fazilat) screen -->
     <string name="virtues_title">İsimlerin Fazileti</string>

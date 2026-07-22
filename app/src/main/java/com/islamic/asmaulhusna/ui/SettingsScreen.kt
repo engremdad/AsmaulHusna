@@ -117,6 +117,15 @@ fun SettingsScreen(
                 checked = ZikirPrefs.isCounterShown(context),
                 onToggle = { ZikirPrefs.setCounterShown(context, it) }
             )
+            ToggleRow(
+                title = stringResource(R.string.zikir_sound_title),
+                hint = stringResource(R.string.zikir_sound_hint),
+                checked = ZikirPrefs.isSoundOn(context),
+                onToggle = {
+                    ZikirPrefs.setSoundOn(context, it)
+                    if (it) ZikirSound.click() // preview the sound when enabling
+                }
+            )
             TextSizeRow(
                 scale = TextScaleStore.scale(context),
                 onDecrease = {

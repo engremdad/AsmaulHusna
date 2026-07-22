@@ -70,6 +70,8 @@
     <string name="cd_text_smaller">Teks lebih kecil</string>
     <string name="cd_text_larger">Teks lebih besar</string>
     <string name="zikir_show_hint">Tampilkan penghitung ketuk pada setiap nama</string>
+    <string name="zikir_sound_title">Suara Zikir</string>
+    <string name="zikir_sound_hint">Bunyikan suara ketuk saat menghitung</string>
 
     <!-- Virtues (Fazilat) screen -->
     <string name="virtues_title">Keutamaan Nama-Nama</string>

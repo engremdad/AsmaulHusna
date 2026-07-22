@@ -70,6 +70,8 @@
     <string name="cd_text_smaller">چھوٹا متن</string>
     <string name="cd_text_larger">بڑا متن</string>
     <string name="zikir_show_hint">ہر نام پر ٹیپ کاؤنٹر دکھائیں</string>
+    <string name="zikir_sound_title">ذکر کی آواز</string>
+    <string name="zikir_sound_hint">گنتی کے دوران ٹیپ پر آواز چلائیں</string>
 
     <!-- Virtues (Fazilat) screen -->
     <string name="virtues_title">ناموں کی فضیلت</string>

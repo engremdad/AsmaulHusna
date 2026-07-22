@@ -70,6 +70,8 @@
     <string name="cd_text_smaller">ছোট লেখা</string>
     <string name="cd_text_larger">বড় লেখা</string>
     <string name="zikir_show_hint">প্রতিটি নামে ট্যাপ কাউন্টার দেখান</string>
+    <string name="zikir_sound_title">জিকির সাউন্ড</string>
+    <string name="zikir_sound_hint">গণনার সময় ট্যাপে শব্দ বাজাও</string>
 
     <!-- Virtues (Fazilat) screen -->
     <string name="virtues_title">নামসমূহের ফজিলত</string>

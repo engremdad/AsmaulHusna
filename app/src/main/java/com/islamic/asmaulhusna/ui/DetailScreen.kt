@@ -234,6 +234,7 @@ private fun ZikirCounter(
     onSetTarget: (Int) -> Unit
 ) {
     val haptics = LocalHapticFeedback.current
+    val context = LocalContext.current
     var showTargetDialog by remember { mutableStateOf(false) }
     val reached = target > 0 && count >= target
 
@@ -269,6 +270,7 @@ private fun ZikirCounter(
                 .border(1.dp, if (reached) Gold else GoldLine, RoundedCornerShape(70.dp))
                 .clickable {
                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                    if (ZikirPrefs.isSoundOn(context)) ZikirSound.click()
                     onTap()
                 },
             contentAlignment = Alignment.Center
