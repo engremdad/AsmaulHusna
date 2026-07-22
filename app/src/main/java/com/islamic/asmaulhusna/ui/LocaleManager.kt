@@ -44,6 +44,12 @@ object LocaleStore {
         return AppLanguage.fromTag(tag)
     }
 
+    /** False until the user has picked a language once — used to gate the first-launch screen. */
+    fun isLanguageChosen(context: Context): Boolean =
+        context.applicationContext
+            .getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .contains(KEY_LANG)
+
     fun setLanguage(context: Context, language: AppLanguage) {
         context.applicationContext
             .getSharedPreferences(PREFS, Context.MODE_PRIVATE)

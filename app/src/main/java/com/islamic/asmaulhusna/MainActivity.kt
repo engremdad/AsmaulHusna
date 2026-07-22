@@ -28,6 +28,7 @@ import com.islamic.asmaulhusna.ui.DetailScreen
 import com.islamic.asmaulhusna.ui.FavoritesScreen
 import com.islamic.asmaulhusna.ui.HomeScreen
 import com.islamic.asmaulhusna.ui.LanguageScreen
+import com.islamic.asmaulhusna.ui.FirstRunLanguageScreen
 import com.islamic.asmaulhusna.ui.LocaleStore
 import com.islamic.asmaulhusna.ui.SettingsScreen
 import com.islamic.asmaulhusna.ui.TextScaleStore
@@ -55,6 +56,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             AsmaulHusnaTheme {
                 val context = LocalContext.current
+
+                // First launch after install: let the user pick a language before entering.
+                if (!LocaleStore.isLanguageChosen(context)) {
+                    FirstRunLanguageScreen()
+                    return@AsmaulHusnaTheme
+                }
+
                 val favorites = remember { FavoritesStore(context) }
                 val zikir = remember { ZikirStore(context) }
                 val nav = rememberNavController()
