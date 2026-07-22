@@ -8,6 +8,7 @@
     <string name="section_meaning">المعنى</string>
     <string name="section_virtue">الفضل</string>
     <string name="section_practice">العمل</string>
+    <string name="authenticity_note">ملاحظات الفضل والعمل تستند إلى تعاليم متوارثة وتتفاوت في صحّتها، وليست كلها أحاديث ثابتة. راجع قسم الفضائل واستشر أهل العلم الموثوقين قبل العمل بها.</string>
     <string name="action_listen">استمع</string>
     <string name="audio_loading">جارٍ التحميل…</string>
     <string name="audio_load_failed">تعذّر تحميل الصوت</string>

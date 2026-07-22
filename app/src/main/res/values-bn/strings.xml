@@ -8,6 +8,7 @@
     <string name="section_meaning">অর্থ</string>
     <string name="section_virtue">ফজিলত</string>
     <string name="section_practice">আমল</string>
+    <string name="authenticity_note">ফজিলত ও আমলের বর্ণনাগুলো প্রচলিত শিক্ষার ভিত্তিতে দেওয়া এবং এগুলোর সত্যতা ভিন্ন—সবগুলো প্রমাণিত হাদিস নয়। আমল করার আগে ফজিলত অংশ দেখুন এবং নির্ভরযোগ্য আলেমদের পরামর্শ নিন।</string>
     <string name="action_listen">শুনুন</string>
     <string name="audio_loading">লোড হচ্ছে…</string>
     <string name="audio_load_failed">অডিও লোড করা যায়নি</string>

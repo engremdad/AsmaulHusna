@@ -8,6 +8,7 @@
     <string name="section_meaning">Anlamı</string>
     <string name="section_virtue">Fazileti</string>
     <string name="section_practice">Ameli</string>
+    <string name="authenticity_note">Fazilet ve amel notları geleneksel öğretilere dayanır ve sıhhat dereceleri farklıdır; hepsi sabit hadis değildir. Amel etmeden önce Faziletler bölümüne bakın ve güvenilir âlimlere danışın.</string>
     <string name="action_listen">Dinle</string>
     <string name="audio_loading">Yükleniyor…</string>
     <string name="audio_load_failed">Ses yüklenemedi</string>

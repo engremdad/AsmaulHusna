@@ -8,6 +8,7 @@
     <string name="section_meaning">अर्थ</string>
     <string name="section_virtue">फ़ज़ीलत</string>
     <string name="section_practice">अमल</string>
+    <string name="authenticity_note">फ़ज़ीलत और अमल की बातें पारंपरिक शिक्षाओं पर आधारित हैं और इनकी प्रामाणिकता अलग-अलग है; ये सब प्रमाणित हदीस नहीं हैं। इन पर अमल करने से पहले फ़ज़ीलत भाग देखें और विश्वसनीय विद्वानों से सलाह लें।</string>
     <string name="action_listen">सुनें</string>
     <string name="audio_loading">लोड हो रहा है…</string>
     <string name="audio_load_failed">ऑडियो लोड नहीं हो सका</string>

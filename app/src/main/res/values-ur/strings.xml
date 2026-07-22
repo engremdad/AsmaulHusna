@@ -8,6 +8,7 @@
     <string name="section_meaning">معنی</string>
     <string name="section_virtue">فضیلت</string>
     <string name="section_practice">عمل</string>
+    <string name="authenticity_note">فضیلت اور عمل کی باتیں روایتی تعلیمات پر مبنی ہیں اور ان کی صحت مختلف ہے؛ یہ سب ثابت احادیث نہیں ہیں۔ ان پر عمل کرنے سے پہلے فضیلت کا حصہ دیکھیں اور معتبر علماء سے رجوع کریں۔</string>
     <string name="action_listen">سنیں</string>
     <string name="audio_loading">لوڈ ہو رہا ہے…</string>
     <string name="audio_load_failed">آڈیو لوڈ نہیں ہو سکا</string>

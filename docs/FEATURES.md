@@ -18,7 +18,9 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 
 ## Name detail
 - **Name hero** — large Arabic calligraphy with transliteration and localized name.
-- **Meaning / Virtue / Practice** sections for every name.
+- **Meaning / Virtue / Practice** sections for every name, followed by a localized
+  **authenticity note** flagging that the Virtue/Practice text is traditional and varies in
+  authenticity (points to Virtues → "On Authenticity").
 - **Listen** — plays the name's recitation from a bundled MP3 (fully offline, no network).
   The 99 clips are human pronunciation recordings by Mohammed Sadiq via Wikimedia Commons,
   licensed CC BY-SA 4.0; attribution is shown in **Settings › About › Audio credits**.

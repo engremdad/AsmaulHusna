@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Share
@@ -151,6 +152,11 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
                 SectionCard(stringResource(R.string.section_meaning), loc.meaning)
                 SectionCard(stringResource(R.string.section_virtue), loc.fazilat)
                 SectionCard(stringResource(R.string.section_practice), loc.amal)
+                // Authenticity disclaimer: virtue/practice notes are traditional and vary in
+                // grading, so mark them rather than presenting them as established hadith.
+                if (loc.fazilat.isNotBlank() || loc.amal.isNotBlank()) {
+                    AuthenticityNote()
+                }
                 Spacer(Modifier.height(24.dp))
             }
         }
@@ -419,6 +425,30 @@ private fun ZikirTargetDialog(current: Int, onDismiss: () -> Unit, onConfirm: (I
             }
         }
     )
+}
+
+@Composable
+private fun AuthenticityNote() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 6.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(SectGround)
+            .border(1.dp, GoldLine, RoundedCornerShape(12.dp))
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.Top
+    ) {
+        Icon(
+            Icons.Outlined.Info, null, tint = GoldSoft,
+            modifier = Modifier.size(16.dp).padding(top = 1.dp)
+        )
+        Spacer(Modifier.width(10.dp))
+        Text(
+            stringResource(R.string.authenticity_note),
+            color = CreamDim, fontSize = 12.sp, lineHeight = 18.sp
+        )
+    }
 }
 
 @Composable

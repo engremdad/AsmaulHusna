@@ -39,6 +39,7 @@
     <string name="section_meaning">Meaning</string>
     <string name="section_virtue">Virtue</string>
     <string name="section_practice">Practice</string>
+    <string name="authenticity_note">The virtue and practice notes reflect traditional teachings and differ in authenticity; not all are established hadith. See Virtues → “On Authenticity” and consult reliable scholars before acting on them.</string>
     <string name="action_listen">Listen</string>
     <string name="audio_loading">Loading…</string>
     <string name="audio_load_failed">Couldn’t load audio</string>
