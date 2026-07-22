@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-   Legacy auto-backup scope (API 30 and below). Back up only the user's
-   own preferences; exclude the Firebase/FCM id files so a restored
-   install re-registers cleanly. See data_extraction_rules.xml for 31+.
+   Legacy auto-backup scope (API 30 and below). This is an allowlist: only the
+   user's own preferences are backed up. Anything not listed here (including the
+   Firebase/FCM id files) is automatically excluded, so a restored install
+   re-registers cleanly. See data_extraction_rules.xml for API 31+.
 -->
 <full-backup-content>
     <include domain="sharedpref" path="favorites.xml" />
     <include domain="sharedpref" path="zikir.xml" />
     <include domain="sharedpref" path="settings.xml" />
     <include domain="sharedpref" path="reminders.xml" />
-    <exclude domain="sharedpref" path="com.google.android.gms.appid.xml" />
-    <exclude domain="sharedpref" path="com.google.firebase.messaging.xml" />
 </full-backup-content>

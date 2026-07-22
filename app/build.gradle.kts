@@ -52,12 +52,14 @@ android {
             if (rootProject.file("keystore.properties").exists()) {
                 signingConfig = signingConfigs.getByName("release")
             }
-            // R8/shrinking left off for now — enable and verify against a signed release
-            // build before shipping. proguard-rules.pro already has the needed keeps; wire
-            // it up (proguardFiles / optimization DSL) when enabling for your AGP version.
-            optimization {
-                enable = false
-            }
+            // R8 code + resource shrinking on for release (smaller AAB + obfuscation).
+            // Keeps live in proguard-rules.pro; Firebase/Compose ship their own consumer rules.
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {

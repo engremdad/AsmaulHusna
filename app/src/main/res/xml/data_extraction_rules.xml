@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-   Backup/transfer scope (Android 12+). We back up only the user's own
-   preferences: favorites, per-name zikir counts, language, display and
-   reminder settings. Nothing sensitive is stored, and the FCM/Firebase
-   id files are excluded so a restored install re-registers cleanly.
+   Backup/transfer scope (Android 12+). Allowlist: only the user's own
+   preferences (favorites, per-name zikir counts, language, display and
+   reminder settings) are backed up / transferred. Anything not listed —
+   including the FCM/Firebase id files — is excluded automatically, so a
+   restored install re-registers cleanly.
 -->
 <data-extraction-rules>
     <cloud-backup>
@@ -11,8 +12,6 @@
         <include domain="sharedpref" path="zikir.xml" />
         <include domain="sharedpref" path="settings.xml" />
         <include domain="sharedpref" path="reminders.xml" />
-        <exclude domain="sharedpref" path="com.google.android.gms.appid.xml" />
-        <exclude domain="sharedpref" path="com.google.firebase.messaging.xml" />
     </cloud-backup>
     <device-transfer>
         <include domain="sharedpref" path="favorites.xml" />

@@ -24,7 +24,8 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **Splash screen** (#13) — Android 12+ SplashScreen API added (gold Mushaf mark on the emerald page) via `core-splashscreen`.
 - **Release signing scaffold** (#3, partial) — `signingConfigs.release` reads `keystore.properties` (git-ignored); `keystore.properties.example` + `.gitignore` entries added. _You still create the keystore._
 - **Privacy Policy draft** (#4, partial) — `docs/PRIVACY_POLICY.md` written. _You still host it and add the URL in Play Console._
-- **ProGuard rules staged** (#17, partial) — `proguard-rules.pro` with the needed keeps added; R8 shrinking left off until it can be verified against a signed release build.
+- **R8 shrinking enabled** (#17) — `isMinifyEnabled` + `isShrinkResources` on for release, wired to `proguard-rules.pro`. `assembleRelease` verified: 22M → 4.7M, mapping emitted, audio + FCM service preserved.
+- **Release lint fix** — `lintVitalRelease` (which only runs on release builds) rejected the backup rules: with an `<include>` allowlist, the Firebase `<exclude>` entries pointed at non-included paths and errored the build. Removed the redundant excludes — the allowlist already omits those files. (Debug builds never caught this.)
 
 ---
 
@@ -58,7 +59,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 | 14 | Console | No app category set | Books & Reference or Lifestyle. |
 | 15 | Code | Remaining deprecated API | `Icons.Filled.VolumeUp` → `Icons.AutoMirrored.Filled.VolumeUp` in `DetailScreen`. |
 | 16 | Assets | No store listing assets | 2–8 phone screenshots + 1024×500 feature graphic (optional tablet shots). |
-| 17 | Build | R8 shrinking disabled | `release { optimization.enable = false }` — enable for a smaller AAB + obfuscation. |
+| 17 | ✅ **Resolved** | R8 shrinking disabled | **Done:** `isMinifyEnabled` + `isShrinkResources` on for release, wired to `proguard-rules.pro`. Verified with `assembleRelease`: **22M → 4.7M**, mapping file emitted, all 99 audio clips kept & reachable, FCM service retained. _Runtime smoke-test on a device still recommended before shipping._ |
 | 18 | Quality | No meaningful tests | Only the stub instrumented test; add unit tests for `FavoritesStore`, `ZikirStore`, and content mapping. |
 | 19 | i18n | Hard-coded Bangla toasts | `AudioPlayer` toasts are literal Bangla strings — extract to resources. |
 | 20 | Branding | Generic name / package | "Asma al-Husna" and `com.islamic.asmaulhusna` are common; the package is immutable once published. Consider a distinctive package (e.g. an owned domain). |
@@ -75,7 +76,7 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 3. ~~**Exact alarms**: decide `USE_EXACT_ALARM` vs inexact~~ ✅ done — dropped exact-alarm perms, using inexact `setAndAllowWhileIdle` — #7
 4. ~~**Backup**: fill in backup rules~~ ✅ done — allowlisted user prefs, verified filenames match, Firebase ids excluded — #11
 5. **Privacy Policy**: write + host, get the URL — #4
-6. **Release build**: keystore + `signingConfigs.release`, enable R8 — #3, #17
+6. **Release build**: R8 ✅ enabled & verified (#17); `signingConfigs.release` scaffolded — **you still create the keystore** (#3)
 7. **Build signed AAB**: `./gradlew bundleRelease`
 8. **Play Console** ($25 one-time): Data Safety, Content Rating, Target Audience, store assets — #5, #6, #14, #16
 9. **Rollout**: Internal → Closed → Production tracks
