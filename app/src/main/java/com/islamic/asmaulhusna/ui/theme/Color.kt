@@ -13,6 +13,7 @@ val Page       = Color(0xFF0A2019) // screen background
 val Emerald    = Color(0xFF0C3A2C) // card ground
 val EmeraldLo  = Color(0xFF0A241B) // card ground, lower gradient stop
 val EmeraldHi  = Color(0xFF123F30) // card ground, upper gradient stop
+val EmeraldGlow= Color(0xFF17553F) // lifted emerald — luminous top of hero/today cards
 val EmeraldRow = Color(0xFF0E3125) // grid cell ground
 val EmeraldLine= Color(0xFF17392C) // hairline separators on emerald
 val SectGround = Color(0xFF0B271E) // section-card ground

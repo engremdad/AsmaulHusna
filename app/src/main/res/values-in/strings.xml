@@ -33,7 +33,6 @@
     <string name="cd_favorites">Favorit</string>
     <string name="cd_reminders">Pengingat</string>
     <string name="cd_language">Bahasa</string>
-    <string name="cd_share">Bagikan</string>
     <string name="cd_copy">Salin</string>
     <string name="toast_copied">Disalin ke papan klip</string>
 
@@ -47,4 +46,58 @@
     <string name="notif_suhoor_body">Selesaikan santap sahur sebelum waktunya habis dan niatkan puasa.</string>
     <string name="notif_iftar_title">Waktu berbuka</string>
     <string name="notif_iftar_body">Saatnya berbuka puasa — momen penuh berkah saat doa dikabulkan.</string>
+
+    <string name="section_zikir">Penghitung Zikir</string>
+    <string name="zikir_hint">Ketuk untuk menghitung zikir Anda</string>
+    <string name="zikir_reset">Atur ulang</string>
+    <string name="cd_zikir_count">Jumlah zikir</string>
+    <string name="zikir_set_target">Tetapkan target</string>
+    <string name="zikir_target_title">Target zikir</string>
+    <string name="zikir_target_hint">Pilih berapa kali membaca, atau masukkan angka Anda sendiri.</string>
+    <string name="zikir_target_custom">Target khusus</string>
+    <string name="zikir_target_none">Tanpa target</string>
+    <string name="zikir_target_done">Target tercapai</string>
+    <string name="action_save">Simpan</string>
+    <string name="action_cancel">Batal</string>
+    <string name="action_share">Bagikan</string>
+    <string name="action_copy">Salin</string>
+    <string name="copied">Disalin</string>
+    <string name="cd_share">Bagikan nama ini</string>
+    <string name="share_subject">Asmaul Husna</string>
+    <string name="section_display">Tampilan</string>
+    <string name="text_size_title">Ukuran teks</string>
+    <string name="text_size_sample">Contoh teks</string>
+    <string name="cd_text_smaller">Teks lebih kecil</string>
+    <string name="cd_text_larger">Teks lebih besar</string>
+    <string name="zikir_show_hint">Tampilkan penghitung ketuk pada setiap nama</string>
+
+    <!-- Virtues (Fazilat) screen -->
+    <string name="virtues_title">Keutamaan Nama-Nama</string>
+    <string name="virtues_subtitle">Fadhail Asmaul Husna</string>
+    <string name="cd_virtues">Keutamaan</string>
+
+    <string name="virtues_s1_title">Nama-Nama yang Paling Indah</string>
+    <string name="virtues_s1_body">Asmaul Husna berarti \"nama-nama yang paling indah\" — nama-nama yang dengannya Allah menyifati diri-Nya dalam Al-Qur\'an dan Sunnah. Allah berfirman: \"Dan Allah memiliki nama-nama yang terbaik, maka berdoalah kepada-Nya dengan menyebut nama-nama itu\" (Al-Qur\'an, Surah al-A\'raf 7:180). Nama-nama ini juga disebutkan dalam Surah Ta-Ha 20:8, Surah al-Isra 17:110, dan Surah al-Hasyr 59:22–24. Mempelajarinya berarti mengenal Tuhanmu — rahmat, kekuasaan, hikmah, dan keagungan-Nya.</string>
+
+    <string name="virtues_s2_title">Sembilan Puluh Sembilan Nama — dan Surga</string>
+    <string name="virtues_s2_body">Abu Hurairah (semoga Allah meridhainya) meriwayatkan bahwa Rasulullah (semoga shalawat dan salam tercurah kepadanya) bersabda: \"Allah memiliki sembilan puluh sembilan nama, seratus kurang satu; barang siapa menghafal dan mengamalkannya akan masuk Surga.\"\n\nRujukan: Sahih al-Bukhari 2736 (Kitab Syarat), juga 6410 (Kitab Doa); Sahih Muslim 2677 (Kitab Zikir). Bilangan sembilan puluh sembilan tidaklah membatasi nama-nama Allah — riwayat sahih lain menyebutkan nama-nama yang hanya diketahui oleh-Nya — tetapi nama-nama ini dikhususkan untuk ganjaran yang agung ini.</string>
+
+    <string name="virtues_s3_title">Makna \"Ihsa\" (Menghimpun)</string>
+    <string name="virtues_s3_body">Kata ihsa (menghitung/menghimpun) jauh lebih dari sekadar menghitung. Para ulama seperti Imam al-Bukhari, an-Nawawi, dan Ibnu Hajar (dalam Fath al-Bari) menjelaskannya sebagai: menghafal nama-nama, memahami maknanya, mengimaninya, dan mengamalkan tuntutannya. Maka mengenal Ar-Razzaq (Maha Pemberi Rezeki) menumbuhkan kepercayaanmu pada pemberian-Nya, dan Al-Ghafur (Maha Pengampun) mengarahkanmu kepada tobat. Ganjaran itu terkait dengan menghidupkan nama-nama, bukan sekadar melafalkannya.</string>
+
+    <string name="virtues_s4_title">Catatan tentang Daftar Nama</string>
+    <string name="virtues_s4_body">Daftar sembilan puluh sembilan nama yang dikenal diriwayatkan dalam Jami\' at-Tirmidhi 3507. Banyak ahli hadis — termasuk Ibnu Hajar — berpendapat bahwa daftar tertentu ini merupakan sisipan dari seorang perawi (idraj), bukan kata-kata persis Nabi (semoga shalawat dan salam tercurah kepadanya), meskipun setiap nama di dalamnya tetap kokoh dalam Al-Qur\'an dan Sunnah. Karena itulah sebagian kompilasi tradisional sedikit berbeda dalam redaksinya.</string>
+
+    <string name="virtues_s5_title">Berdoa kepada Allah dengan Nama-Nama-Nya</string>
+    <string name="virtues_s5_body">Allah mengajak kita berdoa kepada-Nya dengan nama-nama-Nya (Al-Qur\'an 7:180). Pilihlah nama yang sesuai dengan kebutuhanmu: Ya Rahman untuk rahmat, Ya Razzaq untuk rezeki, Ya Ghafur untuk ampunan, Ya Shafi untuk kesembuhan. Nabi (semoga shalawat dan salam tercurah kepadanya) juga mengajarkan bahwa Allah memiliki Nama Teragung (Ism al-A\'zam) yang apabila Dia diminta dengannya, Dia mengabulkannya — diriwayatkan dalam Sunan Abi Dawud 1495, Jami\' at-Tirmidhi 3544, dan Sunan Ibn Majah 3856.</string>
+
+    <string name="virtues_s6_title">Dalam Kehidupan Sehari-hari</string>
+    <string name="virtues_s6_body">• Jadikan nama-nama itu bagian dari zikirmu pagi dan petang.\n• Biarkan ia membentuk akhlakmu: berbelas kasihlah karena Dia Ar-Rahman, memaafkanlah karena Dia Al-Ghafur, berlaku adillah karena Dia Al-\'Adl, bersabarlah karena Dia As-Sabur.\n• Dalam kesulitan, berpalinglah kepada nama yang sesuai dalam doa dan bertawakallah kepada Al-Wakil.\n• Ajarkan nama-nama itu kepada keluarga dan anak-anakmu, agar pengenalan akan Allah terus diwariskan.</string>
+
+    <string name="virtues_s7_title">Buah Rohani</string>
+    <string name="virtues_s7_body">Merenungkan nama-nama memperdalam pengenalan akan Allah (ma\'rifah), rasa takut kepada-Nya (khasyyah), cinta, harapan, dan tawakal. Hati menjadi teguh, syukur bertambah, dan hamba semakin dekat kepada Dzat yang diingatnya. Nama-nama adalah pintu: semakin engkau memahaminya, semakin bermakna ibadahmu.</string>
+
+    <string name="virtues_s8_title">Tentang Keautentikan</string>
+    <string name="virtues_s8_body">Riwayat-riwayat di atas dikutip dari Sahih al-Bukhari, Sahih Muslim, Jami\' at-Tirmidhi, Sunan Abi Dawud, dan Sunan Ibn Majah. Derajat hadis dan perinciannya sebaiknya dipastikan kepada ulama yang terpercaya dan kitab-kitab cetak. Untuk kajian yang lebih mendalam, kembalilah kepada guru-guru yang tepercaya serta kitab-kitab tafsir dan hadis.</string>
+
 </resources>

@@ -6,11 +6,57 @@
     <string name="today_label">Today</string>
     <string name="search_hint">Search name or meaning…</string>
 
+    <!-- Virtues (Fazilat) screen -->
+    <string name="virtues_title">Virtues of the Names</string>
+    <string name="virtues_subtitle">Fadā\'il of Asma al-Husna</string>
+    <string name="cd_virtues">Virtues</string>
+
+    <string name="virtues_s1_title">The Most Beautiful Names</string>
+    <string name="virtues_s1_body">Asma al-Husna means \"the most beautiful names\" — the names by which Allah has described Himself in the Qur\'an and the Sunnah. Allah says: \"And to Allah belong the best names, so call upon Him by them\" (Qur\'an, Surah al-A\'raf 7:180). They are also mentioned in Surah Ta-Ha 20:8, Surah al-Isra 17:110, and Surah al-Hashr 59:22–24. To learn them is to know your Lord — His mercy, power, wisdom, and majesty.</string>
+
+    <string name="virtues_s2_title">Ninety-Nine Names — and Paradise</string>
+    <string name="virtues_s2_body">Abu Hurayrah (may Allah be pleased with him) reported that the Messenger of Allah (peace be upon him) said: \"Allah has ninety-nine names, one hundred less one; whoever enumerates them will enter Paradise.\"\n\nReferences: Sahih al-Bukhari 2736 (Book of Conditions), also 6410 (Book of Invocations); Sahih Muslim 2677 (Book of Remembrance). The number ninety-nine does not limit Allah\'s names — other authentic reports mention names known only to Him — but these are singled out for this great reward.</string>
+
+    <string name="virtues_s3_title">What \"Enumerating\" Means</string>
+    <string name="virtues_s3_body">The word ihsa (enumerating) is far more than counting. Scholars such as Imam al-Bukhari, al-Nawawi, and Ibn Hajar (in Fath al-Bari) explain it as: to memorize the names, to understand their meanings, to believe in them, and to act by what they call for. So knowing Ar-Razzaq (The Provider) grows your trust in His provision, and Al-Ghafur (The Ever-Forgiving) turns you toward repentance. The reward is tied to living by the names, not merely reciting them.</string>
+
+    <string name="virtues_s4_title">A Note on the Listed Names</string>
+    <string name="virtues_s4_body">The familiar list of the ninety-nine names is narrated in Jami\' at-Tirmidhi 3507. Many hadith scholars — including Ibn Hajar — hold that the specific list is an addition by a narrator (idraj) rather than the exact words of the Prophet (peace be upon him), even though every name in it is established in the Qur\'an and Sunnah. This is why some traditional compilations differ slightly in their wording.</string>
+
+    <string name="virtues_s5_title">Calling upon Allah by His Names</string>
+    <string name="virtues_s5_body">Allah invites us to call on Him by His names (Qur\'an 7:180). Choose the name that fits your need: Ya Rahman for mercy, Ya Razzaq for provision, Ya Ghafur for forgiveness, Ya Shafi for healing. The Prophet (peace be upon him) also taught that Allah has a Greatest Name (Ism al-A\'zam) by which, when He is asked, He answers — reported in Sunan Abi Dawud 1495, Jami\' at-Tirmidhi 3544, and Sunan Ibn Majah 3856.</string>
+
+    <string name="virtues_s6_title">In Daily Life</string>
+    <string name="virtues_s6_body">• Make the names part of your remembrance (dhikr) morning and evening.\n• Let them shape your character: show mercy because He is Ar-Rahman, forgive because He is Al-Ghafur, be fair because He is Al-\'Adl, be patient because He is As-Sabur.\n• In hardship, turn to the fitting name in du\'a and place your trust in Al-Wakil.\n• Teach the names to your family and children, so knowledge of Allah passes on.</string>
+
+    <string name="virtues_s7_title">Spiritual Fruits</string>
+    <string name="virtues_s7_body">Reflecting on the names deepens knowledge of Allah (ma\'rifah), awe of Him (khashyah), love, hope, and reliance (tawakkul). The heart grows steady, gratitude increases, and the worshipper draws nearer to the One being remembered. The names are a doorway: the more you understand them, the more your worship gains meaning.</string>
+
+    <string name="virtues_s8_title">On Authenticity</string>
+    <string name="virtues_s8_body">The reports above are cited from Sahih al-Bukhari, Sahih Muslim, Jami\' at-Tirmidhi, Sunan Abi Dawud, and Sunan Ibn Majah. Hadith gradings and details are best confirmed with reliable scholars and the printed collections. For deeper study, return to trustworthy teachers and books of tafsir and hadith.</string>
+
     <!-- Detail -->
     <string name="section_meaning">Meaning</string>
     <string name="section_virtue">Virtue</string>
     <string name="section_practice">Practice</string>
     <string name="action_listen">Listen</string>
+    <string name="section_zikir">Zikir Counter</string>
+    <string name="zikir_hint">Tap to count your recitations</string>
+    <string name="zikir_reset">Reset</string>
+    <string name="cd_zikir_count">Zikir count</string>
+    <string name="zikir_set_target">Set target</string>
+    <string name="zikir_target_title">Zikir target</string>
+    <string name="zikir_target_hint">Choose how many times to recite, or enter your own.</string>
+    <string name="zikir_target_custom">Custom target</string>
+    <string name="zikir_target_none">No target</string>
+    <string name="zikir_target_done">Target reached</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_share">Share</string>
+    <string name="action_copy">Copy</string>
+    <string name="copied">Copied</string>
+    <string name="cd_share">Share this name</string>
+    <string name="share_subject">Asma al-Husna</string>
 
 
     <!-- Favorites -->
@@ -33,6 +79,12 @@
     <string name="section_language">Language</string>
     <string name="section_reminders">Reminders</string>
     <string name="choose_language">Choose language</string>
+    <string name="section_display">Display</string>
+    <string name="zikir_show_hint">Show the tap counter on each name</string>
+    <string name="text_size_title">Text size</string>
+    <string name="text_size_sample">Sample text</string>
+    <string name="cd_text_smaller">Smaller text</string>
+    <string name="cd_text_larger">Larger text</string>
 
     <!-- Content descriptions -->
     <string name="cd_back">Back</string>
@@ -40,7 +92,6 @@
     <string name="cd_favorites">Favorites</string>
     <string name="cd_reminders">Reminders</string>
     <string name="cd_language">Language</string>
-    <string name="cd_share">Share</string>
     <string name="cd_copy">Copy</string>
     <string name="toast_copied">Copied to clipboard</string>
 

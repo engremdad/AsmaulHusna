@@ -1,9 +1,17 @@
 package com.islamic.asmaulhusna.ui
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
+import android.content.Intent
+import android.os.Build
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -11,6 +19,8 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.*
@@ -23,112 +33,123 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.clipRect
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
-import android.os.Build
-import android.widget.Toast
 import com.islamic.asmaulhusna.R
 import com.islamic.asmaulhusna.data.AsmaulHusnaRepository
 import com.islamic.asmaulhusna.data.FavoritesStore
+import com.islamic.asmaulhusna.data.ZikirStore
 import com.islamic.asmaulhusna.data.localized
 import com.islamic.asmaulhusna.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailScreen(nameId: Int, favorites: FavoritesStore, onBack: () -> Unit) {
+fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBack: () -> Unit) {
     val name = remember(nameId) { AsmaulHusnaRepository.names.first { it.id == nameId } }
     val loc = name.localized(rememberNameContent())
     val context = LocalContext.current
     val isFav = favorites.favorites.value.contains(nameId)
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("${name.id}. ${name.transliteration}", fontWeight = FontWeight.SemiBold) },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.cd_back))
-                    }
-                },
-                actions = {
-                    val shareBody = buildShareText(
-                        arabic = name.arabic,
-                        transliteration = name.transliteration,
-                        name = loc.name,
-                        sections = listOf(
-                            stringResource(R.string.section_meaning) to loc.meaning,
-                            stringResource(R.string.section_virtue) to loc.fazilat,
-                            stringResource(R.string.section_practice) to loc.amal
-                        ),
-                        appName = stringResource(R.string.app_name)
-                    )
-                    val copiedMsg = stringResource(R.string.toast_copied)
-                    IconButton(onClick = { copyToClipboard(context, name.transliteration, shareBody, copiedMsg) }) {
-                        Icon(Icons.Filled.ContentCopy, stringResource(R.string.cd_copy), tint = Gold)
-                    }
-                    IconButton(onClick = { shareTextVia(context, shareBody) }) {
-                        Icon(Icons.Filled.Share, stringResource(R.string.cd_share), tint = Gold)
-                    }
-                    IconButton(onClick = { favorites.toggle(nameId) }) {
-                        Icon(
-                            if (isFav) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                            stringResource(R.string.cd_favorite),
-                            tint = Gold
+    Box(Modifier.mushafGround()) {
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text("${name.id}. ${name.transliteration}", fontWeight = FontWeight.SemiBold) },
+                    navigationIcon = {
+                        IconButton(onClick = onBack) {
+                            Icon(Icons.AutoMirrored.Filled.ArrowBack, stringResource(R.string.cd_back))
+                        }
+                    },
+                    actions = {
+                        val shareBody = buildShareText(
+                            arabic = name.arabic,
+                            transliteration = name.transliteration,
+                            name = loc.name,
+                            sections = listOf(
+                                stringResource(R.string.section_meaning) to loc.meaning,
+                                stringResource(R.string.section_virtue) to loc.fazilat,
+                                stringResource(R.string.section_practice) to loc.amal
+                            ),
+                            appName = stringResource(R.string.app_name)
                         )
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Page,
-                    titleContentColor = Gold,
-                    navigationIconContentColor = Gold
+                        val copiedMsg = stringResource(R.string.toast_copied)
+                        IconButton(onClick = { copyToClipboard(context, name.transliteration, shareBody, copiedMsg) }) {
+                            Icon(Icons.Filled.ContentCopy, stringResource(R.string.cd_copy), tint = Gold)
+                        }
+                        IconButton(onClick = { shareTextVia(context, shareBody) }) {
+                            Icon(Icons.Filled.Share, stringResource(R.string.cd_share), tint = Gold)
+                        }
+                        IconButton(onClick = { favorites.toggle(nameId) }) {
+                            Icon(
+                                if (isFav) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
+                                stringResource(R.string.cd_favorite),
+                                tint = Gold
+                            )
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = Color.Transparent,
+                        titleContentColor = Gold,
+                        navigationIconContentColor = Gold
+                    )
                 )
-            )
-        },
-        containerColor = Page
-    ) { padding ->
-        Column(
-            modifier = Modifier
-                .padding(padding)
-                .starLattice()
-                .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            NameHero(
-                name.arabic, name.transliteration,
-                if (loc.name.equals(name.transliteration, true)) "" else loc.name
-            )
-
-            Spacer(Modifier.height(20.dp))
-            Button(
-                onClick = { AudioPlayer.play(context, nameId) },
-                shape = RoundedCornerShape(50),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Gold,
-                    contentColor = GoldInk
-                ),
-                contentPadding = PaddingValues(horizontal = 26.dp, vertical = 12.dp)
+            },
+            containerColor = Color.Transparent
+        ) { padding ->
+            Column(
+                modifier = Modifier
+                    .padding(padding)
+                    .verticalScroll(rememberScrollState())
+                    .padding(16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Icon(Icons.Filled.VolumeUp, null)
-                Spacer(Modifier.width(8.dp))
-                Text(stringResource(R.string.action_listen), fontWeight = FontWeight.Bold)
-            }
-            Spacer(Modifier.height(20.dp))
+                NameHero(
+                    name.arabic, name.transliteration,
+                    if (loc.name.equals(name.transliteration, true)) "" else loc.name
+                )
 
-            SectionCard(stringResource(R.string.section_meaning), loc.meaning)
-            SectionCard(stringResource(R.string.section_virtue), loc.fazilat)
-            SectionCard(stringResource(R.string.section_practice), loc.amal)
-            Spacer(Modifier.height(24.dp))
+                Spacer(Modifier.height(20.dp))
+                Button(
+                    onClick = { AudioPlayer.play(context, nameId) },
+                    shape = RoundedCornerShape(50),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Gold,
+                        contentColor = GoldInk
+                    ),
+                    contentPadding = PaddingValues(horizontal = 26.dp, vertical = 12.dp)
+                ) {
+                    Icon(Icons.Filled.VolumeUp, null)
+                    Spacer(Modifier.width(8.dp))
+                    Text(stringResource(R.string.action_listen), fontWeight = FontWeight.Bold)
+                }
+                Spacer(Modifier.height(20.dp))
+
+                if (ZikirPrefs.isCounterShown(context)) {
+                    ZikirCounter(
+                        count = zikir.countFor(nameId),
+                        target = zikir.targetFor(nameId),
+                        onTap = { zikir.increment(nameId) },
+                        onReset = { zikir.reset(nameId) },
+                        onSetTarget = { zikir.setTarget(nameId, it) }
+                    )
+                    Spacer(Modifier.height(8.dp))
+                }
+
+                SectionCard(stringResource(R.string.section_meaning), loc.meaning)
+                SectionCard(stringResource(R.string.section_virtue), loc.fazilat)
+                SectionCard(stringResource(R.string.section_practice), loc.amal)
+                Spacer(Modifier.height(24.dp))
+            }
         }
     }
 }
@@ -202,6 +223,197 @@ private fun NameHero(arabic: String, transliteration: String, bangla: String) {
             if (bangla.isNotBlank()) Text(bangla, fontSize = 15.sp, color = CreamDim)
         }
     }
+}
+
+@Composable
+private fun ZikirCounter(
+    count: Int,
+    target: Int,
+    onTap: () -> Unit,
+    onReset: () -> Unit,
+    onSetTarget: (Int) -> Unit
+) {
+    val haptics = LocalHapticFeedback.current
+    var showTargetDialog by remember { mutableStateOf(false) }
+    val reached = target > 0 && count >= target
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 6.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(SectGround)
+            .border(1.dp, EmeraldLine, RoundedCornerShape(16.dp))
+            .padding(vertical = 18.dp, horizontal = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            stringResource(R.string.section_zikir),
+            fontWeight = FontWeight.Bold, color = Gold, fontSize = 11.sp, letterSpacing = 2.sp
+        )
+        Spacer(Modifier.height(16.dp))
+        // Large circular tap target — the whole disc counts a recitation.
+        Box(
+            modifier = Modifier
+                .size(140.dp)
+                .clip(RoundedCornerShape(70.dp))
+                .drawBehind {
+                    drawRect(
+                        Brush.radialGradient(
+                            colors = listOf(EmeraldGlow, EmeraldLo, Ink),
+                            center = Offset(size.width / 2f, size.height * 0.35f),
+                            radius = size.height * 0.85f
+                        )
+                    )
+                }
+                .border(1.dp, if (reached) Gold else GoldLine, RoundedCornerShape(70.dp))
+                .clickable {
+                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                    onTap()
+                },
+            contentAlignment = Alignment.Center
+        ) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    count.toString(),
+                    fontSize = 44.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Cream
+                )
+                if (target > 0) {
+                    Text(
+                        "/ $target",
+                        fontSize = 14.sp,
+                        color = GoldSoft,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                }
+            }
+        }
+
+        if (target > 0) {
+            Spacer(Modifier.height(14.dp))
+            LinearProgressIndicator(
+                progress = { (count.toFloat() / target).coerceIn(0f, 1f) },
+                modifier = Modifier
+                    .fillMaxWidth(0.7f)
+                    .clip(RoundedCornerShape(50)),
+                color = Gold,
+                trackColor = EmeraldLine
+            )
+            if (reached) {
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    stringResource(R.string.zikir_target_done),
+                    color = Gold, fontSize = 13.sp, fontWeight = FontWeight.Bold
+                )
+            }
+        }
+
+        Spacer(Modifier.height(12.dp))
+        Text(
+            stringResource(R.string.zikir_hint),
+            color = CreamDim, fontSize = 12.sp, textAlign = TextAlign.Center
+        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            TextButton(onClick = { showTargetDialog = true }) {
+                Icon(Icons.Filled.Flag, null, tint = GoldSoft)
+                Spacer(Modifier.width(6.dp))
+                Text(stringResource(R.string.zikir_set_target), color = GoldSoft, fontSize = 13.sp)
+            }
+            if (count > 0) {
+                TextButton(onClick = onReset) {
+                    Icon(Icons.Filled.Refresh, null, tint = GoldSoft)
+                    Spacer(Modifier.width(6.dp))
+                    Text(stringResource(R.string.zikir_reset), color = GoldSoft, fontSize = 13.sp)
+                }
+            }
+        }
+    }
+
+    if (showTargetDialog) {
+        ZikirTargetDialog(
+            current = target,
+            onDismiss = { showTargetDialog = false },
+            onConfirm = {
+                onSetTarget(it)
+                showTargetDialog = false
+            }
+        )
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun ZikirTargetDialog(current: Int, onDismiss: () -> Unit, onConfirm: (Int) -> Unit) {
+    val presets = listOf(33, 99, 100, 500, 1000)
+    var custom by remember {
+        mutableStateOf(if (current > 0 && current !in presets) current.toString() else "")
+    }
+    var selected by remember { mutableStateOf(if (current in presets) current else 0) }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        containerColor = Page,
+        titleContentColor = Gold,
+        textContentColor = Cream,
+        title = { Text(stringResource(R.string.zikir_target_title), fontWeight = FontWeight.Bold) },
+        text = {
+            Column {
+                Text(
+                    stringResource(R.string.zikir_target_hint),
+                    color = CreamDim, fontSize = 13.sp
+                )
+                Spacer(Modifier.height(14.dp))
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    presets.forEach { value ->
+                        FilterChip(
+                            selected = selected == value && custom.isBlank(),
+                            onClick = { selected = value; custom = "" },
+                            label = { Text(value.toString()) },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = Gold,
+                                selectedLabelColor = GoldInk,
+                                labelColor = Cream,
+                                containerColor = SectGround
+                            )
+                        )
+                    }
+                }
+                Spacer(Modifier.height(12.dp))
+                OutlinedTextField(
+                    value = custom,
+                    onValueChange = { new ->
+                        custom = new.filter { it.isDigit() }.take(6)
+                        if (custom.isNotBlank()) selected = 0
+                    },
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                    label = { Text(stringResource(R.string.zikir_target_custom)) },
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Gold,
+                        unfocusedBorderColor = GoldLine,
+                        focusedLabelColor = Gold,
+                        unfocusedLabelColor = CreamDim,
+                        cursorColor = Gold,
+                        focusedTextColor = Cream,
+                        unfocusedTextColor = Cream
+                    )
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                val value = custom.toIntOrNull() ?: selected
+                onConfirm(value)
+            }) { Text(stringResource(R.string.action_save), color = Gold, fontWeight = FontWeight.Bold) }
+        },
+        dismissButton = {
+            TextButton(onClick = { onConfirm(0) }) {
+                Text(stringResource(R.string.zikir_target_none), color = CreamDim)
+            }
+        }
+    )
 }
 
 @Composable

@@ -16,6 +16,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -30,6 +31,7 @@ fun LanguageScreen(onBack: () -> Unit) {
     val context = LocalContext.current
     val current = remember { LocaleStore.language(context) }
 
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -40,16 +42,16 @@ fun LanguageScreen(onBack: () -> Unit) {
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Gold,
                     navigationIconContentColor = Gold
                 )
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         LazyColumn(
-            modifier = Modifier.padding(padding).starLattice(),
+            modifier = Modifier.padding(padding),
             contentPadding = PaddingValues(14.dp),
             verticalArrangement = Arrangement.spacedBy(9.dp)
         ) {
@@ -78,5 +80,6 @@ fun LanguageScreen(onBack: () -> Unit) {
                 }
             }
         }
+    }
     }
 }

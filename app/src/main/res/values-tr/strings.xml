@@ -33,7 +33,6 @@
     <string name="cd_favorites">Favoriler</string>
     <string name="cd_reminders">Hatırlatıcılar</string>
     <string name="cd_language">Dil</string>
-    <string name="cd_share">Paylaş</string>
     <string name="cd_copy">Kopyala</string>
     <string name="toast_copied">Panoya kopyalandı</string>
 
@@ -47,4 +46,58 @@
     <string name="notif_suhoor_body">Sahur bitmeden yemeğinizi tamamlayın ve oruca niyet edin.</string>
     <string name="notif_iftar_title">İftar vakti</string>
     <string name="notif_iftar_body">Orucunu açma vakti geldi — duaların kabul olduğu mübarek bir an.</string>
+
+    <string name="section_zikir">Zikir Sayacı</string>
+    <string name="zikir_hint">Zikirlerini saymak için dokun</string>
+    <string name="zikir_reset">Sıfırla</string>
+    <string name="cd_zikir_count">Zikir sayısı</string>
+    <string name="zikir_set_target">Hedef belirle</string>
+    <string name="zikir_target_title">Zikir hedefi</string>
+    <string name="zikir_target_hint">Kaç kez çekeceğini seç ya da kendi sayını gir.</string>
+    <string name="zikir_target_custom">Özel hedef</string>
+    <string name="zikir_target_none">Hedef yok</string>
+    <string name="zikir_target_done">Hedefe ulaşıldı</string>
+    <string name="action_save">Kaydet</string>
+    <string name="action_cancel">İptal</string>
+    <string name="action_share">Paylaş</string>
+    <string name="action_copy">Kopyala</string>
+    <string name="copied">Kopyalandı</string>
+    <string name="cd_share">Bu ismi paylaş</string>
+    <string name="share_subject">Esma-ül Hüsna</string>
+    <string name="section_display">Görünüm</string>
+    <string name="text_size_title">Yazı boyutu</string>
+    <string name="text_size_sample">Örnek metin</string>
+    <string name="cd_text_smaller">Daha küçük yazı</string>
+    <string name="cd_text_larger">Daha büyük yazı</string>
+    <string name="zikir_show_hint">Her isimde dokunma sayacını göster</string>
+
+    <!-- Virtues (Fazilat) screen -->
+    <string name="virtues_title">İsimlerin Fazileti</string>
+    <string name="virtues_subtitle">Esma-ül Hüsna\'nın Faziletleri</string>
+    <string name="cd_virtues">Faziletler</string>
+
+    <string name="virtues_s1_title">En Güzel İsimler</string>
+    <string name="virtues_s1_body">Esma-ül Hüsna \"en güzel isimler\" demektir — Allah\'ın Kur\'an ve Sünnet\'te kendisini nitelediği isimler. Allah şöyle buyurur: \"En güzel isimler Allah\'ındır; O\'na bu isimlerle dua edin\" (Kur\'an, A\'raf Suresi 7:180). Bu isimler ayrıca Ta-Ha Suresi 20:8, İsra Suresi 17:110 ve Haşr Suresi 59:22–24\'te de zikredilir. Onları öğrenmek Rabbini tanımaktır — O\'nun rahmetini, kudretini, hikmetini ve azametini.</string>
+
+    <string name="virtues_s2_title">Doksan Dokuz İsim — ve Cennet</string>
+    <string name="virtues_s2_body">Ebu Hureyre (Allah ondan razı olsun) rivayet ettiğine göre Allah\'ın Resulü (ona salât ve selam olsun) şöyle buyurdu: \"Allah\'ın doksan dokuz ismi vardır; kim bunları sayar (ezberler ve gereğince yaşarsa) cennete girer.\"\n\nKaynaklar: Sahih al-Bukhari 2736 (Şartlar Kitabı), ayrıca 6410 (Dualar Kitabı); Sahih Muslim 2677 (Zikir Kitabı). Doksan dokuz sayısı Allah\'ın isimlerini sınırlamaz — başka sahih rivayetler yalnızca O\'nun bildiği isimlerden söz eder — fakat bu isimler bu büyük mükâfat için özellikle anılmıştır.</string>
+
+    <string name="virtues_s3_title">\"İhsa\" Ne Demektir</string>
+    <string name="virtues_s3_body">İhsa (sayıp kuşatma) kelimesi salt saymaktan çok daha fazlasıdır. İmam Buhari, Nevevi ve İbn Hacer (Fethu\'l-Bari\'de) gibi âlimler bunu şöyle açıklar: isimleri ezberlemek, anlamlarını kavramak, onlara inanmak ve gereğince amel etmek. Böylece Ar-Razzaq\'ı (Rızık Veren) bilmek O\'nun rızkına olan güvenini artırır, Al-Ghafur (Çok Bağışlayan) ise seni tövbeye yöneltir. Mükâfat, isimleri sadece anmaya değil, onlara göre yaşamaya bağlıdır.</string>
+
+    <string name="virtues_s4_title">Sıralanan İsimler Üzerine Bir Not</string>
+    <string name="virtues_s4_body">Doksan dokuz ismin bilinen listesi Jami\' at-Tirmidhi 3507\'de rivayet edilir. İbn Hacer dâhil birçok hadis âlimi, bu belirli listenin Peygamber\'in (ona salât ve selam olsun) birebir sözleri değil, bir ravinin eklemesi (idrac) olduğu görüşündedir; gerçi listedeki her isim Kur\'an ve Sünnet\'te sabittir. Bu yüzden bazı geleneksel derlemeler lafızda birbirinden az da olsa farklılık gösterir.</string>
+
+    <string name="virtues_s5_title">Allah\'a İsimleriyle Dua Etmek</string>
+    <string name="virtues_s5_body">Allah bizi isimleriyle kendisine dua etmeye çağırır (Kur\'an 7:180). İhtiyacına uygun ismi seç: rahmet için Ya Rahman, rızık için Ya Razzaq, bağışlanma için Ya Ghafur, şifa için Ya Shafi. Peygamber (ona salât ve selam olsun) ayrıca Allah\'ın bir İsm-i Azam\'ı (En Yüce İsim) olduğunu, onunla dua edildiğinde kabul ettiğini öğretmiştir — Sunan Abi Dawud 1495, Jami\' at-Tirmidhi 3544 ve Sunan Ibn Majah 3856\'da rivayet edilir.</string>
+
+    <string name="virtues_s6_title">Günlük Hayatta</string>
+    <string name="virtues_s6_body">• İsimleri sabah akşam zikrinin bir parçası yap.\n• Ahlakını onlar şekillendirsin: merhamet et çünkü O Ar-Rahman\'dır, bağışla çünkü O Al-Ghafur\'dur, adil ol çünkü O Al-\'Adl\'dir, sabret çünkü O As-Sabur\'dur.\n• Sıkıntıda uygun isimle dua et ve Al-Wakil\'e güven.\n• İsimleri ailene ve çocuklarına öğret ki Allah\'ın bilgisi sonraki nesillere aktarılsın.</string>
+
+    <string name="virtues_s7_title">Manevi Meyveler</string>
+    <string name="virtues_s7_body">İsimler üzerine düşünmek Allah bilgisini (marifet), O\'na duyulan haşyeti, sevgiyi, ümidi ve tevekkülü derinleştirir. Kalp sükûnet bulur, şükür artar ve kul, andığı Zat\'a daha da yaklaşır. İsimler bir kapıdır: onları ne kadar anlarsan ibadetin o kadar anlam kazanır.</string>
+
+    <string name="virtues_s8_title">Sıhhat ve Sübut Üzerine</string>
+    <string name="virtues_s8_body">Yukarıdaki rivayetler Sahih al-Bukhari, Sahih Muslim, Jami\' at-Tirmidhi, Sunan Abi Dawud ve Sunan Ibn Majah\'tan aktarılmıştır. Hadislerin dereceleri ve ayrıntıları en iyi güvenilir âlimler ve basılı kaynaklarla doğrulanır. Daha derin bir çalışma için güvenilir hocalara, tefsir ve hadis kitaplarına başvur.</string>
+
 </resources>

@@ -10,16 +10,17 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Language
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -37,8 +38,8 @@ import com.islamic.asmaulhusna.ui.theme.*
 fun HomeScreen(
     onNameClick: (Int) -> Unit,
     onFavoritesClick: () -> Unit,
-    onSettingsClick: () -> Unit,
-    onLanguageClick: () -> Unit
+    onVirtuesClick: () -> Unit,
+    onSettingsClick: () -> Unit
 ) {
     var query by remember { mutableStateOf("") }
     val all = AsmaulHusnaRepository.names
@@ -55,6 +56,7 @@ fun HomeScreen(
     }
     val today = remember { AsmaulHusnaRepository.today() }
 
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -67,27 +69,27 @@ fun HomeScreen(
                     }
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Cream
                 ),
                 actions = {
-                    IconButton(onClick = onLanguageClick) {
-                        Icon(Icons.Filled.Language, stringResource(R.string.cd_language), tint = Gold)
-                    }
-                    IconButton(onClick = onSettingsClick) {
-                        Icon(Icons.Filled.Notifications, stringResource(R.string.cd_reminders), tint = Gold)
+                    IconButton(onClick = onVirtuesClick) {
+                        Icon(Icons.AutoMirrored.Filled.MenuBook, stringResource(R.string.cd_virtues), tint = Gold)
                     }
                     IconButton(onClick = onFavoritesClick) {
                         Icon(Icons.Filled.Favorite, stringResource(R.string.cd_favorites), tint = Gold)
                     }
+                    IconButton(onClick = onSettingsClick) {
+                        Icon(Icons.Filled.Settings, stringResource(R.string.settings_title), tint = Gold)
+                    }
                 }
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         LazyVerticalGrid(
             columns = GridCells.Fixed(3),
-            modifier = Modifier.padding(padding).starLattice().padding(horizontal = 14.dp),
+            modifier = Modifier.padding(padding).padding(horizontal = 14.dp),
             contentPadding = PaddingValues(vertical = 10.dp),
             verticalArrangement = Arrangement.spacedBy(9.dp),
             horizontalArrangement = Arrangement.spacedBy(9.dp)
@@ -103,6 +105,7 @@ fun HomeScreen(
             }
         }
     }
+    }
 }
 
 @Composable
@@ -117,7 +120,8 @@ private fun TodayCard(name: AsmaulHusna, loc: NameContent, onClick: () -> Unit) 
             .border(1.dp, GoldLine, RoundedCornerShape(20.dp))
             .padding(4.dp)
             .clip(RoundedCornerShape(16.dp))
-            .background(Brush.verticalGradient(listOf(EmeraldHi, EmeraldLo)))
+            .background(Brush.verticalGradient(listOf(EmeraldGlow, EmeraldHi, EmeraldLo)))
+            .background(Brush.verticalGradient(0f to GoldSoft.copy(alpha = 0.07f), 0.09f to GoldSoft.copy(alpha = 0f)))
             .border(1.dp, GoldLine, RoundedCornerShape(16.dp))
             .clickable(onClick = onClick)
             .padding(vertical = 20.dp, horizontal = 18.dp)

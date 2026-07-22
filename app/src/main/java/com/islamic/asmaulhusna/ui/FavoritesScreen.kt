@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -31,6 +32,7 @@ fun FavoritesScreen(favorites: FavoritesStore, onNameClick: (Int) -> Unit, onBac
     val favIds = favorites.favorites.value
     val list = AsmaulHusnaRepository.names.filter { it.id in favIds }
     val content = rememberNameContent()
+    Box(Modifier.mushafGround()) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -41,21 +43,21 @@ fun FavoritesScreen(favorites: FavoritesStore, onNameClick: (Int) -> Unit, onBac
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Page,
+                    containerColor = Color.Transparent,
                     titleContentColor = Gold,
                     navigationIconContentColor = Gold
                 )
             )
         },
-        containerColor = Page
+        containerColor = Color.Transparent
     ) { padding ->
         if (list.isEmpty()) {
-            Box(Modifier.padding(padding).starLattice().fillMaxSize(), contentAlignment = Alignment.Center) {
+            Box(Modifier.padding(padding).fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text(stringResource(R.string.favorites_empty), color = CreamDim)
             }
         } else {
             LazyColumn(
-                modifier = Modifier.padding(padding).starLattice(),
+                modifier = Modifier.padding(padding),
                 contentPadding = PaddingValues(14.dp),
                 verticalArrangement = Arrangement.spacedBy(9.dp)
             ) {
@@ -82,5 +84,6 @@ fun FavoritesScreen(favorites: FavoritesStore, onNameClick: (Int) -> Unit, onBac
                 }
             }
         }
+    }
     }
 }
