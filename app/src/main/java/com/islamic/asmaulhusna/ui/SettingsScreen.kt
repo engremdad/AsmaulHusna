@@ -13,6 +13,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.NotificationsOff
 import androidx.compose.material.icons.filled.Remove
@@ -182,6 +183,52 @@ fun SettingsScreen(
                     }
                 )
             }
+
+            Spacer(Modifier.height(6.dp))
+
+            // ── About ─────────────────────────────────────────────────
+            SectionHeader(stringResource(R.string.section_about))
+            var showAudioCredits by remember { mutableStateOf(false) }
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(SectGround)
+                    .border(1.dp, EmeraldLine, RoundedCornerShape(16.dp))
+                    .clickable { showAudioCredits = true }
+                    .padding(horizontal = 16.dp, vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(Icons.AutoMirrored.Filled.VolumeUp, null, tint = Gold, modifier = Modifier.size(20.dp))
+                Spacer(Modifier.width(14.dp))
+                Column(Modifier.weight(1f)) {
+                    Text(stringResource(R.string.audio_credits_title), color = Cream, fontSize = 16.sp,
+                        fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.audio_credits_hint), color = CreamDim, fontSize = 12.sp)
+                }
+                Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = GoldDim)
+            }
+            if (showAudioCredits) {
+                AlertDialog(
+                    onDismissRequest = { showAudioCredits = false },
+                    containerColor = Page,
+                    titleContentColor = Gold,
+                    textContentColor = Cream,
+                    title = { Text(stringResource(R.string.audio_credits_title), fontWeight = FontWeight.Bold) },
+                    text = {
+                        Text(
+                            stringResource(R.string.audio_credits_body),
+                            color = Cream, fontSize = 14.sp, lineHeight = 21.sp
+                        )
+                    },
+                    confirmButton = {
+                        TextButton(onClick = { showAudioCredits = false }) {
+                            Text(stringResource(R.string.action_close), color = Gold, fontWeight = FontWeight.Bold)
+                        }
+                    }
+                )
+            }
+
             Spacer(Modifier.height(8.dp))
         }
     }

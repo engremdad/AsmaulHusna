@@ -1,0 +1,4 @@
+- [/] Stabilize build environment (`gradle.properties`)
+- [ ] Upgrade Splashscreen library version (`libs.versions.toml`)
+- [ ] Refine `installSplashScreen` usage in `MainActivity.kt`
+- [ ] Verify build and IDE state

@@ -14,12 +14,17 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **Notification-permission guidance** — Settings shows a banner when notifications are blocked, deep-linking to system settings (added while fixing "reminders not firing").
 - **Top-bar deprecation** — Home switched off `centerAlignedTopAppBarColors` to `topAppBarColors`.
 - **Empty states** — Favorites has a proper empty state.
-- **Audio blocker mitigated** — unlicensed streaming disabled behind `AudioPlayer.ENABLED = false` (button hidden).
+- **Audio blocker resolved** (#1) — the unlicensed GitHub hotlink is gone. All 99 pronunciation clips (Mohammed Sadiq / Wikimedia Commons / **CC BY-SA 4.0**) are now bundled in `res/raw/` and play fully offline; `AudioPlayer.ENABLED = true`. CC BY-SA attribution + licence link surfaced in **Settings › About › Audio credits**, with the notice file at `assets/licenses/asma_ul_husna_audio_attribution.txt`.
 - **FCM token upload neutralized** (#2) — guarded behind `TokenUploader.BACKEND_CONFIGURED = false`; no identifier leaves the device until a real endpoint is set.
 - **Exact-alarm permission** (#7) — switched to `USE_EXACT_ALARM` (auto-granted for alarm/reminder apps) on 33+, `SCHEDULE_EXACT_ALARM` capped at `maxSdkVersion=32`; exact Suhoor/Iftar timing preserved. _(Play Console still asks to confirm the alarm use case.)_
 - **`VolumeUp` deprecation** (#15) — switched to `Icons.AutoMirrored.Filled.VolumeUp`.
 - **Hard-coded Bangla toasts** (#19) — `AudioPlayer` toasts extracted to localized string resources.
 - **`ahad.mp4` typo** (#22) — corrected to `.mp3`.
+- **Backup rules** (#11) — explicit `backup_rules.xml` / `data_extraction_rules.xml` now include only the user's prefs (favorites, zikir, settings, reminders) and exclude Firebase id files.
+- **Splash screen** (#13) — Android 12+ SplashScreen API added (gold Mushaf mark on the emerald page) via `core-splashscreen`.
+- **Release signing scaffold** (#3, partial) — `signingConfigs.release` reads `keystore.properties` (git-ignored); `keystore.properties.example` + `.gitignore` entries added. _You still create the keystore._
+- **Privacy Policy draft** (#4, partial) — `docs/PRIVACY_POLICY.md` written. _You still host it and add the URL in Play Console._
+- **ProGuard rules staged** (#17, partial) — `proguard-rules.pro` with the needed keeps added; R8 shrinking left off until it can be verified against a signed release build.
 
 ---
 
@@ -27,11 +32,11 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 
 | # | Category | Gap | Fix |
 |---|---|---|---|
-| 1 | **Legal** | **Third-party audio without license** — `AudioPlayer` hotlinks MP3s from `MohammedAbidNafi/99-Names-of-Allah` (no LICENSE). **Interim mitigation applied: audio feature disabled (`AudioPlayer.ENABLED = false`), so nothing streams.** | Still to do before re-enabling: bundle your own/commissioned or verified CC0/CC-BY audio in `assets/` (don't hotlink; self-hosting the *same* files does **not** cure copyright), then flip the flag. |
+| 1 | ✅ **Resolved** | **Third-party audio without license** — was hotlinking MP3s from `MohammedAbidNafi/99-Names-of-Allah` (no LICENSE). | **Done:** 99 CC BY-SA 4.0 clips (Mohammed Sadiq / Wikimedia Commons) bundled in `res/raw/`, played offline; attribution shown in Settings › About. Keep the CC BY-SA credit visible and the audio under CC BY-SA while these files ship. |
 | 2 | **Legal/Privacy** | **FCM token upload to a placeholder server** — `TokenUploader` POSTs the device push token to `https://api.example.com/v1/devices`. | Either remove `TokenUploader`/FCM until there's a real backend, or point it at a secured HTTPS endpoint you own and declare it in Data Safety. Shipping token collection to `example.com` is broken and a policy risk. |
 | 3 | **Build** | **No signed release AAB** — `buildTypes.release` has no `signingConfig`; no keystore. | Create a keystore, add `signingConfigs.release` (creds via `keystore.properties`, never committed), build `bundleRelease`. |
-| 4 | **Legal** | **No Privacy Policy URL** — required: app declares `INTERNET`, streams audio, and integrates FCM (push token is a device identifier). | Publish a privacy policy (GitHub Pages is fine) and add the URL in Play Console. |
-| 5 | **Console** | **Data Safety form not prepared** — must declare audio streaming network use, FCM push token (an identifier), and any backup of preferences. | Complete the Data Safety questionnaire honestly once #2 is resolved. |
+| 4 | **Legal** | **No Privacy Policy URL** — required: app declares `INTERNET` and integrates FCM (push token is a device identifier). _(Audio is now bundled/offline, so it no longer uses the network.)_ | Publish a privacy policy (GitHub Pages is fine) and add the URL in Play Console. |
+| 5 | **Console** | **Data Safety form not prepared** — must declare the FCM push token (an identifier) and any backup of preferences. _(Audio no longer makes network calls.)_ | Complete the Data Safety questionnaire honestly once #2 is resolved. |
 | 6 | **Console** | **Content rating not obtained** — IARC questionnaire required. | Complete in Play Console. |
 
 ## 🟡 High-risk (may be rejected or flagged)
@@ -41,7 +46,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 | 7 | **Policy** | **`SCHEDULE_EXACT_ALARM` is a restricted permission** — apps targeting 33+ that request it must have alarm/reminder as a core feature and justify it; otherwise Play flags it. | Justify it in the Console declaration, switch to `USE_EXACT_ALARM` (allowed for alarm/reminder apps), or drop to inexact alarms (the scheduler already falls back). |
 | 8 | **Content** | **Fazilat/amal authenticity** — per-name virtue/practice text may include weak/unsourced narrations. (A Virtues screen with hadith references + an authenticity note now exists — good, but per-name text still needs review.) | Cite sources or mark as "traditional"; keep the disclaimer prominent. |
 | 9 | **Config** | **`google-services.json` is gitignored** but the app links Firebase. | Fine for local builds; ensure the release/CI build has the correct file for the production Firebase project (or remove Firebase if unused). |
-| 10 | **UX** | **No offline fallback for audio** — network failure only shows a toast (and the toast is hard-coded Bangla). | Bundle/caching once audio is licensed; localize the toasts. |
+| 10 | ✅ **Resolved** | **No offline fallback for audio** — used to stream and only show a toast on failure. | **Done:** audio is bundled in `res/raw/` and plays offline; no network path to fail. |
 | 11 | **Config** | **`allowBackup=true` with default (empty) backup rules** — prefs auto-back up to Google. | Fill in `backup_rules.xml` / `data_extraction_rules.xml` (or set `allowBackup=false`) and reflect it in Data Safety. |
 | 12 | **Ops** | **No crash reporting** — not required, but appeals/debugging are hard without it. | Add Crashlytics (Firebase is already integrated). |
 
@@ -65,7 +70,7 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 ---
 
 ## 📋 Suggested publish order
-1. **Audio**: bundle licensed audio in `assets/` (or disable the feature) — #1, #10, #22
+1. ~~**Audio**: bundle licensed audio~~ ✅ done — 99 CC BY-SA 4.0 clips bundled offline in `res/raw/` with in-app attribution — #1, #10, #22
 2. **FCM**: remove `TokenUploader`/Firebase if there's no backend, else wire a real secured endpoint — #2, #9, #12
 3. **Exact alarms**: decide `USE_EXACT_ALARM` vs inexact and update the manifest/declaration — #7
 4. **Backup**: fill in backup rules or set `allowBackup=false` — #11

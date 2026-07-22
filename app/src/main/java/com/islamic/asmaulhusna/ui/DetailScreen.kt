@@ -118,7 +118,7 @@ fun DetailScreen(nameId: Int, favorites: FavoritesStore, zikir: ZikirStore, onBa
                     if (loc.name.equals(name.transliteration, true)) "" else loc.name
                 )
 
-                // Audio feature disabled until licensed audio ships — see AudioPlayer.ENABLED.
+                // Bundled, licensed pronunciation audio — see AudioPlayer.
                 if (AudioPlayer.ENABLED) {
                     Spacer(Modifier.height(20.dp))
                     Button(

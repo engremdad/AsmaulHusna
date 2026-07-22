@@ -1,0 +1,19 @@
+99 NAMES OF ALLAH — HUMAN AUDIO ATTRIBUTION
+
+Creator / speaker: Mohammed Sadiq
+Source: Wikimedia Commons, “Arabic pronunciation of names of God in Islam” file set
+Source index: https://commons.wikimedia.org/wiki/Category:Arabic_pronunciation_of_names_of_God_in_Islam
+Per-file source links: see 99_names_human_audio_manifest.csv
+License: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+License: https://creativecommons.org/licenses/by-sa/4.0/
+
+Changes made for this Android package:
+- Wikimedia’s MP3 transcodes are downloaded.
+- Files are renamed to Android-compatible resource names.
+- No intentional change is made to the spoken content.
+
+Suggested in-app credit:
+“99 Names pronunciation audio by Mohammed Sadiq, via Wikimedia Commons, licensed CC BY-SA 4.0. Files renamed for Android.”
+
+IMPORTANT
+Keep this attribution available in your app (for example, Settings > Open-source licenses or About > Audio credits). Keep copies and adaptations of these audio assets under CC BY-SA 4.0 and identify material changes. This notice covers the audio assets, not your app’s unrelated code. It is practical licensing information, not legal advice.

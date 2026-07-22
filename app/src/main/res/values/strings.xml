@@ -91,6 +91,13 @@
     <string name="zikir_sound_hint">Play a tap sound while counting</string>
     <string name="text_size_title">Text size</string>
     <string name="text_size_sample">Sample text</string>
+
+    <!-- Audio credits (CC BY-SA 4.0 attribution — keep visible while audio ships) -->
+    <string name="section_about">About</string>
+    <string name="audio_credits_title">Audio credits</string>
+    <string name="audio_credits_hint">Pronunciation recordings &amp; licence</string>
+    <string name="audio_credits_body">99 Names pronunciation audio by Mohammed Sadiq, via Wikimedia Commons, licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). Files were renamed for Android; the spoken content is unchanged.\n\nLicence: https://creativecommons.org/licenses/by-sa/4.0/</string>
+    <string name="action_close">Close</string>
     <string name="cd_text_smaller">Smaller text</string>
     <string name="cd_text_larger">Larger text</string>
 

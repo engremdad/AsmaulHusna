@@ -3,7 +3,7 @@
 > The 99 Names of Allah — an illuminated "Mushaf" reading app.
 > Package `com.islamic.asmaulhusna` · version 1.0 (versionCode 1) · minSdk 24 · targetSdk 36
 
-_Last updated: 2026-07-22 (audio feature disabled pending licensing)_
+_Last updated: 2026-07-22 (audio enabled — bundled, licensed offline pronunciation clips)_
 
 This document is the running catalogue of what the app does. **It is updated whenever a
 task adds, changes, or removes a feature** — see [Maintenance](#maintenance) at the bottom.
@@ -19,8 +19,10 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 ## Name detail
 - **Name hero** — large Arabic calligraphy with transliteration and localized name.
 - **Meaning / Virtue / Practice** sections for every name.
-- **Listen** — audio playback of the name's recitation. _(Currently disabled pending
-  properly-licensed audio — toggle `AudioPlayer.ENABLED`. The button is hidden while off.)_
+- **Listen** — plays the name's recitation from a bundled MP3 (fully offline, no network).
+  The 99 clips are human pronunciation recordings by Mohammed Sadiq via Wikimedia Commons,
+  licensed CC BY-SA 4.0; attribution is shown in **Settings › About › Audio credits**.
+  Gated by `AudioPlayer.ENABLED` (now `true`).
 - **Favorite** — toggle a name as favorite from the detail top bar.
 - **Share** — send the full name text (Arabic, transliteration, name, Meaning, Virtue,
   Practice) with an "— Asma al-Husna" footer via the system share sheet.
@@ -59,6 +61,8 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
   - Zikir count sound toggle.
   - Text size stepper (with live sample).
 - **Reminders** — enable/disable and set times for the notification reminders below.
+- **About › Audio credits** — dialog with the pronunciation-audio attribution and CC BY-SA
+  4.0 licence link (required while the bundled audio ships).
 
 ## Notifications
 - **Name of the Day** — daily reminder that deep-links to a name's detail screen.
@@ -72,6 +76,8 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 ## Design
 - **Mushaf theme** — a single committed dark palette (deep emerald grounds, gold-leaf
   ornament, warm cream text) with a star-lattice background, evoking a hand-gilded mushaf.
+- **Splash screen** — Android 12+ SplashScreen API showing the gold Mushaf mark on the
+  emerald page at launch.
 
 ---
 
