@@ -12,6 +12,7 @@
     <string name="section_practice">Practice</string>
     <string name="action_listen">Listen</string>
 
+
     <!-- Favorites -->
     <string name="favorites_title">Favorites</string>
     <string name="favorites_empty">No names added yet.</string>
@@ -26,8 +27,12 @@
     <string name="reminder_iftar">Iftar</string>
     <string name="reminder_iftar_hint">Tells you when it is time for Iftar</string>
 
-    <!-- Language -->
+    <!-- Settings & Language -->
+    <string name="settings_title">Settings</string>
     <string name="language_title">Language</string>
+    <string name="section_language">Language</string>
+    <string name="section_reminders">Reminders</string>
+    <string name="choose_language">Choose language</string>
 
     <!-- Content descriptions -->
     <string name="cd_back">Back</string>
@@ -35,6 +40,9 @@
     <string name="cd_favorites">Favorites</string>
     <string name="cd_reminders">Reminders</string>
     <string name="cd_language">Language</string>
+    <string name="cd_share">Share</string>
+    <string name="cd_copy">Copy</string>
+    <string name="toast_copied">Copied to clipboard</string>
 
     <!-- Notification channels -->
     <string name="channel_reminders">Daily reminders</string>

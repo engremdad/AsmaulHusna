@@ -22,13 +22,20 @@
     <string name="reminder_iftar">Buka Puasa</string>
     <string name="reminder_iftar_hint">Memberi tahu saat waktu berbuka tiba</string>
 
+    <string name="settings_title">Pengaturan</string>
     <string name="language_title">Bahasa</string>
+    <string name="section_language">Bahasa</string>
+    <string name="section_reminders">Pengingat</string>
+    <string name="choose_language">Pilih bahasa</string>
 
     <string name="cd_back">Kembali</string>
     <string name="cd_favorite">Favorit</string>
     <string name="cd_favorites">Favorit</string>
     <string name="cd_reminders">Pengingat</string>
     <string name="cd_language">Bahasa</string>
+    <string name="cd_share">Bagikan</string>
+    <string name="cd_copy">Salin</string>
+    <string name="toast_copied">Disalin ke papan klip</string>
 
     <string name="channel_reminders">Pengingat harian</string>
     <string name="channel_reminders_desc">Pengingat nama hari ini, sahur, dan buka puasa</string>

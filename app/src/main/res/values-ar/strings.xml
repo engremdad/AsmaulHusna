@@ -22,13 +22,20 @@
     <string name="reminder_iftar">الإفطار</string>
     <string name="reminder_iftar_hint">يخبرك عند حلول وقت الإفطار</string>
 
+    <string name="settings_title">الإعدادات</string>
     <string name="language_title">اللغة</string>
+    <string name="section_language">اللغة</string>
+    <string name="section_reminders">التذكيرات</string>
+    <string name="choose_language">اختر اللغة</string>
 
     <string name="cd_back">رجوع</string>
     <string name="cd_favorite">المفضلة</string>
     <string name="cd_favorites">المفضلة</string>
     <string name="cd_reminders">التذكيرات</string>
     <string name="cd_language">اللغة</string>
+    <string name="cd_share">مشاركة</string>
+    <string name="cd_copy">نسخ</string>
+    <string name="toast_copied">تم النسخ إلى الحافظة</string>
 
     <string name="channel_reminders">التذكيرات اليومية</string>
     <string name="channel_reminders_desc">تذكيرات اسم اليوم والسحور والإفطار</string>

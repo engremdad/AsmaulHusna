@@ -22,13 +22,20 @@
     <string name="reminder_iftar">افطار</string>
     <string name="reminder_iftar_hint">افطار کا وقت ہونے پر بتائے گا</string>
 
+    <string name="settings_title">ترتیبات</string>
     <string name="language_title">زبان</string>
+    <string name="section_language">زبان</string>
+    <string name="section_reminders">یاد دہانیاں</string>
+    <string name="choose_language">زبان منتخب کریں</string>
 
     <string name="cd_back">واپس</string>
     <string name="cd_favorite">پسندیدہ</string>
     <string name="cd_favorites">پسندیدہ</string>
     <string name="cd_reminders">یاد دہانیاں</string>
     <string name="cd_language">زبان</string>
+    <string name="cd_share">شیئر کریں</string>
+    <string name="cd_copy">کاپی</string>
+    <string name="toast_copied">کلپ بورڈ پر کاپی ہو گیا</string>
 
     <string name="channel_reminders">روزانہ یاد دہانیاں</string>
     <string name="channel_reminders_desc">آج کا نام، سحری اور افطار کی یاد دہانیاں</string>

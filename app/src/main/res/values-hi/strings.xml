@@ -22,13 +22,20 @@
     <string name="reminder_iftar">इफ़्तार</string>
     <string name="reminder_iftar_hint">इफ़्तार का समय होने पर बताएगा</string>
 
+    <string name="settings_title">सेटिंग्स</string>
     <string name="language_title">भाषा</string>
+    <string name="section_language">भाषा</string>
+    <string name="section_reminders">रिमाइंडर</string>
+    <string name="choose_language">भाषा चुनें</string>
 
     <string name="cd_back">वापस</string>
     <string name="cd_favorite">पसंदीदा</string>
     <string name="cd_favorites">पसंदीदा</string>
     <string name="cd_reminders">रिमाइंडर</string>
     <string name="cd_language">भाषा</string>
+    <string name="cd_share">साझा करें</string>
+    <string name="cd_copy">कॉपी</string>
+    <string name="toast_copied">क्लिपबोर्ड पर कॉपी किया गया</string>
 
     <string name="channel_reminders">दैनिक रिमाइंडर</string>
     <string name="channel_reminders_desc">आज का नाम, सहरी और इफ़्तार के रिमाइंडर</string>
