@@ -5,9 +5,9 @@ _Last updated: 2026-07-22_
 Asma al-Husna ("the app") is an offline reference app for the 99 Names of Allah.
 This policy explains what the app does and does not do with your data.
 
-> **Draft.** Review, fill in the **[CONTACT EMAIL]** and effective date, then host this
-> (e.g. GitHub Pages) and paste the public URL into Play Console → Store listing and
-> Data Safety. Keep it in sync with the app's actual behavior.
+> **Published:** https://sites.google.com/view/asma-al-husna/home — paste this URL into
+> Play Console → Store listing and Data Safety. This file is the source of truth; keep the
+> hosted page in sync with it (and with the app's actual behavior) on every change.
 
 ## Summary
 The app does **not** require an account, and does **not** collect, sell, or share
@@ -55,4 +55,4 @@ We may update this policy as the app changes. Material changes will be reflected
 new "Last updated" date.
 
 ## Contact
-Questions about this policy: **[CONTACT EMAIL]**
+Questions about this policy: **emdadev@gmail.com**

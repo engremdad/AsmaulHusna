@@ -23,7 +23,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **Backup rules** (#11) — explicit `backup_rules.xml` / `data_extraction_rules.xml` now include only the user's prefs (favorites, zikir, settings, reminders) and exclude Firebase id files. Verified the include paths match the real `SharedPreferences` filenames, so backup isn't silently empty. _Maintenance: if a new prefs file is added, add it to both rule files or it won't be backed up._
 - **Splash screen** (#13) — Android 12+ SplashScreen API added (gold Mushaf mark on the emerald page) via `core-splashscreen`.
 - **Release signing scaffold** (#3, partial) — `signingConfigs.release` reads `keystore.properties` (git-ignored); `keystore.properties.example` + `.gitignore` entries added. _You still create the keystore._
-- **Privacy Policy draft** (#4, partial) — `docs/PRIVACY_POLICY.md` written. _You still host it and add the URL in Play Console._
+- **Privacy Policy published** (#4) — hosted at https://sites.google.com/view/asma-al-husna/home (source: `docs/PRIVACY_POLICY.md`). Live, no placeholders, contact `emdadev@gmail.com`, content verified to match app behaviour. _Still: paste the URL into Play Console (Store listing + Data Safety)._
 - **R8 shrinking enabled** (#17) — `isMinifyEnabled` + `isShrinkResources` on for release, wired to `proguard-rules.pro`. `assembleRelease` verified: 22M → 4.7M, mapping emitted, audio + FCM service preserved.
 - **Release lint fix** — `lintVitalRelease` (which only runs on release builds) rejected the backup rules: with an `<include>` allowlist, the Firebase `<exclude>` entries pointed at non-included paths and errored the build. Removed the redundant excludes — the allowlist already omits those files. (Debug builds never caught this.)
 - **Authenticity disclaimer** (#8, mitigated) — per-name detail screens show a prominent note that the Virtue/Practice text is traditional and varies in authenticity, pointing to Virtues → "On Authenticity". Localized in all 7 languages (`authenticity_note`). A scholar review of the per-name content is still recommended.
@@ -37,7 +37,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 | 1 | ✅ **Resolved** | **Third-party audio without license** — was hotlinking MP3s from `MohammedAbidNafi/99-Names-of-Allah` (no LICENSE). | **Done:** 99 CC BY-SA 4.0 clips (Mohammed Sadiq / Wikimedia Commons) bundled in `res/raw/`, played offline; attribution shown in Settings › About. Keep the CC BY-SA credit visible and the audio under CC BY-SA while these files ship. |
 | 2 | ✅ **Resolved** | **FCM token upload to a placeholder server** — `TokenUploader` POSTed the device push token to `https://api.example.com/v1/devices`. | **Done:** `TokenUploader` removed (no backend). FCM receive is retained for broadcast announcements; target from the Firebase console or topics — no token is uploaded, so no identifier leaves the device. |
 | 3 | **Build** | **No signed release AAB** — `buildTypes.release` has no `signingConfig`; no keystore. | Create a keystore, add `signingConfigs.release` (creds via `keystore.properties`, never committed), build `bundleRelease`. |
-| 4 | **Legal** | **No Privacy Policy URL** — required: app declares `INTERNET` and integrates FCM (receives pushes). _(Audio is now bundled/offline; the FCM token is no longer uploaded, but Firebase SDK still applies.)_ | Publish a privacy policy (GitHub Pages is fine) and add the URL in Play Console. |
+| 4 | ✅ **Resolved** | **No Privacy Policy URL** — required because the app declares `INTERNET` and integrates FCM. | **Done:** hosted at **https://sites.google.com/view/asma-al-husna/home** — live, no placeholders, contact `emdadev@gmail.com`. Verified content matches actual behaviour (offline audio, no token upload, prefs back up to the user's own Google account). **You still paste this URL into Play Console → Store listing and Data Safety.** |
 | 5 | **Console** | **Data Safety form not prepared** — declare any backup of preferences and Firebase SDK behaviour. _(The push token is no longer collected or sent anywhere; audio makes no network calls.)_ | Complete the Data Safety questionnaire honestly. |
 | 6 | **Console** | **Content rating not obtained** — IARC questionnaire required. | Complete in Play Console. |
 
@@ -76,7 +76,7 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 2. ~~**FCM**: remove `TokenUploader`~~ ✅ done — `TokenUploader` deleted (no backend); FCM receive kept, no token uploaded — #2, #9, #12
 3. ~~**Exact alarms**: decide `USE_EXACT_ALARM` vs inexact~~ ✅ done — dropped exact-alarm perms, using inexact `setAndAllowWhileIdle` — #7
 4. ~~**Backup**: fill in backup rules~~ ✅ done — allowlisted user prefs, verified filenames match, Firebase ids excluded — #11
-5. **Privacy Policy**: write + host, get the URL — #4
+5. ~~**Privacy Policy**: write + host, get the URL~~ ✅ done — https://sites.google.com/view/asma-al-husna/home — #4
 6. **Release build**: R8 ✅ enabled & verified (#17); `signingConfigs.release` scaffolded — **you still create the keystore** (#3)
 7. **Build signed AAB**: `./gradlew bundleRelease`
 8. **Play Console** ($25 one-time): Data Safety, Content Rating, Target Audience, store assets — #5, #6, #14, #16
