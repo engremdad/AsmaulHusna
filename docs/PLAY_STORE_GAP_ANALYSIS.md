@@ -15,7 +15,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **Top-bar deprecation** — Home switched off `centerAlignedTopAppBarColors` to `topAppBarColors`.
 - **Empty states** — Favorites has a proper empty state.
 - **Audio blocker resolved** (#1) — the unlicensed GitHub hotlink is gone. All 99 pronunciation clips (Mohammed Sadiq / Wikimedia Commons / **CC BY-SA 4.0**) are now bundled in `res/raw/` and play fully offline; `AudioPlayer.ENABLED = true`. CC BY-SA attribution + licence link surfaced in **Settings › About › Audio credits**, with the notice file at `assets/licenses/asma_ul_husna_audio_attribution.txt`.
-- **FCM token upload neutralized** (#2) — guarded behind `TokenUploader.BACKEND_CONFIGURED = false`; no identifier leaves the device until a real endpoint is set.
+- **FCM token upload removed** (#2) — `TokenUploader` (which POSTed the device token to the `api.example.com` placeholder) is deleted, along with its retrofit/gson/coroutines deps. The FCM *receive* path is kept (`AsmaulHusnaMessagingService`); push is now targeted from the Firebase console / topics, so no device identifier is collected or sent anywhere.
 - **Exact-alarm permission** (#7) — switched to `USE_EXACT_ALARM` (auto-granted for alarm/reminder apps) on 33+, `SCHEDULE_EXACT_ALARM` capped at `maxSdkVersion=32`; exact Suhoor/Iftar timing preserved. _(Play Console still asks to confirm the alarm use case.)_
 - **`VolumeUp` deprecation** (#15) — switched to `Icons.AutoMirrored.Filled.VolumeUp`.
 - **Hard-coded Bangla toasts** (#19) — `AudioPlayer` toasts extracted to localized string resources.
@@ -33,10 +33,10 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 | # | Category | Gap | Fix |
 |---|---|---|---|
 | 1 | ✅ **Resolved** | **Third-party audio without license** — was hotlinking MP3s from `MohammedAbidNafi/99-Names-of-Allah` (no LICENSE). | **Done:** 99 CC BY-SA 4.0 clips (Mohammed Sadiq / Wikimedia Commons) bundled in `res/raw/`, played offline; attribution shown in Settings › About. Keep the CC BY-SA credit visible and the audio under CC BY-SA while these files ship. |
-| 2 | **Legal/Privacy** | **FCM token upload to a placeholder server** — `TokenUploader` POSTs the device push token to `https://api.example.com/v1/devices`. | Either remove `TokenUploader`/FCM until there's a real backend, or point it at a secured HTTPS endpoint you own and declare it in Data Safety. Shipping token collection to `example.com` is broken and a policy risk. |
+| 2 | ✅ **Resolved** | **FCM token upload to a placeholder server** — `TokenUploader` POSTed the device push token to `https://api.example.com/v1/devices`. | **Done:** `TokenUploader` removed (no backend). FCM receive is retained for broadcast announcements; target from the Firebase console or topics — no token is uploaded, so no identifier leaves the device. |
 | 3 | **Build** | **No signed release AAB** — `buildTypes.release` has no `signingConfig`; no keystore. | Create a keystore, add `signingConfigs.release` (creds via `keystore.properties`, never committed), build `bundleRelease`. |
-| 4 | **Legal** | **No Privacy Policy URL** — required: app declares `INTERNET` and integrates FCM (push token is a device identifier). _(Audio is now bundled/offline, so it no longer uses the network.)_ | Publish a privacy policy (GitHub Pages is fine) and add the URL in Play Console. |
-| 5 | **Console** | **Data Safety form not prepared** — must declare the FCM push token (an identifier) and any backup of preferences. _(Audio no longer makes network calls.)_ | Complete the Data Safety questionnaire honestly once #2 is resolved. |
+| 4 | **Legal** | **No Privacy Policy URL** — required: app declares `INTERNET` and integrates FCM (receives pushes). _(Audio is now bundled/offline; the FCM token is no longer uploaded, but Firebase SDK still applies.)_ | Publish a privacy policy (GitHub Pages is fine) and add the URL in Play Console. |
+| 5 | **Console** | **Data Safety form not prepared** — declare any backup of preferences and Firebase SDK behaviour. _(The push token is no longer collected or sent anywhere; audio makes no network calls.)_ | Complete the Data Safety questionnaire honestly. |
 | 6 | **Console** | **Content rating not obtained** — IARC questionnaire required. | Complete in Play Console. |
 
 ## 🟡 High-risk (may be rejected or flagged)
@@ -71,7 +71,7 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 
 ## 📋 Suggested publish order
 1. ~~**Audio**: bundle licensed audio~~ ✅ done — 99 CC BY-SA 4.0 clips bundled offline in `res/raw/` with in-app attribution — #1, #10, #22
-2. **FCM**: remove `TokenUploader`/Firebase if there's no backend, else wire a real secured endpoint — #2, #9, #12
+2. ~~**FCM**: remove `TokenUploader`~~ ✅ done — `TokenUploader` deleted (no backend); FCM receive kept, no token uploaded — #2, #9, #12
 3. **Exact alarms**: decide `USE_EXACT_ALARM` vs inexact and update the manifest/declaration — #7
 4. **Backup**: fill in backup rules or set `allowBackup=false` — #11
 5. **Privacy Policy**: write + host, get the URL — #4

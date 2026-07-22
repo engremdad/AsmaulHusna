@@ -6,8 +6,9 @@ import com.google.firebase.messaging.RemoteMessage
 
 /**
  * Receives Firebase Cloud Messaging pushes — the "broadcast" half of the strategy:
- * Ramadan greetings, name-of-the-day highlights, and other announcements you send
- * from the Firebase console or a backend.
+ * Ramadan greetings, name-of-the-day highlights, and other announcements sent from
+ * the Firebase console (or a topic). No device token is uploaded anywhere — target
+ * this app from the console directly or via topic subscriptions.
  *
  * Dormant until google-services.json is added to the app module (see app/build.gradle.kts).
  * Time-critical Suhoor/Iftar reminders are handled locally instead — see ReminderScheduler.
@@ -15,9 +16,9 @@ import com.google.firebase.messaging.RemoteMessage
 class AsmaulHusnaMessagingService : FirebaseMessagingService() {
 
     override fun onNewToken(token: String) {
-        // Send this to your backend/marketing tool to target this device or a topic.
-        Log.d(TAG, "FCM registration token: $token")
-        TokenUploader.upload(token)
+        // No backend: the token is not uploaded anywhere. Logged only for local debugging.
+        // Push targeting is done from the Firebase console (all instances or topics).
+        Log.d(TAG, "FCM registration token refreshed")
     }
 
     override fun onMessageReceived(message: RemoteMessage) {

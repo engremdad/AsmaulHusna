@@ -68,7 +68,9 @@ task adds, changes, or removes a feature** — see [Maintenance](#maintenance) a
 - **Name of the Day** — daily reminder that deep-links to a name's detail screen.
 - **Suhoor** and **Iftar** reminders at user-set local times.
 - Reminders reschedule after device reboot.
-- **Announcements** — remote push (Firebase Cloud Messaging) for Ramadan/special messages.
+- **Announcements** — receives remote push (Firebase Cloud Messaging) for Ramadan/special
+  messages, targeted from the Firebase console or by topic. No device token is uploaded to
+  any server (the app has no backend), so nothing identifying leaves the device.
 - **Permission guidance** — if notifications are blocked, Settings shows a warning banner
   with an "Enable" button that opens the system notification settings; it clears
   automatically on return.

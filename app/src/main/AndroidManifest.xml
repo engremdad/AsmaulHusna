@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AsmaulHusna"
+            android:theme="@style/Theme.AsmaulHusna.Starting"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,7 +46,9 @@
             </intent-filter>
         </receiver>
 
-        <!-- Firebase Cloud Messaging: broadcast announcements (dormant until google-services.json is added) -->
+        <!-- Firebase Cloud Messaging: receives broadcast announcements. No device token is
+             uploaded anywhere — target from the Firebase console or via topics. Dormant
+             until google-services.json is added (see app/build.gradle.kts). -->
         <service
             android:name=".notify.AsmaulHusnaMessagingService"
             android:exported="false">
