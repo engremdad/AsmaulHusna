@@ -12,5 +12,11 @@
 /captures
 .externalNativeBuild
 .cxx
+.kotlin
 local.properties
 app/google-services.json
+
+# Release signing secrets
+keystore.properties
+*.jks
+*.keystore

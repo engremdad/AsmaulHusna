@@ -1,23 +1,36 @@
-# Implementation Plan - Fix "Daemon compilation failed: Unknown or invalid session 1"
+# Implementation Plan - Fix Build and SplashScreen Errors
 
-The error `Daemon compilation failed: Unknown or invalid session 1` typically occurs when the Kotlin compiler daemon becomes unstable or loses synchronization with the Gradle build process. This is common when using cutting-edge versions of Kotlin and AGP, or when the daemon runs out of memory.
+The user reported two main issues:
+1.  `Daemon compilation failed: Unknown or invalid session 1`: This is caused by Kotlin daemon instability, often due to memory limits or environment mismatches.
+2.  `installSplashScreen showing error`: This appeared to be an "Unresolved reference" in the IDE, likely due to a sync issue or stale dependency.
 
 ## User Review Required
 
-> [!NOTE]
-> I have already performed an initial `./gradlew --stop` to clear the corrupted daemon state and fixed several script compilation errors in `app/build.gradle.kts` that were blocking the build.
+> [!IMPORTANT]
+> I have already:
+> - Stopped stale Gradle daemons.
+> - Fixed syntax errors in `app/build.gradle.kts` that were preventing the project from compiling.
+> - Performed a Gradle Sync which resolved the "Unresolved reference" for `installSplashScreen` in my analysis.
 
 ## Proposed Changes
 
 ### Build Configuration
 
 #### [MODIFY] [gradle.properties](file:///Users/mac/AndroidStudioProjects/MyApplication/gradle.properties)
-- Add `kotlin.daemon.jvmargs` to provide the Kotlin compiler daemon with sufficient heap memory (2GB), matching the Gradle daemon's allocation. This helps prevent "invalid session" errors caused by daemon crashes or timeouts.
+- Add `kotlin.daemon.jvmargs=-Xmx2g` to stabilize the Kotlin compiler daemon.
+
+#### [MODIFY] [libs.versions.toml](file:///Users/mac/AndroidStudioProjects/MyApplication/gradle/libs.versions.toml)
+- Upgrade `coreSplashscreen` from `1.0.1` to `1.2.0` to ensure compatibility with recent SDKs and AGP.
+
+### UI / Activity
+
+#### [MODIFY] [MainActivity.kt](file:///Users/mac/AndroidStudioProjects/MyApplication/app/src/main/java/com/islamic/asmaulhusna/MainActivity.kt)
+- Update the `installSplashScreen` import and usage to be more explicit, which can help resolve persistent IDE "red underlines" even when the code compiles.
 
 ## Verification Plan
 
 ### Automated Tests
-- Run `./gradlew :app:compileDebugKotlin` to verify that the build succeeds and the daemon remains stable.
+- Run `./gradlew :app:compileDebugKotlin` to verify the build remains successful with the new dependency version and memory settings.
 
 ### Manual Verification
-- If the error persists after these changes, I recommend the user perform a **File > Invalidate Caches...** in Android Studio to clear any remaining stale build metadata.
+- The user should check if the red underline on `installSplashScreen` in `MainActivity.kt` has disappeared. If it persists, a **File > Invalidate Caches...** in Android Studio is recommended.
