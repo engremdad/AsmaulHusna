@@ -20,7 +20,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 - **`VolumeUp` deprecation** (#15) — switched to `Icons.AutoMirrored.Filled.VolumeUp`.
 - **Hard-coded Bangla toasts** (#19) — `AudioPlayer` toasts extracted to localized string resources.
 - **`ahad.mp4` typo** (#22) — corrected to `.mp3`.
-- **Backup rules** (#11) — explicit `backup_rules.xml` / `data_extraction_rules.xml` now include only the user's prefs (favorites, zikir, settings, reminders) and exclude Firebase id files.
+- **Backup rules** (#11) — explicit `backup_rules.xml` / `data_extraction_rules.xml` now include only the user's prefs (favorites, zikir, settings, reminders) and exclude Firebase id files. Verified the include paths match the real `SharedPreferences` filenames, so backup isn't silently empty. _Maintenance: if a new prefs file is added, add it to both rule files or it won't be backed up._
 - **Splash screen** (#13) — Android 12+ SplashScreen API added (gold Mushaf mark on the emerald page) via `core-splashscreen`.
 - **Release signing scaffold** (#3, partial) — `signingConfigs.release` reads `keystore.properties` (git-ignored); `keystore.properties.example` + `.gitignore` entries added. _You still create the keystore._
 - **Privacy Policy draft** (#4, partial) — `docs/PRIVACY_POLICY.md` written. _You still host it and add the URL in Play Console._
@@ -47,7 +47,7 @@ Status legend: 🔴 Blocker · 🟡 High-risk · 🟢 Minor polish · ✅ Resolv
 | 8 | **Content** | **Fazilat/amal authenticity** — per-name virtue/practice text may include weak/unsourced narrations. (A Virtues screen with hadith references + an authenticity note now exists — good, but per-name text still needs review.) | Cite sources or mark as "traditional"; keep the disclaimer prominent. |
 | 9 | **Config** | **`google-services.json` is gitignored** but the app links Firebase. | Fine for local builds; ensure the release/CI build has the correct file for the production Firebase project (or remove Firebase if unused). |
 | 10 | ✅ **Resolved** | **No offline fallback for audio** — used to stream and only show a toast on failure. | **Done:** audio is bundled in `res/raw/` and plays offline; no network path to fail. |
-| 11 | **Config** | **`allowBackup=true` with default (empty) backup rules** — prefs auto-back up to Google. | Fill in `backup_rules.xml` / `data_extraction_rules.xml` (or set `allowBackup=false`) and reflect it in Data Safety. |
+| 11 | ✅ **Resolved** | **`allowBackup=true` with default (empty) backup rules** — prefs auto-backed up to Google. | **Done:** `backup_rules.xml` (legacy) + `data_extraction_rules.xml` (12+) now allowlist only the user's prefs and exclude Firebase id files. Verified the `<include>` paths match the real `SharedPreferences` files (`favorites`, `zikir`, `settings`, `reminders`) — so backup actually captures them. **Data Safety:** declare that app preferences may be backed up to the user's own Google account. |
 | 12 | **Ops** | **No crash reporting** — not required, but appeals/debugging are hard without it. | Add Crashlytics (Firebase is already integrated). |
 
 ## 🟢 Minor polish (won't block, but affects quality/ratings)
@@ -73,7 +73,7 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 1. ~~**Audio**: bundle licensed audio~~ ✅ done — 99 CC BY-SA 4.0 clips bundled offline in `res/raw/` with in-app attribution — #1, #10, #22
 2. ~~**FCM**: remove `TokenUploader`~~ ✅ done — `TokenUploader` deleted (no backend); FCM receive kept, no token uploaded — #2, #9, #12
 3. ~~**Exact alarms**: decide `USE_EXACT_ALARM` vs inexact~~ ✅ done — dropped exact-alarm perms, using inexact `setAndAllowWhileIdle` — #7
-4. **Backup**: fill in backup rules or set `allowBackup=false` — #11
+4. ~~**Backup**: fill in backup rules~~ ✅ done — allowlisted user prefs, verified filenames match, Firebase ids excluded — #11
 5. **Privacy Policy**: write + host, get the URL — #4
 6. **Release build**: keystore + `signingConfigs.release`, enable R8 — #3, #17
 7. **Build signed AAB**: `./gradlew bundleRelease`
