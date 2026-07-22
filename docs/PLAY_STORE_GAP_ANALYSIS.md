@@ -72,6 +72,9 @@ _Note: an in-app dark-mode toggle is intentionally **not** offered — the app c
 ---
 
 ## 📋 Suggested publish order
+
+> Full step-by-step publishing + upload walkthrough: **[PUBLISHING.md](PUBLISHING.md)**.
+
 1. ~~**Audio**: bundle licensed audio~~ ✅ done — 99 CC BY-SA 4.0 clips bundled offline in `res/raw/` with in-app attribution — #1, #10, #22
 2. ~~**FCM**: remove `TokenUploader`~~ ✅ done — `TokenUploader` deleted (no backend); FCM receive kept, no token uploaded — #2, #9, #12
 3. ~~**Exact alarms**: decide `USE_EXACT_ALARM` vs inexact~~ ✅ done — dropped exact-alarm perms, using inexact `setAndAllowWhileIdle` — #7
